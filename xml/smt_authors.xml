@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE authorgroup PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd"
+[
+  <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE">
+  <!ENTITY % entities SYSTEM "entity-decl.ent">
+  %entities;
+]>
+<authorgroup>
+ <author><firstname>Jakub</firstname><surname>Friedl</surname>
+ </author>
+ <author><firstname>Florian</firstname><surname>Nadge</surname>
+ </author>
+ <author><firstname>Tomáš</firstname><surname>Bažant</surname>
+ </author>
+</authorgroup>
+<!-- Keep this comment at the end of the file
+     Local variables:
+     mode: xml
+     coding: utf-8
+     End:
+-->

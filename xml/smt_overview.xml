@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd"
+          [
+          <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE">
+          <!ENTITY % entities SYSTEM "entity-decl.ent">
+          %entities;
+]>
+<preface id="pre_&smt;">
+ <title>About this Guide</title>
+ <para>
+  This chapter introduces the SMT installation process and the SMT
+  Configuration Wizard. The &smtguide; (&smt;) for &sle; 11 helps customers
+  to manage their &sle; software updates while maintaining corporate
+  firewall policy and regulatory compliance requirements. &smt; is a package
+  proxy system that is integrated with the Novell® Customer Center and
+  provides key &ncc; capabilities locally at the customer site. It provides
+  a repository and registration target that is synchronized with the &ncc;,
+  thus maintaining all the capabilities of the &ncc; while allowing a more
+  secure centralized deployment.
+ </para>
+ <sect1>
+  <title>Overview</title>
+
+  <para>
+   This guide is divided into the following parts:
+  </para>
+
+  <variablelist>
+   <varlistentry>
+    <term>&smt; Installation and Configuration</term>
+    <listitem>
+     <para>
+      This chapter introduces the &smt; installation process and the SM
+      Configuration Wizard. You can install the &smt; add-on together with
+      your base program during the installation process or on top of an
+      already installed based system. The &smt; Configuration Wizard guides
+      you through the individual installation steps.
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry>
+    <term>&smt; Server Configuration</term>
+    <listitem>
+     <para>
+      This chapter introduces the &yast; configuration module &smt; Server.
+      the &yast; graphical interface lets you activate and configure. You
+      can set and configure mirroring credentials, &smt; database passwords,
+      and e-mail addresses to send &smt; reports, or set the &smt; job
+      schedule, and activate or deactivate the &smt; service.
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry>
+    <term>Installation Mirror and Source Updates with &yast;. </term>
+    <listitem>
+     <para>
+      This chapter introduces the option to mirror the installation and
+      update sources with &yast;.
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry>
+    <term>Management for Client Machines to use &smt;</term>
+    <listitem>
+     <para>
+      This chapter introduces the option to register client machines on
+      &ncc;. The Client machines must be configured to use &smt;.
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry>
+    <term>&smt; Reports</term>
+    <listitem>
+     <para>
+      This chapter introduces generated reports based on &smt; and &ncc;
+      data. Generated reports contain statistics of all registered machines
+      and products used and of all active, expiring, or missing
+      subscriptions.
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry>
+    <term>&smt; Tools and Configuration Files </term>
+    <listitem>
+     <para>
+      This chapter introduces the most important scripts, configuration
+      files and certificates shipped with &smt;.
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry>
+    <term>Configuration for Clients to Use &smt; </term>
+    <listitem>
+     <para>
+      This chapter introduces the option to configure any client machine to
+      register against &smt; and download software updates from there
+      instead of communicating directly with the Novell Customer Center and
+      the NU servers.
+     </para>
+    </listitem>
+   </varlistentry>
+  </variablelist>
+ </sect1>
+ <sect1>
+  <title>Additional Documentation and Resources</title>
+
+  <para>
+   Many chapters in this manual contain links to additional documentation
+   resources. These include additional documentation that is available on
+   the system as well as documentation available on the Internet.
+  </para>
+
+  <para>
+   For an overview of the documentation available for your product and the
+   latest documentation updates, refer to
+   <ulink url="http://www.novell.com/documentation"/>.
+  </para>
+ </sect1>
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="common_intro_feedback_i.xml"/>
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="common_intro_typografie_i.xml"/>
+</preface>

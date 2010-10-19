@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd"
+          [
+          <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE">
+          <!ENTITY % entities SYSTEM "entity-decl.ent">
+          %entities;
+]>
+<chapter id="smt.installation">
+ <title>&smt; Installation</title>
+ <para>
+  &smt; is distributed as an add-on product for &sls; 11 systems. Just install
+  the &sls; 11 base system to get &smt; as well. You can choose to install the &smt;
+  add-on together with your base system during the initial installation
+  process, or you can install the &smt; add-on on top of an
+  already-installed base system at any later time.
+ </para>
+ <sect1>
+  <title>Installation During the Initial Installation Process</title>
+
+  <para>
+   To install &smt; add-on together with your base system during the initial
+   installation process, follow these steps:
+  </para>
+
+  <procedure>
+   <step>
+    <para>
+     Start the &sls; 11 installation as usual. For more information, see the
+     &sls; documentation.
+    </para>
+   </step>
+   <step>
+    <para>
+     To include the &smt; add-on product, check the <guimenu>Include Add-On
+     Products from Separate Media</guimenu> option in the
+     <guimenu>Installation Mode</guimenu> dialog in the <guimenu>System
+     Analysis</guimenu> step, and click <guimenu>Next</guimenu>.
+    </para>
+   </step>
+   <step>
+    <para>
+     In the next dialog, click <guimenu>Add</guimenu> and, if you are
+     installing &smt; from a CD medium, select <guimenu>CD</guimenu> as the
+     source type. If you are installing from a different source, such as NFS
+     or HTTP, choose the appropriate source type. Click
+     <guimenu>Next</guimenu>.
+    </para>
+   </step>
+   <step>
+    <para>
+     If you are installing from a CD, insert the &smt; add-on product CD. If
+     you are installing from a different source, provide the necessary
+     source. Click <guimenu>Continue</guimenu>.
+    </para>
+   </step>
+   <step>
+    <para>
+     Confirm the &smt; license agreement and click <guimenu>Next</guimenu>.
+    </para>
+   </step>
+   <step>
+    <para>
+     The &smt; add-on product is displayed in the overview. Continue with
+     the installation as usual. Make sure that the <guimenu>&smt;:
+     Subscription Management Tool for SLE</guimenu> installation pattern is
+     selected automatically and do not remove it.
+    </para>
+   </step>
+   <step>
+    <para>
+     A two-step <guimenu>&smt; Configuration Wizard</guimenu> is shown
+     during the final steps of the installation workflow. Configure &smt; as
+     described in <xref
+      linkend="smt.installation.wizard"/> and
+     continue with the &sls; installation as usual.
+    </para>
+   </step>
+  </procedure>
+ </sect1>
+ <sect1>
+  <title>Installation on Top of an Already Installed System</title>
+
+  <para>
+   To install &smt; on top of an already-installed base system, follow these
+   steps:
+  </para>
+
+  <procedure>
+   <step>
+    <para>
+     Start &yast; and select <menuchoice> <guimenu>Software</guimenu>
+     <guimenu>Add-On Product</guimenu> </menuchoice>.
+    </para>
+   </step>
+   <step>
+    <para>
+     If you are installing &smt; from a CD, select <guimenu>CD</guimenu> as
+     the source type. If you are installing from a different source, such as
+     NFS or HTTP, choose the appropriate source type. Click
+     <guimenu>Next</guimenu>.
+    </para>
+   </step>
+   <step>
+    <para>
+     If you are installing from a CD, insert the &smt; add-on product CD. If
+     you are installing from a different source, provide the necessary
+     source. Click <guimenu>Continue</guimenu>.
+    </para>
+   </step>
+   <step>
+    <para>
+     Confirm the &smt; license agreement and click <guimenu>Next</guimenu>.
+    </para>
+   </step>
+   <step>
+    <para>
+     Click <guimenu>Accept</guimenu> to install the <guimenu>&smt;:
+     Subscription Management Tool for SLE</guimenu> pattern.
+    </para>
+   </step>
+   <step>
+    <para>
+     The <guimenu>&smt; Configuration Wizard</guimenu> is launched. See
+     <xref
+      linkend="smt.installation.wizard"/>.
+    </para>
+   </step>
+  </procedure>
+ </sect1>
+ <sect1 id="smt.installation.wizard">
+  <title>&smt; Configuration Wizard</title>
+
+  <para>
+   During the installation of &smt; the two-step <guimenu>&smt;
+   Configuration Wizard</guimenu> is launched, regardless of the used
+   installation method. Configure &smt; using this wizard. However, you will
+   be able to change the configuration later using the &yast; &smt;
+   Configuration module.
+  </para>
+
+  <procedure>
+   <step>
+    <para>
+     The <guimenu>Enable Subscription Management Tool service
+     (&smt;)</guimenu> option is checked by default. Uncheck it only if you
+     want to disable the installed &smt;.
+    </para>
+    <para>
+     If the firewall is enabled, check <guimenu>Open Port in
+     Firewall</guimenu> to allow access to the &smt; service from remote
+     computers.
+    </para>
+    <para>
+     Enter your &ncc; mirroring credentials in <guimenu>NU User</guimenu>
+     and <guimenu>NU Password</guimenu>. NU stands for Novell Update. If you
+     do not know your &ncc; credentials, refer to
+     <xref linkend="smt.mirroring.getcredentials"/>. Test the entered
+     credentials by pressing the <guimenu>Test</guimenu> button. &smt; will
+     connect to the Customer Center server using the provided credentials
+     and download some testing data.
+    </para>
+    <para>
+     Enter the e-mail address you have used for the &ncc; registration into
+     <guimenu>NCC E-mail Used for Registration</guimenu>.
+    </para>
+    <para>
+     <guimenu>Your &smt; Server URL</guimenu> should contain the URL of the
+     &smt; server being configured. It is populated automatically.
+    </para>
+    <para>
+     Press <guimenu>Next</guimenu> to continue to the second configuration
+     step.
+    </para>
+   </step>
+   <step>
+    <para>
+     For security reasons, enter <literal>smt</literal> as username in the
+     database and select a &smt; <guimenu>Database Password</guimenu> in the
+     respective fields. The password must be entered.
+    </para>
+    <para>
+     Enter all e-mail addresses that &smt; should send reports to using the
+     <guimenu>Add</guimenu> button. You are also able to
+     <guimenu>Edit</guimenu> or <guimenu>Delete</guimenu> any incorrect or
+     needless addresses.
+    </para>
+    <para>
+     Press <guimenu>Next</guimenu>.
+    </para>
+   </step>
+   <step>
+    <para>
+     If the current MySQL root password is empty&mdash;as in any freshly
+     installed system&mdash; you will be asked to enter a <guimenu>New MySQL
+     Root Password</guimenu>.
+    </para>
+   </step>
+  </procedure>
+ </sect1>
+</chapter>
