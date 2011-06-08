@@ -40,7 +40,8 @@
   client machine to use &smt;. The first way is to provide the needed
   information via boot parameters at boot time. The second way is to
   configure clients using an &ay; profile. There is also the
-  <command>clientSetup4SMT.sh</command> script. This script can be run on a
+  <command>clientSetup4SMT.sh</command> script. 
+  This script can be run on a
   client to make it register against a specified &smt; server. In SLE 11 you
   can now set the SMT server URL with the &yast;2 registration module during
   installation. These methods are described in the following sections:
@@ -268,8 +269,9 @@
    <step>
     <para>
      Copy the
-     <filename>/usr/share/doc/packages/smt/clientSetup4SMT.sh</filename>
-     script at your &smt; server to the client machine.
+     <filename>clientSetup4SMT.sh</filename>
+     script from your &smt; server to the client machine.
+     The script is available at <filename>&lt;SMT_HOSTNAME&gt;/repo/tools/clientSetup4SMT.sh</filename> and <filename>/srv/www/htdocs/repo/tools/clientSetup4SMT.sh</filename>. You can download it with a browser, <command>wget</command> (if installed on the client), or by another means, such as with <command>scp</command>.
     </para>
    </step>
    <step>
@@ -280,11 +282,11 @@
      <replaceable>registration_URL</replaceable></command> For example,
      <command>./clientSetup4SMT.sh
      https://smt.&exampledomain;/center/regsvc</command>. In the second
-     case, the script name is followed by the <option>--host</option> option
-     followed by hostname of the &smt; server: <command>./clientSetup4SMT.sh
-     --host <replaceable>server_hostname</replaceable></command>. For
+     case, the script uses the <option>--host</option> option
+     followed by hostname of the &smt; serveri, and the <option>--regcert</option> followed by the URL of the SSL certificate: <command>./clientSetup4SMT.sh
+      --host <replaceable>server_hostname</replaceable> --regcert <replaceable>http://server_hostname/certs/smt.crt</replaceable></command>. For
      example, <command>./clientSetup4SMT.sh --host
-     smt.&exampledomain;</command>.
+      smt.&exampledomain; --regcert http://smt.&exampledomain;/certs/smt.crt.</command>
     </para>
    </step>
    <step>
