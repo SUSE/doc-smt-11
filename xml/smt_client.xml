@@ -259,6 +259,12 @@
    client machine to use a &smt; server or to reconfigure it to use a
    different &smt; server.
   </para>
+  <note>
+   <title>Installation of wget</title>
+   <para>The script <filename>clientSetup4SMT.sh</filename> itself uses
+    <command>wget</command>, so <command>wget</command> must be installed on the
+    client.</para>
+  </note>
 
   <para>
    To configure a client machine to use &smt; with the
@@ -271,7 +277,10 @@
      Copy the
      <filename>clientSetup4SMT.sh</filename>
      script from your &smt; server to the client machine.
-     The script is available at <filename>&lt;SMT_HOSTNAME&gt;/repo/tools/clientSetup4SMT.sh</filename> and <filename>/srv/www/htdocs/repo/tools/clientSetup4SMT.sh</filename>. You can download it with a browser, <command>wget</command> (if installed on the client), or by another means, such as with <command>scp</command>.
+     The script is available at
+     <filename>&lt;SMT_HOSTNAME&gt;/repo/tools/clientSetup4SMT.sh</filename> and
+     <filename>/srv/www/htdocs/repo/tools/clientSetup4SMT.sh</filename>. You can
+     download it with a browser, run <command>wget</command>, or by another means, such as with <command>scp</command>.
     </para>
    </step>
    <step>
@@ -283,7 +292,7 @@
      <command>./clientSetup4SMT.sh
      https://smt.&exampledomain;/center/regsvc</command>. In the second
      case, the script uses the <option>--host</option> option
-     followed by hostname of the &smt; serveri, and the <option>--regcert</option> followed by the URL of the SSL certificate: <command>./clientSetup4SMT.sh
+     followed by hostname of the &smt; server, and the <option>--regcert</option> followed by the URL of the SSL certificate: <command>./clientSetup4SMT.sh
       --host <replaceable>server_hostname</replaceable> --regcert <replaceable>http://server_hostname/certs/smt.crt</replaceable></command>. For
      example, <command>./clientSetup4SMT.sh --host
       smt.&exampledomain; --regcert http://smt.&exampledomain;/certs/smt.crt.</command>
