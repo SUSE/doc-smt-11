@@ -42,11 +42,11 @@
     <term>&smt; Server Configuration</term>
     <listitem>
      <para>
-      This chapter introduces the &yast; configuration module &smt; Server.
-      the &yast; graphical interface lets you activate and configure. You
-      can set and configure mirroring credentials, &smt; database passwords,
-      and e-mail addresses to send &smt; reports, or set the &smt; job
-      schedule, and activate or deactivate the &smt; service.
+      This chapter introduces the &yast; configuration module &smt;
+      Server.  You can set and configure mirroring credentials, &smt;
+      database passwords, and e-mail addresses to send &smt; reports, or
+      set the &smt; job schedule, and activate or deactivate the &smt;
+      service.
      </para>
     </listitem>
    </varlistentry>
