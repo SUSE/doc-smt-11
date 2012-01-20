@@ -20,8 +20,8 @@
     <para>
      To report bugs for a product component, or to submit enhancement
      requests, please use <ulink url="https://bugzilla.novell.com/"/>. For
-     documentation bugs, submit a bug against the component
-     <guimenu>Documentation</guimenu> for the respective product.
+     documentation bugs, submit a bug report for the component
+     <guimenu>Documentation</guimenu> of the respective product.
     </para>
     <para>
      If you are new to Bugzilla, you might find the following articles
@@ -49,15 +49,9 @@
      <ulink url="http://www.novell.com/services/"></ulink>.
     </para>
     <para>
-     To report bugs for a product component, please use
-     <ulink
-    url="http://support.novell.com/additional/bugreport.html"/>.
-    </para>
-    <para>
-     Submit enhancement requests at
-     <ulink
-      url="https://secure-www.novell.com/rms/rmsTool?action=ReqActions.viewAddPage&amp;return=www"
-     />.
+     To report bugs for a product component, log into the &ncc; from
+     <ulink url="support.novell.com/"/> and select <menuchoice> <guimenu>My
+     Support</guimenu> <guimenu>Service Request</guimenu> </menuchoice>.
     </para>
    </listitem>
   </varlistentry>
@@ -68,9 +62,9 @@
      We want to hear your comments and suggestions about this manual and the
      other documentation included with this product. Use the User Comments
      feature at the bottom of each page in the online documentation or go to
-     <ulink
-      url="http://www.novell.com/documentation/feedback.html"/>
-     and enter your comments there.
+     <ulink url="http://www.suse.com/documentation/feedback.html"/> and
+     enter your comments there.
+     <remark>taroth 2011-10-10: this URL does not exist yet, filed bnc#723015</remark>
     </para>
    </listitem>
   </varlistentry>
