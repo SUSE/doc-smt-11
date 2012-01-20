@@ -106,7 +106,7 @@
    repositories and setting new custom repositories on the command line. For
    details on the newly designed &smt; Management module, see
    <xref
-    linkend="smt_management"/>
+    linkend="smt.management"/>
   </para>
 
   <sect2>
@@ -526,7 +526,9 @@ lrwxrwxrwx 1 root root    26 2008-01-11 15:37 RPMMD -> /space/MIRRORDATA/repo/RP
    Recommended work flow:
   </para>
 
-<screen>repo=>repo/full, repo/full => repo/testing, repo/testing => repo/</screen>
+<screen>repo => repo/full,
+repo/full => repo/testing,
+repo/testing => repo</screen>
  </sect1>
  <sect1 id="smt.staging">
   <title>Testing and Filtering Update Repositories with Staging</title>
@@ -541,7 +543,7 @@ lrwxrwxrwx 1 root root    26 2008-01-11 15:37 RPMMD -> /space/MIRRORDATA/repo/RP
   <para>
    For Staging you can either use the <command>smt-staging</command>command,
    or use the SMT Management module. For more details,
-   see<xref linkend="smt_management"/>
+   see<xref linkend="smt.management"/>
   </para>
 
   <para>

@@ -5,7 +5,7 @@
           <!ENTITY % entities SYSTEM "entity-decl.ent">
           %entities;
 ]>
-<chapter id="smt_management">
+<chapter id="smt.management">
  <title>Managing Repositories with &smt; Management</title>
  <para>
   You can use the &smt; Management module for day-to-day management. &smt;
