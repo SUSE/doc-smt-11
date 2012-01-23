@@ -15,10 +15,9 @@
 <!--			Bookinfo			       -->
 <!-- ============================================================= -->
  <bookinfo>
-  <title>&smtool; Guide</title><productname>&sle;</productname>
+  <title>&smtool; Guide</title><productname>&smtool;</productname>
   <productnumber>11</productnumber><date>
 <?dbtimestamp format="B d, Y" ?></date>
-  <titleabbrev>&smtool; Guide</titleabbrev>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="common_copyright_sle.xml"></xi:include>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="smt_authors.xml"></xi:include>
  </bookinfo>
