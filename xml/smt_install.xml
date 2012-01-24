@@ -8,17 +8,17 @@
 <chapter id="smt.installation">
  <title>&smt; Installation</title>
  <para>
-  &smt; is distributed as an add-on product for &sls; 11 systems. Just install
-  the &sls; 11 base system to get &smt; as well. You can choose to install the &smt;
-  add-on together with your base system during the initial installation
-  process, or you can install the &smt; add-on on top of an
-  already-installed base system at any later time.
+  &smt; is an add-on product for &sls; 11 systems. Install the &sls; 11
+  base system and add &smt;. You can either install the &smt; add-on
+  together with your base system during the initial installation
+  process, or on top of an already-installed base system at any later
+  time.
  </para>
  <sect1>
   <title>Installation During the Initial Installation Process</title>
 
   <para>
-   To install &smt; add-on together with your base system during the initial
+   To install the &smt; add-on together with your base system during the initial
    installation process, follow these steps:
   </para>
 
@@ -26,7 +26,7 @@
    <step>
     <para>
      Start the &sls; 11 installation as usual. For more information, see the
-     &sls; documentation.
+     &sls; documentation coming with the base product.
     </para>
    </step>
    <step>
@@ -40,17 +40,17 @@
    <step>
     <para>
      In the next dialog, click <guimenu>Add</guimenu> and, if you are
-     installing &smt; from a CD medium, select <guimenu>CD</guimenu> as the
-     source type. If you are installing from a different source, such as NFS
-     or HTTP, choose the appropriate source type. Click
-     <guimenu>Next</guimenu>.
+     installing &smt; from a CD medium, select <guimenu>CD</guimenu> as
+     the repository type. If you are installing from a different source,
+     such as NFS or HTTP, choose the appropriate repository type. Then
+     click <guimenu>Next</guimenu>.
     </para>
    </step>
    <step>
     <para>
      If you are installing from a CD, insert the &smt; add-on product CD. If
      you are installing from a different source, provide the necessary
-     source. Click <guimenu>Continue</guimenu>.
+     repository information. Then click <guimenu>Continue</guimenu>.
     </para>
    </step>
    <step>
@@ -77,6 +77,7 @@
    </step>
   </procedure>
  </sect1>
+ <!-- ==================================================================== -->
  <sect1>
   <title>Installation on Top of an Already Installed System</title>
 
