@@ -17,9 +17,9 @@
   <title>Getting Mirror Credentials</title>
 
   <para>
-   Before you can create local mirrors of the repositories, you need to have
-   proper mirror credentials. You can get these credentials from the &ncc;
-   with these steps:
+   Before you create local mirrors of the repositories, you need proper
+   mirror credentials. Get these credentials from the &ncc; with these
+   steps:
   </para>
 
   <procedure>
@@ -90,11 +90,11 @@
   <para>
    To request a merge, the customer or their sales rep send an email
    <ulink
-    url="mailto:emea_pic@novell.com">emea_pic@novell.com</ulink>
+    url="mailto:emea_pic@novell.com"/>
    (for EMEA-based customers only) with the applicable customer and site
    IDs. The EMEA PIC team will verify the records. The contact for NALAAP is
    <ulink
-    url="mailto:cmf@novell.com">cmf@novell.com</ulink>
+    url="mailto:cmf@novell.com"/>
   </para>
  </sect1>
  <sect1 id="smt.mirroring.manage">
@@ -104,7 +104,7 @@
    This section describes tools and procedures for viewing information about
    software repositories available through &smt;, configuring these
    repositories and setting new custom repositories on the command line. For
-   details on the newly designed &smt; Management module, see
+   details on the &smt; Management module, see
    <xref
     linkend="smt.management"/>
   </para>
@@ -149,7 +149,7 @@
     The fact that a repository can be mirrored does not mean that it has to
     be mirrored. Only repositories with the <literal>DOMIRROR</literal> flag
     set in the &smt; database will be mirrored. For more information about
-    setting which repositories should be mirrored,
+    settings, which repositories should be mirrored,
     see <xref
      linkend="smt.mirroring.manage.domirror"/>.
    </para>
@@ -169,26 +169,26 @@
     whether the repository can be mirrored.
    </para>
    <para>
-    Use the <option>-verbose</option> option, to get additional information
-    as the source URL of the repository and the path it will be mirrored to.
+    Use the <option>--verbose</option> option, to get additional information
+    about the URL of the repository and the path it will be mirrored to.
 <!--FIXME-->
    </para>
    <para>
     The repository listing can be limited to only repositories that can be
     mirrored or to enabled repositories. To list only repositories that can
     be mirrored, use the <option>-m</option> or
-    <option>--only-mirrorable</option> option: <command>smt-repositories
+    <option>--only-mirrorable</option> option: <command>smt-repos
     -m</command>.
    </para>
    <para>
     To list only enabled repositories, use the <option>-o</option> or
-    <option>--only-enabled</option> option: <command>smt-repositories
-    -o</command>.
+    <option>--only-enabled</option> option: <command>smt-repos
+    -o</command> (see <xref linkend="ex.smt.mirroring.repos.o"/>).
    </para>
-   <example>
+   <example id="ex.smt.mirroring.repos.o">
     <title>Listing All Enabled Repositories</title>
 <screen><?dbsuse-fo font-size="5pt"?>
-tux:~ # smt-repositories -o
+tux:~ # smt-repos -o
 .---------------------------------------------------------------------------------------------------------------------.
 | Mirror? | ID | Type | Name               | Target         | Description                           | Can be Mirrored |
 +---------+----+------+--------------------+----------------+---------------------------------------+-----------------+
@@ -209,10 +209,10 @@ tux:~ # smt-repositories -o
     You can also list only repositories with a particular name or show
     information about a repository with a particular name and target. To
     list repositories with a particular name, use the
-    <command>smt-repositories
+    <command>smt-repos
     <replaceable>repository_name</replaceable></command> command. To show
     information about a repository with a particular name and target, use
-    the <command>smt-repositories <replaceable>repository_name</replaceable>
+    the <command>smt-repos <replaceable>repository_name</replaceable>
     <replaceable>target</replaceable></command> command.
    </para>
   </sect2>
@@ -222,7 +222,7 @@ tux:~ # smt-repositories -o
    <para>
     Only enabled repositories can be mirrored. In the database, the enabled
     repositories have the <literal>DOMIRROR</literal> flag set. Repositories
-    can be enabled or disabled using the <command>smt-repositories</command>
+    can be enabled or disabled using the <command>smt-repos</command>
     script.
    </para>
    <para>
@@ -238,12 +238,12 @@ tux:~ # smt-repositories -o
      <para>
       You are able to limit the list of repositories by using the relevant
       options. To limit the list to only repositories that can be mirrored,
-      use the <option>-m</option> option: <command>smt-repositories -m
+      use the <option>-m</option> option: <command>smt-repos -m
       -e</command>. To limit the list to only repositories with a particular
-      name, use the <command>smt-repositories -e
+      name, use the <command>smt-repos -e
       <replaceable>repository_name</replaceable></command> command. To list
       only a repository with a particular name and target, use the command
-      <command>smt-repositories -e
+      <command>smt-repos -e
       <replaceable>repository_name</replaceable>
       <replaceable>target</replaceable></command>.
      </para>
@@ -251,13 +251,14 @@ tux:~ # smt-repositories -o
       If you want to enable all repositories belonging to a certain product,
       use the <option>--enable-by-prod</option> or <option>-p</option>
       option followed by the name of the product and, optionally, its
-      version, architecture, and release: <command>smt-repositories -p
+      version, architecture, and release: <!-- FIXME: are spaces allowed? -->
+      <command>smt-repos -p
       <replaceable>product</replaceable>[,
       <replaceable>version</replaceable>[,
       <replaceable>architecture</replaceable>[,
-      <replaceable>release</replaceable>]]] </command>. For example, to
+      <replaceable>release</replaceable>]]]</command>. For example, to
       enable all repositories belonging to &sls; 10 SP3 for PowerPC
-      architecture, use the <command>smt-repositories -p
+      architecture, use the <command>smt-repos -p
       SUSE-Linux-Enterprise-Server-SP3,10,ppc</command> command. The list of
       known products can be obtained with the
       <command>smt-list-products</command> command.
@@ -282,29 +283,30 @@ tux:~ # smt-repositories -o
      <para>
       If you want to disable all enabled repositories or just choose one
       repository from the list of all repositories, run the
-      <command>smt-repositories -d</command> command.
+      <command>smt-repos -d</command> command.
      </para>
      <para>
       If you want to choose the repository to be disabled from a shorter
       list, or if you want to disable all repositories from a limited group,
       you can use any of the available options to limit the list of the
       repositories. To limit the list to only enabled repositories, use the
-      <option>-o</option> option: <command>smt-repositories -o -d</command>.
+      <option>-o</option> option: <command>smt-repos -o -d</command>.
       To limit the list to only repositories with a particular name, use the
-      <command>smt-repositories -d
+      <command>smt-repos -d
       <replaceable>repository_name</replaceable></command> command. To list
       only a repository with a particular name and target, use the
-      <command>smt-repositories -d
+      <command>smt-repos -d
       <replaceable>repository_name</replaceable>
       <replaceable>target</replaceable></command> command.
      </para>
     </step>
     <step>
      <para>
-      If more than one repositories is listed, choose which one you want to
-      disable by specifying its ID listed in the repository table shown and
-      pressing Enter. If you want to disable all the listed repositories,
-      use <literal>a</literal> and press Enter.
+      If more than one repositories is listed, choose which one you want
+      to disable by specifying its ID listed in the repository table
+      shown and pressing <keycap function="enter"/>. If you want to
+      disable all the listed repositories, use <literal>a</literal> and
+      press <keycap function="enter"/>.
      </para>
     </step>
    </procedure>
@@ -314,16 +316,17 @@ tux:~ # smt-repositories -o
    <title>Mirroring Custom Repositories</title>
    <para>
     You can mirror repositories that are not available at the &ncc;
-    &mdash;custom repositories&mdash; using &smt;. Use the
+    using &smt;; those repositories are called <quote>custom
+    repositories</quote>. Use the
     <command>smt-setup-custom-repos</command> script for this purpose.
     Custom repositories can also be deleted.
    </para>
    <para>
     When adding a new custom repository,
     <command>smt-setup-custom-repos</command> adds a new record in the
-    database, and sets a <emphasis>mirror</emphasis> flag to
+    database, and sets the <emphasis>mirror</emphasis> flag to
     <replaceable>true</replaceable> by default. If needed, you can disable
-    <emphasis>mirroring</emphasis> later.
+    mirroring later.
    </para>
    <para>
     To set up a custom repository to be available through &smt;, follow
@@ -340,27 +343,29 @@ tux:~ # smt-repositories -o
     </step>
     <step>
      <para>
-      Run the <command>smt-setup-custom-repos --productid
-      <replaceable>product_id</replaceable> --name
-      <replaceable>repository_name</replaceable> --exturl
-      <replaceable>repository_url</replaceable> </command> command, where
-      <replaceable>product_id</replaceable> is the ID of the product the
-      repository belongs to, <replaceable>repository_name</replaceable>
-      represents the name of the repository and
-      <replaceable>repository_url</replaceable> is the URL the repository is
-      available at. In case the added repository needs to be available for
-      more than one product, specify the IDs of all products that should use
-      the added repository.
+      Run
+     </para>
+     <screen>smt-setup-custom-repos --productid <replaceable>product_id</replaceable> \
+--name <replaceable>repository_name</replaceable> --exturl <replaceable>repository_url</replaceable>
+     </screen>
+     <para>In this command <replaceable>product_id</replaceable> is the
+     ID of the product the repository belongs to,
+     <replaceable>repository_name</replaceable> represents the name of
+     the repository and <replaceable>repository_url</replaceable> is the
+     URL the repository is available at. In case the added repository
+     needs to be available for more than one product, specify the IDs of
+     all products that should use the added repository.
      </para>
      <para>
       For example, to set <literal>My repository</literal> available at
       <literal>http://example.com/My_repository</literal> to the products
       with the IDs <literal>423</literal>, <literal>424</literal>, and
       <literal>425</literal>, use the following command:
-       <command>smt-setup-custom-repositories --productid 423 --productid
-      424 --productid 425 --name 'My_repository' --exturl
-      'http://example.com/My_repository'</command>.
      </para>
+     <screen>smt-setup-custom-repositories --productid 423 --productid 424 \
+--productid 425 --name 'My_repository' \
+--exturl 'http://example.com/My_repository'</screen>
+
     </step>
    </procedure>
    <note>
@@ -371,8 +376,7 @@ tux:~ # smt-repositories -o
      repositories and use them on client machines, you have to allow this
      explicitly by executing the following command on the client machines:
     </para>
-<screen>
-   rug set security-level checksum
+<screen>rug set security-level checksum
   </screen>
    </note>
    <para>
@@ -408,8 +412,7 @@ tux:~ # smt-repositories -o
     <literal>exclude_directories</literal> option to the
     <filename>/var/lib/smt/.wgetrc</filename> configuration file. For more
     information about <command>wget</command> and
-    <filename>/var/lib/smt/.wgetrc</filename>, see <command>man 1
-    wget</command>.
+    <filename>/var/lib/smt/.wgetrc</filename>, see <command>man wget</command>.
    </para>
   </sect2>
  </sect1>
@@ -424,14 +427,29 @@ tux:~ # smt-repositories -o
    <xref linkend="smt.config.smtconf"/>. If the <option>MirrorTo</option>
    option is not set to the Apache htdocs directory
    <filename>/srv/www/htdocs/</filename>, links should be created manually
-   like this: <filename>/srv/www/htdocs/repo/$RCE</filename> should point to
-   <filename><replaceable>/MirrorTo</replaceable>/repo/$RCE/</filename>,
-   <filename>/srv/www/htdocs/repo/RPMMD</filename> should point to
-   <filename><replaceable>/MirrorTo</replaceable>/repo/RPMMD/</filename>,
-   <filename>/srv/www/htdocs/repo/testing</filename> should point to
-   <filename><replaceable>/MirrorTo</replaceable>/repo/full/</filename> and
-   <filename>/srv/www/htdocs/repo/full</filename> should point to
-   <filename><replaceable>/MirrorTo</replaceable>/repo/full/</filename>.
+   like this:
+  </para>
+  <itemizedlist>
+   <listitem>
+    <para><filename>/srv/www/htdocs/repo/$RCE</filename> should point to
+   <filename><replaceable>/MirrorTo</replaceable>/repo/$RCE/</filename>
+    </para>
+   </listitem>
+   <listitem>
+    <para><filename>/srv/www/htdocs/repo/RPMMD</filename> to
+    <filename><replaceable>/MirrorTo</replaceable>/repo/RPMMD/</filename></para>
+   </listitem>
+   <listitem>
+    <para><filename>/srv/www/htdocs/repo/testing</filename> to
+    <filename><replaceable>/MirrorTo</replaceable>/repo/full/</filename>
+    and</para>
+   </listitem>
+   <listitem>
+    <para><filename>/srv/www/htdocs/repo/full</filename> to
+   <filename><replaceable>/MirrorTo</replaceable>/repo/full/</filename></para>
+   </listitem>
+  </itemizedlist>
+  <para>
    Here, <literal>/MirrorTo</literal> is the path set in the
    <option>MirrorTo</option> option.
   </para>
@@ -442,20 +460,21 @@ tux:~ # smt-repositories -o
   </para>
 
 <screen>
-srv64:~ # l /srv/www/htdocs/repo/
+l /srv/www/htdocs/repo/
 total 16
 drwxr-xr-x 2 root root   128 2008-01-18 14:00 ./
 drwxr-xr-x 4 root root   128 2008-01-17 17:14 ../
 lrwxrwxrwx 1 root root    27 2008-01-11 15:17 $RCE -> /space/MIRRORDATA/repo/$RCE/
--rw-r--r-- 1 root root 14854 2008-01-21 12:36 repoindex.xml   
+-rw-r--r-- 1 root root 14854 2008-01-21 12:36 repoindex.xml
 lrwxrwxrwx 1 root root    26 2008-01-11 15:37 RPMMD -> /space/MIRRORDATA/repo/RPMMD/
 </screen>
 
   <para>
    The links can be created using the <command>ln -s</command> commands. For
-   example: <command>ln -s '<replaceable>/MirrorTo</replaceable>/repo/$RCE/'
-   '/srv/www/htdocs/repo/$RCE'</command>
+   example:
   </para>
+  <screen>ln -s '<replaceable>/MirrorTo</replaceable>/repo/$RCE/' '/srv/www/htdocs/repo/$RCE'</screen>
+
   <note>
    <title>The <filename>/srv/www/htdocs/repo</filename> Directory</title>
    <para>
@@ -482,7 +501,7 @@ lrwxrwxrwx 1 root root    26 2008-01-11 15:37 RPMMD -> /space/MIRRORDATA/repo/RP
 
   <para>
    To mirror a repository to the testing environment, you can use the
-   <filename>Staging</filename> tab in the &smt; Management module, or the
+   <guimenu>Staging</guimenu> tab in the &smt; Management module, or the
    command <command>smt-staging</command>.
   </para>
 
@@ -501,17 +520,18 @@ lrwxrwxrwx 1 root root    26 2008-01-11 15:37 RPMMD -> /space/MIRRORDATA/repo/RP
   </para>
 
   <para>
-   You can enable "staging" for a repository in the
-   <filename>Repositories</filename> tab of the <filename>&smt;
+   You can enable <quote>staging</quote> for a repository in the
+   <guimenu>Repositories</guimenu> tab of the <filename>&smt;
    Management</filename> module or with the <command>smt-repos</command>
-   command. The mirroring happens automatically to repo/full/.
+   command. The mirroring happens automatically to
+   <filename>repo/full/</filename>.
   </para>
 
   <para>
    If you have a SLE11-based Update repository with patches, &smt; tools can
    help you with the management. With these tools you can select patches and
-   create a snapshot and put it into <filename>repo/testing/</filename>.
-   After tests are finished you can put the content of
+   create a snapshot and copy it into <filename>repo/testing/</filename>.
+   After tests are finished you can copy the contents of
    <filename>repo/testing</filename> into the <filename>production area
    /repo</filename>.
   </para>
@@ -530,6 +550,7 @@ lrwxrwxrwx 1 root root    26 2008-01-11 15:37 RPMMD -> /space/MIRRORDATA/repo/RP
 repo/full => repo/testing,
 repo/testing => repo</screen>
  </sect1>
+ <!-- ==================================================================== -->
  <sect1 id="smt.staging">
   <title>Testing and Filtering Update Repositories with Staging</title>
 
@@ -541,17 +562,19 @@ repo/testing => repo</screen>
   </para>
 
   <para>
-   For Staging you can either use the <command>smt-staging</command>command,
+   For staging, you can either use the <command>smt-staging</command>command,
    or use the SMT Management module. For more details,
-   see<xref linkend="smt.management"/>
+   see <xref linkend="smt.management"/>.
   </para>
 
   <para>
-   Repositories with enabled staging are mirrored to the /MirroTo/repos/full
-   subdirectory. This subdirectory is usually not used by your clients.
-   Incoming new updates are not automatically visible to the clients before
-   you get a chance to test them. Later you can generate a testing
-   environment of this repository, which goes to /mirrorTo/repos directory
+   Repositories with enabled staging are mirrored to the
+   <filename>/MirrorTo/repos/full</filename> subdirectory. This
+   subdirectory is usually not used by your clients.  Incoming new
+   updates are not automatically visible to the clients before you get a
+   chance to test them. Later you can generate a testing environment of
+   this repository, which goes to <filename>/MirrorTo/repos</filename>
+   directory.
   </para>
 
   <para>
@@ -574,15 +597,12 @@ repo/testing => repo</screen>
     <term>Enabling Staging</term>
     <listitem>
      <para>
-      To enable or disable the staging use the <command> smt repos</command>
+      To enable or disable the staging use the <command>smt-repos</command>
       command:
      </para>
-     <para>
-      <command>smt repos --enable staging</command>
-     </para>
-     <para>
-      <command>smt repos -s</command>.
-     </para>
+     <screen>smt-repos --enable staging
+smt-repos -s
+     </screen>
      <para>
       You can enable the required repositories by entering the ID number or
       by entering the name and target. If you want to enable all
@@ -594,11 +614,11 @@ repo/testing => repo</screen>
     <term>Generating Testing and Production Snapshots</term>
     <listitem>
      <para>
-      To create the testing repository enter the <command>$ smt staging
-      createrepo Repository_ID -–testing </command>. Now, you can test the
+      To create the testing repository enter the <command>smt-staging
+      createrepo Repository_ID -–testing</command>. Now, you can test the
       installation and functionality of the patches in testing clients. If
       no problems are discovered during testing, create the production
-      repository by entering <command> $ smt staging createrepo
+      repository by entering <command>smt staging createrepo
       Repository_ID --production</command>.
      </para>
     </listitem>
@@ -614,12 +634,9 @@ repo/testing => repo</screen>
       <command>allow</command> or <command>forbid</command> commands by
       their ID or Category:
      </para>
-     <para>
-      <command>$ smt staging forbid --patch ID</command>
-     </para>
-     <para>
-      <command>$ smt staging forbid --category Categoryname</command>
-     </para>
+     <screen>smt staging forbid --patch ID
+smt staging forbid --category Categoryname
+     </screen>
     </listitem>
    </varlistentry>
    <varlistentry>
@@ -635,21 +652,12 @@ repo/testing => repo</screen>
       In order to enable signing of changed metadata, the admin needs to
       generate new signing key. This can be done with GPG like this:
      </para>
-     <para>
-      <command>$ mkdir $some-dir</command>
-     </para>
-     <para>
-      <command>$ gpg --gen-key --homedir $some-dir</command>
-     </para>
-     <para>
-      <command>$ sudo mv $some-dir /var/lib/smt/.gnupg</command>
-     </para>
-     <para>
-      <command>$ sudo chown smt.users -R /var/lib/smt/.gnupg</command>
-     </para>
-     <para>
-      <command>$ sudo chmod go-rwx -R /var/lib/smt/.gnupg</command>
-     </para>
+     <screen>mkdir $some-dir
+gpg --gen-key --homedir $some-dir
+sudo mv $some-dir /var/lib/smt/.gnupg
+sudo chown smt.users -R /var/lib/smt/.gnupg
+sudo chmod go-rwx -R /var/lib/smt/.gnupg
+     </screen>
      <para>
       Then, the ID of the newly generated key must be written into
       <filename>/etc/smt.conf</filename>, option
@@ -660,11 +668,10 @@ repo/testing => repo</screen>
       import the new key to clients during their registration, the following
       can be done:
      </para>
-     <para>
-      <command>$ sudo -u smt gpg --homedir /var/lib/smt/.gnupg --export -a
-      <replaceable>signingKeyID</replaceable> >
-      <replaceable>MirrorTo</replaceable>/repo/keys/smt-signing-key.key</command>
-     </para>
+     <screen>sudo -u smt gpg --homedir /var/lib/smt/.gnupg \
+--export -a <replaceable>signingKeyID</replaceable> \
+> <replaceable>MirrorTo</replaceable>/repo/keys/smt-signing-key.key
+     </screen>
      <para>
       In this example, <replaceable>MirrorTo</replaceable> stands for the
       base directory where repositories will be mirrored. Once done, clients
