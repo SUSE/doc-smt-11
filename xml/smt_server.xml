@@ -9,11 +9,11 @@
  <title>&smt; Server Configuration</title>
 
  <para>
-  You can use the &smt; Server Configuration module for the initial and overall
-  configuration. The &smt; Server configures mirroring
-  credentials, sets database passwords and e-mail addresses for &smt;
-  reports, sets the &smt; job schedule, and activates or deactivate the &smt;
-  service.
+  You can use the &yast; module &smt; Server Configuration for the
+  initial and overall configuration. The &smt; Server configures
+  mirroring credentials, sets database passwords and e-mail addresses
+  for &smt; reports, sets the &smt; job schedule, and activates or
+  deactivate the &smt; service.
  </para>
  <para>
 <!--
@@ -25,14 +25,15 @@
   -->
  </para>
  <para>
-  To configure &smt; with the &yast; module &smt; Server, follow these
+  To configure &smt; with &smt; Server configuration, follow these
   steps:
  </para>
  <procedure>
   <step>
    <para>
-    To start &smt; Server with text (ncurses) interface, run the
-    <command>yast smt-server</command> command as root.
+    To start &smt; Server Configuration with the text (ncurses)
+    interface, run the <command>yast smt-server</command> command as
+    &rootuser;.
    </para>
    <para>
     To start the &smt; Server with a graphical interface, open &yast;
