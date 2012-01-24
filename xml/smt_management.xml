@@ -29,8 +29,7 @@
    </listitem>
    <listitem>
     <para>
-     Open your favorite terminal application and enter <command>yast2
-     smt</command> in the command line as root.
+     Enter <command>yast2 smt</command> in the command line as &rootuser;.
     </para>
    </listitem>
   </itemizedlist>
