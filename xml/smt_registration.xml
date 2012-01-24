@@ -6,16 +6,21 @@
           %entities;
 ]>
 <chapter id="smt.registration">
- <title>Managing Client Machines With &smt;</title>
- <para> &smt; lets you register and manage client machines on &ncc;. Client machines must be
-  configured to use &smt;. For information about configuring clients to use &smt;, see <xref
-   linkend="smt.client"/>. </para>
+ <title>Managing Client Machines with &smt;</title>
+ <para>
+  &smt; lets you register and manage client machines on &ncc;. Client
+  machines must be configured to use &smt;. For information about
+  configuring clients to use &smt;, see <xref
+  linkend="smt.client"/>.
+ </para>
  <sect1 id="smt.registration.clients">
   <title>Listing Registered Clients</title>
-  <para> To list &smt;-registered client machines, use the <command>smt-list-registrations</command>
-   command. The following information is listed for each client: its <guimenu>Unique ID</guimenu>,
-    <guimenu>Hostname</guimenu>, date and time of <guimenu>Last Contact</guimenu> with the &smt;
-   server, and the Software <guimenu>Product</guimenu> the client uses. </para>
+  <para> To list &smt;-registered client machines, use the
+  <command>smt-list-registrations</command> command. The following
+  information is listed for each client: its <guimenu>Unique
+  ID</guimenu>, <guimenu>Hostname</guimenu>, date and time of
+  <guimenu>Last Contact</guimenu> with the &smt; server, and the
+  Software <guimenu>Product</guimenu> the client uses. </para>
  </sect1>
  <sect1 id="smt.registration.delete">
   <title>Deleting Registrations</title>
@@ -37,9 +42,10 @@
  </sect1>
  <sect1 id="smt.registrations.schedule">
   <title>Scheduling Periodic Registrations of Clients at &ncc;</title>
-  <para> &smt; module allows for the easy scheduling of client registrations. In the default
-   configuration, registrations are scheduled to repeat every 15 minutes. To create or modify a new
-   registration schedule, follow these steps: </para>
+  <para> &smt; module allows for the easy scheduling of client
+  registrations. In the default configuration, registrations are
+  scheduled to repeat every 15 minutes. To create or modify a new
+  registration schedule, follow these steps: </para>
   <procedure>
    <step>
     <para> Start &yast;
@@ -77,8 +83,11 @@
   </procedure>
   <para> Scheduling of &smt; jobs in general is covered in <xref linkend="smt.yast.scheduling"/>
   </para>
-  <para> &yast; uses <command>cron</command> to schedule &ncc; registrations and other &smt; jobs.
-   If you do not want to use &yast;, you can use cron directly. </para>
+  <para>
+   &yast; uses <command>cron</command> to schedule &ncc; registrations
+   and other &smt; jobs.  If you do not want to use &yast;, you can use
+   <command>cron</command> directly.
+  </para>
   <para> To disable automatic registration, change the <option>forwardRegistration</option> value in
    the <literal>[LOCAL]</literal> section of the <filename>/etc/smt.conf</filename> configuration
    file to <literal>false</literal>. </para>
