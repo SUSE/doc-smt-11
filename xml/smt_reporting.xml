@@ -11,10 +11,14 @@
   &smt; allows you to register client machines on &ncc;. Client machines
   must be configured to be able to use &smt;.
   <remark>mbowling 140709: This following sentence makes no sense to me. If it
-   is correct, please disregard this remark. however, it looks wrong from where I'm
-   sitting.</remark>
-  For information about configuring clients to be able to use &smt;,
-  &smt;lets you generate reports based on &smt; and &ncc; data. Generated
+  is correct, please disregard this remark. however, it looks wrong from where I'm
+  sitting.</remark>
+  <remark>ke 2012-01-24: I completed the sentence; not sure, whether
+  that was initially meant that way.</remark>
+
+  For information about configuring clients to be able to use &smt;, see
+  <xref linkend="smt.client"/>.
+  &smt; lets you generate reports based on &smt; and &ncc; data. Generated
   reports contain statistics of the registered machines and products used
   and of the active, expiring, or missing subscriptions. If the number of
   registered machines and products exceeds the number of available
@@ -34,7 +38,7 @@
 
   <para>
    Generated &smt; reports can be sent to a defined list of e-mail addresses
-   periodically. To create or editthis list, and to set the frequency of the
+   periodically. To create or edit this list, and to set the frequency of the
    reports, use the &yast; &smt; Configuration module. How to configure this
    list is described in <xref
     linkend="smt.yast.reports"/>.
@@ -49,7 +53,7 @@
    more information about editing the list of addresses directly, see
    <xref linkend="smt.config.smtconf.report"/>. To set the frequency of
    reports manually, you can directly edit the
-   <literal>/usr/lib/SMT/bin/smt-gen-report</literal> line(s) of the crontab
+   <filename>smt-gen-report</filename> lines of the crontab
    in <filename>/etc/cron.d/novell.com-smt</filename>. For more information
    about the crontab format, see <command>man 5 crontab</command>.
   </para>
@@ -66,7 +70,7 @@
   <title>Types of &smt; Reports</title>
 
 <!--classreport info removed as it is not a feature to be advertised-->
-
+<!-- ke 2012-02-24: this comment is to be clarified -->
   <para>
    Two types of reports can be created with the
    <command>smt-report</command> command:
@@ -74,11 +78,11 @@
 
   <variablelist>
    <varlistentry>
-    <term><option>- -classreport</option>
+    <term><option>--classreport</option>
     </term>
     <listitem>
      <para>
-      When the <option>- -classreport</option> option is used, the created
+      When the <option>--classreport</option> option is used, the created
       report summarizes the number of clients running products of various
       classes (for example, all &sle; Server* products belong to the class
       <literal>SLES</literal>).
