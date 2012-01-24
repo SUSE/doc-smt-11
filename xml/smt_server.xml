@@ -13,7 +13,7 @@
   initial and overall configuration. The &smt; Server configures
   mirroring credentials, sets database passwords and e-mail addresses
   for &smt; reports, sets the &smt; job schedule, and activates or
-  deactivate the &smt; service.
+  deactivates the &smt; service.
  </para>
  <para>
 <!--
@@ -36,8 +36,8 @@
     &rootuser;.
    </para>
    <para>
-    To start the &smt; Server with a graphical interface, open &yast;
-    Control Center and select <guimenu>SMT Configuration</guimenu> in the
+    To start the module with a graphical interface, open &yast;
+    Control Center and click <guimenu>SMT Configuration</guimenu> in the
     <guimenu>Network Services</guimenu> section.
    </para>
 
@@ -231,7 +231,7 @@
   <title>Setting &nu; Credentials with &yast;</title>
 
   <para>
-   &yast; provides a comfortable interface to set and test &nu; credentials
+   &yast; provides an interface to set and test &nu; credentials
    and the URL of the &nu; service. To do so, follow these steps:
   </para>
 
@@ -316,9 +316,9 @@
 
   <para>
    For security reasons, &smt; uses its own user in the database. &yast;
-   provides a comfortable interface for setting up or changing the &smt;
+   provides an interface for setting up or changing the &smt;
    database password. To set or change the &smt; database password with
-   &yast; follow these steps:
+   &yast;, follow these steps:
   </para>
 
   <procedure>
@@ -341,7 +341,7 @@
   <title>Setting E-mail Addresses to Receive Reports with &yast;</title>
 
   <para>
-   &yast; &smt;provides a comfortable interface for setting up a list of
+   &yast; &smt; provides an interface for setting up a list of
    e-mail addresses to which &smt; reports will be sent. To edit this list
    of addresses, follow these steps:
   </para>
@@ -377,9 +377,10 @@
   <title>Setting the &smt; Job Schedule with &yast;</title>
 
   <para>
-   The  &smt; Server Configuration module provides a comfortable interface to schedule periodical
-   &smt; jobs. &yast; uses <literal>cron</literal> to schedule configured
-   jobs. If needed, <literal>cron</literal> can be used directly. Five types of periodical jobs can be set:
+   The &smt; Server Configuration module provides an interface to
+   schedule periodical &smt; jobs. &yast; uses <literal>cron</literal>
+   to schedule configured jobs. If needed, <literal>cron</literal> can
+   be used directly. Five types of periodical jobs can be set:
   </para>
 
   <variablelist>
@@ -420,7 +421,9 @@
    <varlistentry>
     <term>Uploads Spport Configs</term>
     <listitem>
-     <para>Uploads support configs, only when the &smt; -Support package is installed.
+     <!-- FIXME: checkit for SP2 -->
+     <para>Uploads support configs, only when the &smt;-support package
+     is installed.
      </para>
     </listitem>
     </varlistentry>
