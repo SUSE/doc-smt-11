@@ -238,7 +238,7 @@
    Therefore, it is advisable to keep the time on the server and clients
    synchronized. You can easily synchronize time using NTP (network time
    protocol). Use <command>yast2 ntp-client</command> to configure an NTP
-   client. You will find detailed information about NTP in &admin;.
+   client. Find detailed information about NTP in the &admin;.
   </para>
  </sect2>
 </sect1>
