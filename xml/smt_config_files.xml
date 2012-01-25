@@ -302,6 +302,20 @@
        configured in <filename>/etc/syconfig/proxy</filename> are used. You
        can configure the global proxy settings with the &yast; Proxy module.
       </para>
+
+      <tip>
+       <!-- bnc#726126 -->
+       <title>Global User Authentication Setting</title>
+       <para>
+        If you configure the global proxy settings with &yast;, manually
+        copy <filename>/root/.curlrc</filename> to the home directory of
+        the <systemitem class="username">smt</systemitem> and adjust the
+        premissions with the following commands as &rootuser;:
+       </para>
+       <screen>cp /root/.curlrc /var/lib/smt/
+chown smt:www /var/lib/smt/.curlrc</screen>
+      </tip>
+
       <para>
        Neither the <option>ProxyUser</option> value nor the global proxy
        authentication settings apply to the
