@@ -248,19 +248,18 @@ tux:~ # smt-repos -o
       <replaceable>target</replaceable></command>.
      </para>
      <para>
-      If you want to enable all repositories belonging to a certain product,
-      use the <option>--enable-by-prod</option> or <option>-p</option>
-      option followed by the name of the product and, optionally, its
-      version, architecture, and release: <!-- FIXME: are spaces allowed? -->
-      <command>smt-repos -p
-      <replaceable>product</replaceable>[,
-      <replaceable>version</replaceable>[,
-      <replaceable>architecture</replaceable>[,
-      <replaceable>release</replaceable>]]]</command>. For example, to
-      enable all repositories belonging to &sls; 10 SP3 for PowerPC
-      architecture, use the <command>smt-repos -p
-      SUSE-Linux-Enterprise-Server-SP3,10,ppc</command> command. The list of
-      known products can be obtained with the
+      If you want to enable all repositories belonging to a certain
+      product, use the <option>--enable-by-prod</option> or
+      <option>-p</option> option followed by the name of the product
+      and, optionally, its version, architecture, and release:
+     </para>
+     <!-- ke 2012-01-25: no spaces! -->
+     <screen>smt-repos -p <replaceable>product</replaceable>[,<replaceable>version</replaceable>[,<replaceable>architecture</replaceable>[,<replaceable>release</replaceable>]]]</screen>
+     <para>
+      For example, to enable all repositories belonging to &sls; 10 SP3
+      for PowerPC architecture, use the <command>smt-repos -p
+      SUSE-Linux-Enterprise-Server-SP3,10,ppc</command> command. The
+      list of known products can be obtained with the
       <command>smt-list-products</command> command.
      </para>
     </step>
@@ -441,7 +440,7 @@ tux:~ # smt-repos -o
    </listitem>
    <listitem>
     <para><filename>/srv/www/htdocs/repo/testing</filename> to
-    <filename><replaceable>/MirrorTo</replaceable>/repo/full/</filename>
+    <filename><replaceable>/MirrorTo</replaceable>/repo/testing/</filename>
     and</para>
    </listitem>
    <listitem>
@@ -473,7 +472,7 @@ lrwxrwxrwx 1 root root    26 2008-01-11 15:37 RPMMD -> /space/MIRRORDATA/repo/RP
    The links can be created using the <command>ln -s</command> commands. For
    example:
   </para>
-  <screen>ln -s '<replaceable>/MirrorTo</replaceable>/repo/$RCE/' '/srv/www/htdocs/repo/$RCE'</screen>
+  <screen>ln -s '<replaceable>/MirrorTo</replaceable>/repo/$RCE' '/srv/www/htdocs/repo/$RCE'</screen>
 
   <note>
    <title>The <filename>/srv/www/htdocs/repo</filename> Directory</title>
@@ -511,7 +510,7 @@ lrwxrwxrwx 1 root root    26 2008-01-11 15:37 RPMMD -> /space/MIRRORDATA/repo/RP
    setting:
   </para>
 
-<screen>register = command=namespace=testing</screen>
+<screen>register = command=register&amp;namespace=testing</screen>
 
   <para>
    To move the testing environment to the production environment, manually
@@ -528,12 +527,12 @@ lrwxrwxrwx 1 root root    26 2008-01-11 15:37 RPMMD -> /space/MIRRORDATA/repo/RP
   </para>
 
   <para>
-   If you have a SLE11-based Update repository with patches, &smt; tools can
-   help you with the management. With these tools you can select patches and
-   create a snapshot and copy it into <filename>repo/testing/</filename>.
-   After tests are finished you can copy the contents of
-   <filename>repo/testing</filename> into the <filename>production area
-   /repo</filename>.
+   If you have a SLE11-based Update repository with patches, &smt; tools
+   can help you with the management. With these tools you can select
+   patches and create a snapshot and copy it into
+   <filename>repo/testing/</filename>.  After tests are finished you can
+   copy the contents of <filename>repo/testing</filename> into the
+   production area <filename>/repo</filename>.
   </para>
 
   <para>
@@ -687,9 +686,7 @@ sudo chmod go-rwx -R /var/lib/smt/.gnupg
       <filename>/etc/suseRegister.conf</filename> on the client machine by
       setting:
      </para>
-     <para>
-      <filename>register = command=namespace=testing</filename>
-     </para>
+     <screen>register = command=register&amp;namespace=testing</screen>
     </listitem>
    </varlistentry>
   </variablelist>
