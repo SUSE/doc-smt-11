@@ -8,9 +8,9 @@
 <chapter id="smt.client">
  <title>Configuring Clients to Use &smt;</title>
  <para>
-  Any machine running &sle; 10 SP2 or later can be configured to register
-  against &smt; and download software updates from there, instead of
-  communicating directly with the &ncc; and the &nu; servers.
+  Any machine running &sle; 10 SP4 or 11 SP1 or later can be configured
+  to register against &smt; and download software updates from there,
+  instead of communicating directly with the &ncc; and the &nu; servers.
  </para>
  <para>
   If your network includes an &smt; server to provide a local update source,
@@ -22,7 +22,7 @@
   <literal>http://<replaceable>FQDN</replaceable>/smt.crt</literal> . In
   this case you do not have to manually set the certificate: The
   registration process will automatically download the CA certificate from
-  there, unless configured otherwise. You have to enter a path to the
+  there, unless configured otherwise. You must enter a path to the
   server's CA certificate if the certificate was issued by an external
   certificate authority.
  </para>
@@ -170,10 +170,11 @@
   <title>Configuring Clients with &ay; Profile</title>
 
   <para>
-   Clients can be configured to register with &smt; server via &ay; profile.
-   For general information about creating &ay; profiles and preparing
-   automatic installation, refer to the &admin;. In this section, only &smt;
-   specific configuration is described.
+   Clients can be configured to register with &smt; server via &ay;
+   profile.  For general information about creating &ay; profiles and
+   preparing automatic installation, refer to the <emphasis>&ay;
+   Guide</emphasis>. In this section, only &smt; specific configuration
+   is described.
   </para>
 
   <para>
@@ -287,16 +288,19 @@
     <para>
      As &rootuser;, execute the script on the client machine. The script can
      be executed in two ways. In the first case, the script name is followed
-     by the registration URL: <command>./clientSetup4SMT.sh
-     <replaceable>registration_URL</replaceable></command> For example,
-     <command>./clientSetup4SMT.sh
-     https://smt.&exampledomain;/center/regsvc</command>. In the second
-     case, the script uses the <option>--host</option> option
-     followed by hostname of the &smt; server, and the <option>--regcert</option> followed by the URL of the SSL certificate: <command>./clientSetup4SMT.sh
-      --host <replaceable>server_hostname</replaceable> --regcert <replaceable>http://server_hostname/certs/smt.crt</replaceable></command>. For
-     example, <command>./clientSetup4SMT.sh --host
-      smt.&exampledomain; --regcert http://smt.&exampledomain;/certs/smt.crt.</command>
+     by the registration URL; for example:
     </para>
+     <screen>./clientSetup4SMT.sh https://smt.&exampledomain;/center/regsvc</screen>
+     <para>
+      In the second case, the script uses the <option>--host</option>
+      option followed by hostname of the &smt; server, and the
+      <option>--regcert</option> followed by the URL of the SSL
+      certificate; for
+      example:
+     </para>
+     <screen>./clientSetup4SMT.sh --host smt.&exampledomain; \
+      --regcert http://smt.&exampledomain;/certs/smt.crt</screen>
+
    </step>
    <step>
     <para>
@@ -335,7 +339,7 @@
   </para>
 
   <para>
-   <literal>$> wget http://FQDN/repo/tools/clientSetup4SMT.sh</literal>
+   <literal>wget http://FQDN/repo/tools/clientSetup4SMT.sh</literal>
   </para>
 
   <sect2>
@@ -354,11 +358,10 @@
     <literal>apache2-example-pages</literal> package.
    </para>
    <para>
-    If you choose to edit the <filename>robots.txt</filename> file, open it
-    in your favorite text editor and add the <literal>Allow:
-    /repo/keys</literal> line before the <literal>Disallow: /</literal>
-    line. Then save the changes and quit the editor.
+    If you choose to edit the <filename>robots.txt</filename> file, and
+    before the <literal>Disallow: /</literal> add:
    </para>
+   <screen>Allow: /repo/keys</screen>
   </sect2>
  </sect1>
  <sect1>
@@ -389,7 +392,7 @@
   <para>
    SMT 11 enables customers that possess the required entitlements to mirror
    updates for Red Hat Enterprise Linux (RHEL). Refer to
-   <ulink url="http://www.novell.com/products/server/expandedsupport/offering_summary.html"/>
+   <ulink url="http://www.suse.com/products/expandedsupport/"/>
    for details on &sls; Subscription with Expanded Support. This section
    discusses the actions required to configure the SMT server and clients
    (RHEL servers) for this solution.
@@ -425,20 +428,20 @@
       Verify that the mirror credentials have access to download updates for
       the Red Hat products with
      </para>
-<screen># smt-repos -m | grep RES</screen>
+<screen>smt-repos -m | grep RES</screen>
     </step>
     <step>
      <para>
       Enable mirroring of the RHEL update catalog(s) for the desired
-      architecture(s)
+      architecture(s):
      </para>
-<screen># smt-repos -e <replaceable>repo-name</replaceable> <replaceable>architecture</replaceable></screen>
+<screen>smt-repos -e <replaceable>repo-name</replaceable> <replaceable>architecture</replaceable></screen>
     </step>
     <step>
      <para>
       Mirror the updates and log verbose output:
      </para>
-<screen># smt-mirror -d -L /var/log/smt/smt-mirror.log</screen>
+<screen>smt-mirror -d -L /var/log/smt/smt-mirror.log</screen>
      <para>
       The updates for RHEL will also be mirrored automatically as part of
       the default nightly SMT mirroring cron job. When the mirror process of
@@ -460,7 +463,7 @@
         Install the <literal>res-signingkeys</literal> package with the
         command
        </para>
-<screen># zypper in -y res-signingkeys</screen>
+<screen>zypper in -y res-signingkeys</screen>
       </listitem>
       <listitem>
        <para>
@@ -487,12 +490,12 @@
       Import the repository signing key downloaded above into the local RPM
       database with
      </para>
-<screen># rpm --import http://<replaceable>smt-server.domain.top</replaceable>/repo/keys/res-signingkeys.key</screen>
+<screen>rpm --import http://<replaceable>smt-server.domain.top</replaceable>/repo/keys/res-signingkeys.key</screen>
     </step>
     <step>
      <para>
       Create a file in <filename>/etc/yum.repos.d/</filename> and name it
-      <literal>RES5.repo</literal>
+      <literal>RES5.repo</literal>.
      </para>
     </step>
     <step>
@@ -500,20 +503,19 @@
       Edit the file and enter the repository data, and point to the catalog
       on the SMT server as follows:
      </para>
-<screen>
-[smt]
+<screen>[smt]
 name=SMT repository
 baseurl=http://<replaceable>smt-server.domain.top</replaceable>/repo/$RCE/<replaceable>catalog-name</replaceable>/<replaceable>architecture</replaceable>/
 enabled=1
 gpgcheck=1</screen>
      <para>
-      Example of base URL :
-      <literal>http://smt.mycompany.com/repo/$RCE/RES5/i386/</literal>
+      Example of base URL:
      </para>
+      <screen>http://smt.mycompany.com/repo/$RCE/RES5/i386/</screen>
     </step>
     <step>
      <para>
-      Save the file
+      Save the file.
      </para>
     </step>
     <step>
@@ -542,7 +544,7 @@ gpgcheck=1</screen>
       Import the repository signing key downloaded above into the local RPM
       database with
      </para>
-<screen># rpm --import http://<replaceable>smt-server.domain.top</replaceable>/repo/keys/res-signingkeys.key</screen>
+<screen>rpm --import http://<replaceable>smt-server.domain.top</replaceable>/repo/keys/res-signingkeys.key</screen>
     </step>
     <step>
      <para>
@@ -595,7 +597,7 @@ gpgcheck=1</screen>
      <para>
       Install the suseRegisterRES package.
      </para>
-<screen># yum install suseRegisterRES</screen>
+<screen>yum install suseRegisterRES</screen>
      <note>
       <title>Additional Packages</title>
       <para>
@@ -609,8 +611,8 @@ gpgcheck=1</screen>
      <para>
       Copy the SMT certificate to the system:
      </para>
-<screen># wget http://<replaceable>smt-server.domain.top</replaceable>/smt.crt</screen>
-<screen># cat smt.crt >> /etc/pki/tls/cert.pem</screen>
+<screen>wget http://<replaceable>smt-server.domain.top</replaceable>/smt.crt</screen>
+<screen>cat smt.crt >> /etc/pki/tls/cert.pem</screen>
     </step>
     <step>
      <para>
@@ -623,7 +625,7 @@ gpgcheck=1</screen>
      <para>
       Register the system:
      </para>
-<screen># suse_register</screen>
+<screen>suse_register</screen>
     </step>
    </procedure>
   </sect2>
@@ -635,9 +637,9 @@ gpgcheck=1</screen>
      <para>
       Install the <literal>suseRegisterRES</literal> package:
      </para>
-<screen># up2date --get suseRegisterRES</screen>
-<screen># up2date --get perl-XML-Writer</screen>
-<screen># rpm -ivh /var/spool/up2date/suseRegisterRES*.rpm /var/spool/up2date/perl-XML-Writer-0*.rpm</screen>
+<screen>up2date --get suseRegisterRES
+up2date --get perl-XML-Writer
+rpm -ivh /var/spool/up2date/suseRegisterRES*.rpm /var/spool/up2date/perl-XML-Writer-0*.rpm</screen>
      <note>
       <title>Additional Packages</title>
       <para>
@@ -651,8 +653,8 @@ gpgcheck=1</screen>
      <para>
       Copy the SMT certificate to the system:
      </para>
-<screen># wget http://<replaceable>smt-server.domain.top</replaceable>/smt.crt</screen>
-<screen># cat smt.crt >> /usr/share/ssl/cert.pem</screen>
+<screen>wget http://<replaceable>smt-server.domain.top</replaceable>/smt.crt</screen>
+<screen>cat smt.crt >> /usr/share/ssl/cert.pem</screen>
     </step>
     <step>
      <para>
@@ -665,7 +667,7 @@ gpgcheck=1</screen>
      <para>
       Register the system:
      </para>
-<screen># suse_register</screen>
+<screen>suse_register</screen>
     </step>
    </procedure>
   </sect2>
