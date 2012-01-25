@@ -654,7 +654,7 @@ smt staging forbid --category Categoryname
      <screen>mkdir $some-dir
 gpg --gen-key --homedir $some-dir
 sudo mv $some-dir /var/lib/smt/.gnupg
-sudo chown smt.users -R /var/lib/smt/.gnupg
+sudo chown smt:users -R /var/lib/smt/.gnupg
 sudo chmod go-rwx -R /var/lib/smt/.gnupg
      </screen>
      <para>
