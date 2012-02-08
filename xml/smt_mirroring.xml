@@ -103,10 +103,10 @@
   <para>
    This section describes tools and procedures for viewing information about
    software repositories available through &smt;, configuring these
-   repositories and setting new custom repositories on the command line. For
-   details on the &smt; Management module, see
+   repositories and setting up custom repositories on the command line. For
+   details on the &yast; &smt; Management module, see
    <xref
-    linkend="smt.management"/>
+    linkend="smt.management"/>.
   </para>
 
   <sect2>
