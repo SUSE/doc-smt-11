@@ -142,9 +142,9 @@
   <para>
    During the installation of &smt; the two-step <guimenu>&smt;
    Configuration Wizard</guimenu> is launched, regardless of the used
-   installation method. Configure &smt; using this wizard. You will
-   be able to change the configuration later using the &yast; &smt;
-   Configuration module.
+   installation method. Configure &smt; using this wizard. You are able
+   to change the configuration later using the &yast; &smt; Server
+   Configuration module&mdash; see <xref linkend="smt.server"/>.
   </para>
 
   <procedure>
@@ -160,13 +160,13 @@
      computers.
     </para>
     <para>
-     Enter your &ncc; mirroring credentials in <guimenu>NU User</guimenu>
-     and <guimenu>NU Password</guimenu>. NU stands for Novell Update. If you
-     do not know your &ncc; credentials, refer to
-     <xref linkend="smt.mirroring.getcredentials"/>. Test the entered
-     credentials by pressing the <guimenu>Test</guimenu> button. &smt; will
-     connect to the Customer Center server using the provided credentials
-     and download some testing data.
+     Enter your &ncc; mirroring credentials in <guimenu>User</guimenu>
+     and <guimenu>Password</guimenu>.  If you do not know your &ncc;
+     credentials, refer to <xref
+     linkend="smt.mirroring.getcredentials"/>. Test the entered
+     credentials by pressing the <guimenu>Test</guimenu> button. &smt;
+     will connect to the Customer Center server using the provided
+     credentials and download some testing data.
     </para>
     <para>
      Enter the e-mail address you have used for the &ncc; registration into
@@ -183,10 +183,10 @@
    </step>
    <step>
     <para>
-     For security reasons, enter <literal>smt</literal> as username in
-     the database and select an &smt; <guimenu>Database
-     Password</guimenu> in the respective fields. The password must be
-     entered.
+     For security reasons, &smt; requires a separate user to connect to
+     the database.  With <guimenu>Database Password for smt
+     User</guimenu> set the database password for that user.  Confirm it
+     in the following field.
     </para>
     <para>
      Enter all e-mail addresses that &smt; should send reports to using the
