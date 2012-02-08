@@ -25,7 +25,7 @@
   -->
  </para>
  <para>
-  To configure &smt; with &smt; Server configuration, follow these
+  To configure &smt; with &smt; Server Configuration, follow these
   steps:
  </para>
  <procedure>
@@ -37,7 +37,7 @@
    </para>
    <para>
     To start the module with a graphical interface, open &yast;
-    Control Center and click <guimenu>SMT Configuration</guimenu> in the
+    Control Center and click <guimenu>SMT Server Configuration</guimenu> in the
     <guimenu>Network Services</guimenu> section.
    </para>
 
@@ -80,14 +80,15 @@
    </para>
   </step>
   <step>
+   <!-- at least in my yast (sles 11 sp2), this button is called "OK". -->
    <para>
-    If satisfied with the configuration, click <guimenu>Finish</guimenu>.
+    If satisfied with the configuration, click <guimenu>OK</guimenu>.
     &yast; adjusts the &smt; configuration and starts or restarts necessary
     services.
    </para>
    <para>
     If you want to abort the configuration and cancel any changes, click
-    <guimenu>Abort</guimenu>.
+    <guimenu>Cancel</guimenu>.
    </para>
    <note>
     <para>
@@ -169,7 +170,6 @@
   <itemizedlist>
    <listitem>
     <para>
-<!--FIXME check still valid???-->
      The Apache configuration is changed by creating symbolic links in the
      <filename>/etc/apache2/conf.d/</filename> directory. Links to the
      <filename>/etc/smt.d/nu_server.conf</filename> and
@@ -184,9 +184,9 @@
    </listitem>
    <listitem>
     <para>
-     The MySQL server is started (or reloaded if already running). If it
-     does not exist, smt user and all necessary tables in the database are
-     created.
+     The MySQL server is started (or reloaded if already running). The
+     smt user and all necessary tables in the database are created as
+     needed.
     </para>
    </listitem>
    <listitem>
