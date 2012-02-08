@@ -40,17 +40,17 @@
    <step>
     <para>
      In the next dialog, click <guimenu>Add</guimenu> and, if you are
-     installing &smt; from a CD medium, select <guimenu>CD</guimenu> as
-     the repository type. If you are installing from a different source,
-     such as NFS or HTTP, choose the appropriate repository type. Then
-     click <guimenu>Next</guimenu>.
+     installing &smt; from a local ISO image, select <guimenu>Local ISO
+     Image</guimenu> as the media type (repository).  If you are
+     installing from a different source, such as CD, NFS, or HTTP,
+     choose the appropriate type. Then click <guimenu>Next</guimenu>.
     </para>
    </step>
    <step>
     <para>
      If you are installing from a CD, insert the &smt; add-on product CD. If
      you are installing from a different source, provide the necessary
-     repository information. Then click <guimenu>Continue</guimenu>.
+     repository information.
     </para>
    </step>
    <step>
@@ -96,9 +96,10 @@
    </step>
    <step>
     <para>
-     If you are installing &smt; from a CD, select <guimenu>CD</guimenu> as
-     the repository type. If you are installing from a different source, such as
-     NFS or HTTP, choose the appropriate repository type. Then click
+     If you are installing &smt; from a local ISO image, select
+     <guimenu>Local ISO Image</guimenu> as the media type (repository).
+     If you are installing from a different source, such as CD, NFS, or
+     HTTP, choose the appropriate type. Then click
      <guimenu>Next</guimenu>.
     </para>
    </step>
@@ -106,7 +107,7 @@
     <para>
      If you are installing from a CD, insert the &smt; add-on product CD. If
      you are installing from a different source, provide the necessary
-     source. Click <guimenu>Continue</guimenu>.
+     repository information.
     </para>
    </step>
    <step>
@@ -118,6 +119,12 @@
     <para>
      Click <guimenu>Accept</guimenu> to install the <guimenu>&smt;:
      Subscription Management Tool for SLE</guimenu> pattern.
+    </para>
+    <para>
+     Depending on the scope of already installed packages, the software
+     manager will add more packages to resolve all dependencies.
+     Confirm these <guimenu>Automatic Changes</guimenu> to perform the
+     installation.
     </para>
    </step>
    <step>
