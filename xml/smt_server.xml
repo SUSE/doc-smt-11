@@ -240,10 +240,10 @@
    <title>Setting &nu; Credentials with &yast;</title>
    <mediaobject>
     <imageobject role="html">
-     <imagedata fileref="smt-yast-credentials.png" width="95%" format="PNG"/>
+     <imagedata fileref="smt-yast-credentials.png" width="90%" format="PNG"/>
     </imageobject>
     <imageobject role="fo">
-     <imagedata fileref="smt-yast-credentials.png" width="95%" format="PNG"/>
+     <imagedata fileref="smt-yast-credentials.png" width="90%" format="PNG"/>
     </imageobject>
    </mediaobject>
   </figure>
@@ -288,10 +288,10 @@
      <title>Succesful Test of &nu; Credentials</title>
      <mediaobject>
       <imageobject role="html">
-       <imagedata fileref="smt-yast-credtest.png" width="95%" format="PNG"/>
+       <imagedata fileref="smt-yast-credtest.png" width="65%" format="PNG"/>
       </imageobject>
       <imageobject role="fo">
-       <imagedata fileref="smt-yast-credtest.png" width="95%" format="PNG"/>
+       <imagedata fileref="smt-yast-credtest.png" width="65%" format="PNG"/>
       </imageobject>
      </mediaobject>
     </figure>
@@ -436,17 +436,17 @@
     </varlistentry>
   </variablelist>
 
-  <figure id="fig.yast.schedule">
-   <title>Setting SMT Job Schedule with &yast;</title>
-   <mediaobject>
-    <imageobject role="html">
-     <imagedata fileref="smt-yast-schedule.png" width="95%" format="PNG"/>
-    </imageobject>
-    <imageobject role="fo">
-     <imagedata fileref="smt-yast-schedule.png" width="95%" format="PNG"/>
-    </imageobject>
-   </mediaobject>
-  </figure>
+    <figure id="fig.yast.jobconf">
+     <title>&smt; Job Schedule Configuration</title>
+     <mediaobject>
+      <imageobject role="html">
+       <imagedata fileref="smt-yast-jobs-conf.png" width="80%" format="PNG"/>
+      </imageobject>
+      <imageobject role="fo">
+       <imagedata fileref="smt-yast-jobs-conf.png" width="80%" format="PNG"/>
+      </imageobject>
+     </mediaobject>
+    </figure>
 
   <para>
    To configure the schedule of &smt; jobs with &yast;, follow these steps:
@@ -497,6 +497,17 @@
      <guimenu>Edit</guimenu>. Then change the desired parameters and click
      <guimenu>OK</guimenu>.
     </para>
+  <informalfigure><!--id="fig.yast.schedule"-->
+<!--   <title>Setting SMT Job Schedule with &yast;</title> -->
+   <mediaobject>
+    <imageobject role="html">
+     <imagedata fileref="smt-yast-schedule.png" width="65%" format="PNG"/>
+    </imageobject>
+    <imageobject role="fo">
+     <imagedata fileref="smt-yast-schedule.png" width="65%" format="PNG"/>
+    </imageobject>
+   </mediaobject>
+  </informalfigure>
    </step>
    <step>
     <para>
