@@ -648,9 +648,10 @@ smt-staging forbid --category <replaceable>Categoryname</replaceable>
     <listitem>
      <para>
       If you filter one or more patches from a repository,the original
-      signature becomes invalid. The repository needs to be signed again.
-      The <command>smt creeaterepo</command> command takes care of that
-      automatically if you configure the &smt; server.
+      signature becomes invalid. The repository needs to be signed
+      again.  The <command>smt-staging creeaterepo</command> command
+      takes care of that automatically if you configure the &smt;
+      server.
      </para>
      <para>
       In order to enable signing of changed metadata, the admin needs to
