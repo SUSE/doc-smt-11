@@ -501,10 +501,10 @@
 <!--   <title>Setting SMT Job Schedule with &yast;</title> -->
    <mediaobject>
     <imageobject role="html">
-     <imagedata fileref="smt-yast-schedule.png" width="65%" format="PNG"/>
+     <imagedata fileref="smt-yast-schedule.png" width="60%" format="PNG"/>
     </imageobject>
     <imageobject role="fo">
-     <imagedata fileref="smt-yast-schedule.png" width="65%" format="PNG"/>
+     <imagedata fileref="smt-yast-schedule.png" width="60%" format="PNG"/>
     </imageobject>
    </mediaobject>
   </informalfigure>
