@@ -251,10 +251,11 @@
    <step>
     <para>
      Open the <guimenu>Customer Center Access</guimenu> tab of the &smt;
-     Server . If the credentials have been already set with &yast; or the
-     <filename>/etc/smt.conf</filename> configuration file, they appear in
-     the dialog. Otherwise, the <guimenu>NU User</guimenu> and <guimenu>NU
-     Password</guimenu> fields are blank.
+     Server Configuration (NU Configuration). If the credentials have
+     been already set with &yast; or the
+     <filename>/etc/smt.conf</filename> configuration file, they appear
+     in the dialog. Otherwise, the <guimenu>User</guimenu> and
+     <guimenu>Password</guimenu> fields are blank.
     </para>
    </step>
    <step>
@@ -267,8 +268,8 @@
    
    <step>
     <para>
-     Enter your &nu; username in <guimenu>NU User</guimenu> and the
-     corresponding password in <guimenu>NU Password</guimenu>.
+     Enter your &nu; username in <guimenu>User</guimenu> and the
+     corresponding password in <guimenu>Password</guimenu>.
     </para>
    </step>
    <step>
@@ -306,7 +307,7 @@
    </step>
    <step>
     <para>
-     Press <guimenu>Finish</guimenu> or continue with other configurations.
+     Press <guimenu>OK</guimenu> or continue with other configurations.
     </para>
    </step>
   </procedure>
@@ -325,14 +326,14 @@
    <step>
     <para>
      Open the <guimenu>Database and Reporting</guimenu> tab of the &smt;
-     Server module.
+     Server Configuration module.
     </para>
    </step>
    <step>
     <para>
-     Enter the &smt; <guimenu>Database Password for &smt;User</guimenu>.
+     Enter the &smt; <guimenu>Database Password for &smt; User</guimenu>.
      Confirm the password by reentering it and press
-     <guimenu>Finish</guimenu>, or continue with other configurations.
+     <guimenu>OK</guimenu>, or continue with other configurations.
     </para>
    </step>
   </procedure>
@@ -350,7 +351,7 @@
    <step>
     <para>
      Open the <guimenu>Database and Reporting</guimenu> tab of the &smt;
-     Server .
+     Server Configuration.
     </para>
    </step>
    <step>
@@ -362,7 +363,7 @@
    </step>
    <step>
     <para>
-     Press <guimenu>Finish</guimenu> or continue with other configurations.
+     Press <guimenu>OK</guimenu> or continue with other configurations.
     </para>
    </step>
   </procedure>
@@ -412,18 +413,23 @@
     </listitem>
    </varlistentry>
    <varlistentry>
-    <term>Job Que Cleanup</term>
+    <term>Job Queue Cleanup</term>
     <listitem>
-     <para>Cleans up queued jobs.<!-- 2009-11-16 toba: FIXME  #525978 -->
+     <para>Cleans up queued jobs.<!-- 2009-11-16 toba: see #525978
+2012-02-09 ke: I added more info from the provided bug. -->
+     It will remove finished or failed jobs from the job queue that are
+     older than 8 days and remove job artifacts that remained in the
+     database as result of an error.
      </para>
     </listitem>
    </varlistentry>
    <varlistentry>
-    <term>Uploads Spport Configs</term>
+    <term>Uploads Support Configs</term>
     <listitem>
-     <!-- FIXME: checkit for SP2 -->
      <para>Uploads support configs, only when the &smt;-support package
-     is installed.
+     is installed and manually added.  To add it, click
+     <guimenu>Add</guimenu>, then select <guimenu>Uploads Support
+     Configs</guimenu> from the <guimenu>Job to Run</guimenu> list.
      </para>
     </listitem>
     </varlistentry>
@@ -449,7 +455,7 @@
    <step>
     <para>
      Open the <guimenu>Scheduled SMT Jobs</guimenu> tab of the &smt; Server
-     . The table contains a list of all scheduled jobs, their type,
+     Configuration. The table contains a list of all scheduled jobs, their type,
      frequency, date, and time to run. You can add, delete or edit these
      scheduled events.
     </para>
@@ -462,7 +468,9 @@
     <para>
      Choose the synchronization job to schedule. You can choose between
      <guimenu>Synchronization of Updates</guimenu>, <guimenu>Report
-      Generation</guimenu>, <guimenu>NCC Registration</guimenu>, <guimenu>Job Queue Cleanup</guimenu>, and <guimenu>Uploading Support Configs</guimenu>.
+     Generation</guimenu>, <guimenu>NCC Registration</guimenu>,
+     <guimenu>Job Queue Cleanup</guimenu>, and <guimenu>Uploading
+     Support Configs</guimenu>.
     </para>
     <para>
      Choose the <guimenu>Frequency</guimenu> of the new scheduled &smt; job.
@@ -497,8 +505,8 @@
    </step>
    <step>
     <para>
-     Press <guimenu>Finish</guimenu> to apply the settings and quit the
-     &smt; Server, or continue with other configurations.
+     Press <guimenu>OK</guimenu> to apply the settings and quit the
+     &smt; Server Configuration, or continue with other configurations.
     </para>
    </step>
   </procedure>
