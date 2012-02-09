@@ -274,7 +274,7 @@
    </step>
    <step>
     <para>
-     Press <guimenu>Test</guimenu> to check the credentials. &yast; will try
+     Click <guimenu>Test</guimenu> to check the credentials. &yast; will try
      to download a list of available repositories with the provided
 <!--URL and-->
      credentials. If the test succeeds, the last line of the test results
@@ -307,7 +307,7 @@
    </step>
    <step>
     <para>
-     Press <guimenu>OK</guimenu> or continue with other configurations.
+     Click <guimenu>OK</guimenu> or continue with other configurations.
     </para>
    </step>
   </procedure>
@@ -332,7 +332,7 @@
    <step>
     <para>
      Enter the &smt; <guimenu>Database Password for &smt; User</guimenu>.
-     Confirm the password by reentering it and press
+     Confirm the password by reentering it and click
      <guimenu>OK</guimenu>, or continue with other configurations.
     </para>
    </step>
@@ -363,7 +363,7 @@
    </step>
    <step>
     <para>
-     Press <guimenu>OK</guimenu> or continue with other configurations.
+     Click <guimenu>OK</guimenu> or continue with other configurations.
     </para>
    </step>
   </procedure>
@@ -462,7 +462,7 @@
    </step>
    <step>
     <para>
-     If you want to add a scheduled &smt; job, press <guimenu>Add</guimenu>.
+     If you want to add a scheduled &smt; job, click <guimenu>Add</guimenu>.
      The <guimenu>Adding New SMT Scheduled Job</guimenu> dialog opens.
     </para>
     <para>
@@ -486,26 +486,26 @@
      <guimenu>Day of the Month</guimenu>.
     </para>
     <para>
-     Press <guimenu>Add</guimenu>.
+     click <guimenu>Add</guimenu>.
     </para>
    </step>
    <step>
     <para>
      If you want to edit a scheduled &smt; job (for example, change its
-     frequency, time, or date), select the job in the table and press
-     <guimenu>Edit</guimenu>. Then change the desired parameters and press
+     frequency, time, or date), select the job in the table and click
+     <guimenu>Edit</guimenu>. Then change the desired parameters and click
      <guimenu>OK</guimenu>.
     </para>
    </step>
    <step>
     <para>
      If you want to cancel a scheduled job and delete it from the table,
-     select the job in the table and press <guimenu>Delete</guimenu>.
+     select the job in the table and click <guimenu>Delete</guimenu>.
     </para>
    </step>
    <step>
     <para>
-     Press <guimenu>OK</guimenu> to apply the settings and quit the
+     Click <guimenu>OK</guimenu> to apply the settings and quit the
      &smt; Server Configuration, or continue with other configurations.
     </para>
    </step>
