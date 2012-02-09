@@ -104,7 +104,7 @@
    This section describes tools and procedures for viewing information about
    software repositories available through &smt;, configuring these
    repositories and setting up custom repositories on the command line. For
-   details on the &yast; &smt; Management module, see
+   details on the &yast; &smt; Server Management module, see
    <xref
     linkend="smt.management"/>.
   </para>
@@ -149,7 +149,7 @@
     The fact that a repository can be mirrored does not mean that it has to
     be mirrored. Only repositories with the <literal>DOMIRROR</literal> flag
     set in the &smt; database will be mirrored. For more information about
-    settings, which repositories should be mirrored,
+    setting up, which repositories should be mirrored,
     see <xref
      linkend="smt.mirroring.manage.domirror"/>.
    </para>
@@ -455,29 +455,33 @@ tux:~ # smt-repos -o
 
   <para>
    For example, if the <option>MirrorTo</option> is set to
-   <literal>/space/MIRRORDATA/</literal>:
+   <literal>/mirror/data</literal>:
   </para>
 
 <screen>
 l /srv/www/htdocs/repo/
 total 16
-drwxr-xr-x 2 root root   128 2008-01-18 14:00 ./
-drwxr-xr-x 4 root root   128 2008-01-17 17:14 ../
-lrwxrwxrwx 1 root root    27 2008-01-11 15:17 $RCE -> /space/MIRRORDATA/repo/$RCE/
--rw-r--r-- 1 root root 14854 2008-01-21 12:36 repoindex.xml
-lrwxrwxrwx 1 root root    26 2008-01-11 15:37 RPMMD -> /space/MIRRORDATA/repo/RPMMD/
+lrwxrwxrwx 1 root root   22 Feb  9 14:23 $RCE -> /mirror/data/repo/$RCE/
+drwxr-xr-x 4 smt  www  4096 Feb  9 14:23 ./
+drwxr-xr-x 4 root root 4096 Feb  8 15:44 ../
+lrwxrwxrwx 1 root root   23 Feb  9 14:23 RPMMD -> /mirror/data/repo/RPMMD/
+lrwxrwxrwx 1 root root   22 Feb  9 14:23 full -> /mirror/data/repo/full/
+drwxr-xr-x 2 smt  www  4096 Feb  8 11:12 keys/
+lrwxrwxrwx 1 root root   25 Feb  9 14:23 testing -> /mirror/data/repo/testing/
+drwxr-xr-x 2 smt  www  4096 Feb  8 14:14 tools/
 </screen>
 
   <para>
    The links can be created using the <command>ln -s</command> commands. For
    example:
   </para>
-  <screen>ln -s '<replaceable>/MirrorTo</replaceable>/repo/$RCE' '/srv/www/htdocs/repo/$RCE'</screen>
+  <screen>ln -s '/mirror/data/repo/$RCE' '/srv/www/htdocs/repo/$RCE'</screen>
 
   <note>
    <title>The <filename>/srv/www/htdocs/repo</filename> Directory</title>
    <para>
-    The <filename>/srv/www/htdocs/repo</filename> directory must not be a symbolic link.
+    The <filename>/srv/www/htdocs/repo</filename> directory must not be
+    a symbolic link.
    </para>
   </note>
  </sect1>
