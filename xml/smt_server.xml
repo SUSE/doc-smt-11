@@ -9,8 +9,8 @@
  <title>&smt; Server Configuration</title>
 
  <para>
-  You can use the &yast; module &smt; Server Configuration for the
-  initial and overall configuration. The &smt; Server configures
+  You can use the &yast; &smt; Configuration module for the
+  initial and overall configuration. The &smt; Configuration configures
   mirroring credentials, sets database passwords and e-mail addresses
   for &smt; reports, sets the &smt; job schedule, and activates or
   deactivates the &smt; service.
@@ -25,13 +25,13 @@
   -->
  </para>
  <para>
-  To configure &smt; with &smt; Server Configuration, follow these
+  To configure &smt; with &smt; Configuration, follow these
   steps:
  </para>
  <procedure>
   <step>
    <para>
-    To start &smt; Server Configuration with the text (ncurses)
+    To start &smt; Configuration with the text (ncurses)
     interface, run the <command>yast smt-server</command> command as
     &rootuser;.
    </para>
@@ -92,9 +92,10 @@
    </para>
    <note>
     <para>
-     When the &smt; Server applies configuration changes, it checks for the
-     existence of the common server certificate. If the certificate does not
-     exist, you will be asked if the certificate needs to be created.
+     When the &smt; Configuration applies configuration changes, it
+     checks for the existence of the common server certificate. If the
+     certificate does not exist, you will be asked if the certificate
+     needs to be created.
     </para>
    </note>
   </step>
@@ -111,7 +112,7 @@
    <step>
     <para>
      Open the <guimenu>Customer Center Access</guimenu> tab of the &smt;
-     Server .
+     Configuration .
     </para>
    </step>
    <step>
@@ -132,7 +133,7 @@
    <step>
     <para>
      Click <guimenu>Finish</guimenu> to apply the changes and leave the
-     &smt; Server.
+     &smt; Configuration.
     </para>
    </step>
   </procedure>
@@ -145,7 +146,7 @@
    <step>
     <para>
      Open the <guimenu>Customer Center Access</guimenu> tab of the &smt;
-     Server.
+     Configuration.
     </para>
    </step>
    <step>
@@ -157,7 +158,7 @@
    <step>
     <para>
      Click <guimenu>Finish</guimenu> to apply the changes and leave the
-     &smt; Server .
+     &smt; Configuration.
     </para>
    </step>
   </procedure>
@@ -251,7 +252,7 @@
    <step>
     <para>
      Open the <guimenu>Customer Center Access</guimenu> tab of the &smt;
-     Server Configuration (NU Configuration). If the credentials have
+     Configuration (NU Configuration). If the credentials have
      been already set with &yast; or the
      <filename>/etc/smt.conf</filename> configuration file, they appear
      in the dialog. Otherwise, the <guimenu>User</guimenu> and
@@ -326,7 +327,7 @@
    <step>
     <para>
      Open the <guimenu>Database and Reporting</guimenu> tab of the &smt;
-     Server Configuration module.
+     Configuration module.
     </para>
    </step>
    <step>
@@ -351,7 +352,7 @@
    <step>
     <para>
      Open the <guimenu>Database and Reporting</guimenu> tab of the &smt;
-     Server Configuration.
+     Configuration.
     </para>
    </step>
    <step>
@@ -378,7 +379,7 @@
   <title>Setting the &smt; Job Schedule with &yast;</title>
 
   <para>
-   The &smt; Server Configuration module provides an interface to
+   The &smt; Configuration module provides an interface to
    schedule periodical &smt; jobs. &yast; uses <literal>cron</literal>
    to schedule configured jobs. If needed, <literal>cron</literal> can
    be used directly. Five types of periodical jobs can be set:
@@ -454,7 +455,7 @@
   <procedure>
    <step>
     <para>
-     Open the <guimenu>Scheduled SMT Jobs</guimenu> tab of the &smt; Server
+     Open the <guimenu>Scheduled SMT Jobs</guimenu> tab of the &smt;
      Configuration. The table contains a list of all scheduled jobs, their type,
      frequency, date, and time to run. You can add, delete or edit these
      scheduled events.
@@ -506,7 +507,7 @@
    <step>
     <para>
      Click <guimenu>OK</guimenu> to apply the settings and quit the
-     &smt; Server Configuration, or continue with other configurations.
+     &smt; Configuration, or continue with other configurations.
     </para>
    </step>
   </procedure>
