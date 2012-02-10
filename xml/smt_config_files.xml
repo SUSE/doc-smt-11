@@ -209,12 +209,17 @@
      </term>
      <listitem>
       <para>
-       If the <option>MirrorSRC</option> option is set to true, source
-       RPM packages are mirrored.
+       If the <option>MirrorSRC</option> option is set to
+       <literal>true</literal>, source RPM packages are mirrored.
       </para>
       <note>
-       <title>Default Changed with &smt; 11 SP2</title>
+       <!-- fate#313095 -->
+       <title>Default Value Changed with &smt; 11 SP2</title>
        <para>
+        With &smt; 11 SP2, the preset default value was changed to
+        <literal>false</literal>.  If you want &smt; to mirror source
+        RPM packages also on new installations, set
+        <option>MirrorSRC</option> to <literal>true</literal>.
        </para>
       </note>
      </listitem>
