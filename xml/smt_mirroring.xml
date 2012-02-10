@@ -187,22 +187,18 @@
    </para>
    <example id="ex.smt.mirroring.repos.o">
     <title>Listing All Enabled Repositories</title>
-<screen><?dbsuse-fo font-size="5pt"?>
-tux:~ # smt-repos -o
+<screen><?dbsuse-fo font-size="5pt"?>tux:~ # smt-repos -o
 .---------------------------------------------------------------------------------------------------------------------.
-| Mirror? | ID | Type | Name               | Target         | Description                           | Can be Mirrored |
-+---------+----+------+--------------------+----------------+---------------------------------------+-----------------+
-| Yes     |  6 | nu   | SLES10-SP3-Online  | sles-10-i586   | SLES10-SP3-Online for sles-10-i586    | Yes             |
-| Yes     |  7 | nu   | SLES10-SP3-Online  | sles-10-ia64   | SLES10-SP3-Online for sles-10-ia64    | Yes             |
-| Yes     |  8 | nu   | SLES10-SP3-Online  | sles-10-ppc    | SLES10-SP3-Online for sles-10-ppc     | Yes             |
-| Yes     |  9 | nu   | SLES10-SP3-Online  | sles-10-s390x  | SLES10-SP3-Online for sles-10-s390x   | Yes             |
-| Yes     | 10 | nu   | SLES10-SP3-Online  | sles-10-x86_64 | SLES10-SP3-Online for sles-10-x86_64  | Yes             |
-| Yes     | 11 | nu   | SLES10-SP3-Updates | sles-10-i586   | SLES10-SP3-Updates for sles-10-i586   | Yes             |
-| Yes     | 12 | nu   | SLES10-SP3-Updates | sles-10-ia64   | SLES10-SP3-Updates for sles-10-ia64   | Yes             |
-| Yes     | 13 | nu   | SLES10-SP3-Updates | sles-10-ppc    | SLES10-SP3-Updates for sles-10-ppc    | Yes             |
-| Yes     | 14 | nu   | SLES10-SP3-Updates | sles-10-s390x  | SLES10-SP3-Updates for sles-10-s390x  | Yes             |
-| Yes     | 15 | nu   | SLES10-SP3-Updates | sles-10-x86_64 | SLES10-SP3-Updates for sles-10-x86_64 | Yes             |
-'---------+----+------+--------------------+----------------+---------------------------------------+-----------------'
+| Mirr| ID | Type | Name                    | Target        | Description                             | Can be M| Stag|
++-----+----+------+-------------------------+---------------+-----------------------------------------+---------+-----+
+| Yes |  1 | zypp | ATI-Driver-SLE11-SP2    | --            | ATI-Driver-SLE11-SP2                    | Yes     | Yes |
+| Yes |  2 | zypp | nVidia-Driver-SLE11-SP2 | --            | nVidia-Driver-SLE11-SP2                 | Yes     | No  |
+| Yes |  3 | nu   | SLED11-SP2-Updates      | sle-11-x86_64 | SLED11-SP2-Updates for sle-11-x86_64    | Yes     | No  |
+| Yes |  4 | nu   | SLES11-SP1-Updates      | sle-11-x86_64 | SLES11-SP1-Updates for sle-11-x86_64    | Yes     | Yes |
+| Yes |  5 | nu   | SLES11-SP2-Core         | sle-11-x86_64 | SLES11-SP2-Core for sle-11-x86_64       | Yes     | No  |
+| Yes |  6 | nu   | SLES11-SP2-Updates      | sle-11-i586   | SLES11-SP2-Updates for sle-11-i586      | Yes     | No  |
+| Yes |  7 | nu   | WebYaST-Testing-Updates | sle-11-i586   | WebYaST-Testing-Updates for sle-11-i586 | Yes     | No  |
+'-----+----+------+-------------------------+---------------+-----------------------------------------+---------+-----'
 </screen>
    </example>
    <para>
