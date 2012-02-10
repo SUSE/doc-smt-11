@@ -581,11 +581,10 @@ chown smt:www /var/lib/smt/.curlrc</screen>
   <sect3>
    <title>Example /etc/smt.conf</title>
    <example id="smt.mirroring.smtconf.ex">
-    <title>config/smt.conf</title>
+    <!-- <title>smt.conf</title> -->
 <?dbfo keep-together="auto"?>
 <!--FIXME moving target-->
-<screen>
-[NU]
+<screen>[NU]
 NUUrl = https://nu.novell.com/
 NURegUrl = https://secure-www.novell.com/center/regsvc/
 NUUser = exampleuser
@@ -599,13 +598,17 @@ pass = smt
 [LOCAL]
 # Default should be http://server.domain.top/
 url = http://smt.example.com/
-# This email address is used for registration at NCC 
+# This email address is used for registration at NCC
 nccEmail = exampleuser@example.com
 MirrorTo = /srv/www/htdocs
 MirrorAll = false
-MirrorSRC = true
+MirrorSRC = false
 forwardRegistration = true
-rndRegister = 410
+rndRegister = 127
+# The hook script that should be called before the smt-mirror script removes its lock
+mirror_preunlock_hook = 
+# The hook script that should be called after the smt-mirror script removed its lock
+mirror_postunlock_hook = 
 # specify proxy settings here, if you do not want to use the global proxy settings
 # If you leave these options empty the global options are used.
 # 
@@ -638,6 +641,41 @@ smtUser = smt
 # If empty, the modified repositories will be unsigned.
 #
 signingKeyID = 
+#
+# This string is send in HTTP requests as UserAgent.
+# If the key UserAgent does not exist, a default is used.
+# If UserAgent is empty, no UserAgent string is set.
+#
+#UserAgent=
+# Mirroring credentials for this SMT server.
+# These are currently only used to get list of all available repositories
+# from https://your.smt.url/repo/repoindex.xml
+# Note: if authenticated as a client machine instead of these mirrorUser,
+# the above URL returns only repositories relevant for that client.
+mirrorUser = 
+mirrorPassword = 
+
+[REST]
+# Enable administrative access to the SMT RESTService by setting enableRESTAdminAccess=1
+# default: 0
+enableRESTAdminAccess = 0
+# Define the username the REST-Admin uses for login
+# default: RESTroot
+RESTAdminUser = RESTroot
+# Define the password for the REST-Admin (note: empty password is invalid)
+# default: &lt;empty>
+RESTAdminPassword = 
+
+[JOBQUEUE]
+# maximum age of finished (non-persistent) jobs in days
+# default: 8
+maxFinishedJobAge = 8
+# comma separated list of JobQueue status IDs that should be interpreted as successful
+# See smt-job --help for more information about possible Status IDs
+# Please note: An empty string will be interpreted as default (1,4).
+# default: 1,4
+# useful:  1,4,6
+jobStatusIsSuccess = 1,4
 
 [REPORT]
 # comma separated list of eMail addresses where the status reports will be sent to
