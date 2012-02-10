@@ -209,9 +209,14 @@
      </term>
      <listitem>
       <para>
-       If the <option>MirrorSRC</option> option is set to false, no source
+       If the <option>MirrorSRC</option> option is set to true, source
        RPM packages are mirrored.
       </para>
+      <note>
+       <title>Default Changed with &smt; 11 SP2</title>
+       <para>
+       </para>
+      </note>
      </listitem>
     </varlistentry>
     <varlistentry>
@@ -581,7 +586,7 @@ chown smt:www /var/lib/smt/.curlrc</screen>
   <sect3>
    <title>Example /etc/smt.conf</title>
    <example id="smt.mirroring.smtconf.ex">
-    <!-- <title>smt.conf</title> -->
+    <title>smt.conf</title>
 <?dbfo keep-together="auto"?>
 <!--FIXME moving target-->
 <screen>[NU]
