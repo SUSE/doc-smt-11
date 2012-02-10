@@ -1,0 +1,22 @@
+## ---------------------------- 
+## Doc Config File for SMT
+## Subscription Management Tool Guide
+## ----------------------------
+##
+## Basics
+MAIN="MAIN.SMT.xml"
+
+## Profiling
+PROFARCH="x86;amd64;em64t"
+
+## stylesheet location
+STYLEROOT="/usr/share/xml/docbook/stylesheet/suse"
+HTML_CSS="/usr/share/xml/docbook/stylesheet/suse/html/susebooks.css"
+EPUB_CSS="/usr/share/xml/docbook/stylesheet/suse/epub/susebooks.css"
+
+## obsolete
+DISTVER="11.1"
+PKGNAME="sle-smt"
+
+## enable sourcing
+export DOCCONF=$BASH_SOURCE
