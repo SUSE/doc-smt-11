@@ -221,6 +221,7 @@
         RPM packages also on new installations, set
         <option>MirrorSRC</option> to <literal>true</literal>.
        </para>
+       <para>Upgraded systems are not affected.</para>
       </note>
      </listitem>
     </varlistentry>
