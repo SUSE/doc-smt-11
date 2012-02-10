@@ -5,7 +5,7 @@ MAIN=MAIN.SMT.xml
 #export ROOTID="book.smt"
 PROFARCH="x86;amd64;em64t"
 PROFOS=""
-DISTVER=11.1 SP2
+DISTVER="11.1 SP2"
 PKGNAME=sle-smt
 
 export DAPS_ENV_NAME=$(basename $BASH_SOURCE)
