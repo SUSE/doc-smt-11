@@ -2,7 +2,7 @@
 <!DOCTYPE chapter PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd"
           [
           <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE">
-          
+
           <!ENTITY % entities SYSTEM "entity-decl.ent">
           %entities;
 ]>
@@ -306,6 +306,23 @@
     </step>
    </procedure>
   </sect2>
+
+  <sect2>
+   <!-- fate##310207 -->
+   <title>Deleting Mirrored Repositories</title>
+
+   <para>You can delete mirrored repositories that are no longer used.  If you
+   delete a repository, it will be physically removed from the SMT storage
+   area.</para>
+
+   <para>
+    To delete a repository with a particular name, use the <command>smt-repos
+    --delete <replaceable>repo_name</replaceable></command> command.  To delete
+    the repository in a namespace, specify the <option>--namespace
+    <replaceable>dirname</replaceable></option> option.
+</para>
+  </sect2>
+
 
   <sect2>
    <title>Mirroring Custom Repositories</title>
