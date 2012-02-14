@@ -317,12 +317,16 @@
 
    <para>
     To delete a repository with a particular name, use the <command>smt-repos
-    --delete <replaceable>repo_name</replaceable></command> command.  To delete
-    the repository in a namespace, specify the <option>--namespace
-    <replaceable>dirname</replaceable></option> option.
-</para>
+    --delete</command> command.  To delete the repository in a namespace,
+    specify the <option>--namespace <replaceable>dirname</replaceable></option>
+    option.</para>
+   <para>
+    <option>--delete</option> lists all repositories, and by entering the ID
+    number or by entering the name and target you can delete the specified
+    repositories.  If you want to delete all repositories, enter
+    <guimenu>a</guimenu>.
+   </para>
   </sect2>
-
 
   <sect2>
    <title>Mirroring Custom Repositories</title>
