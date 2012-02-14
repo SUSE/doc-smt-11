@@ -20,10 +20,11 @@
   <title>&smt; JobQueue</title>
   <para>
    Since &sle; version 11, there is a new &smt; service called &smt;
-   JobQueue. It is a system to delegate 'jobs' to the registered clients.
+   JobQueue. It is a system to delegate <emphasis>jobs</emphasis> to the
+   registered clients.
   </para>
   <para>
-   To enable JobQueue, the <literal>smt-client</literal> package needs to be
+   To enable JobQueue, the <systemitem>smt-client</systemitem> package needs to be
    installed on the SMT client. The client then pulls jobs from the server
    via a cron job (every 3 hours by default). The list of jobs is maintained
    on the server. Jobs are not pushed directly to the clients and processed
@@ -39,40 +40,39 @@
    patch status job is a persistent job that runs once a day. For each
    client, a patch status job is automatically generated after it registers
    successfully against an &smt; 11 server. The patchstatus information can
-   be queried with the <command>smt client</command> command. For the
+   be queried with the <command>smt-client</command> command. For the
    already registered clients, you can add the patchstatus jobs manually
-   with the <command>smt job</command> command.
+   with the <command>smt-job</command> command.
   </para>
   <para>
    You can manipulate, list, create or delete the jobs. For this reason, the
-   command line tool <command>smt job</command> was introduced. For more
-   details on, see <xref linkend="smt.scripts.job"/>
+   command line tool <command>smt-job</command> was introduced. For more
+   details on, see <xref linkend="smt.scripts.job"/>.
   </para>
   <note>
-   <title>Overriding the Automatic Creation of Patchstatus Job</title>
+   <title>Overriding the Automatic Creation of Patch Status Job</title>
    <para>
-    When creating a softwarepush or an update job, normally a non-persistent
-    patchstatus job will be added automatically with the parent id set to
-    the id of the new job. To disable this behavior, use the
-    <option>--no-autopatchstatus</option> option.
-   </para>
-  </note>
-  <note>
-   <title>Job Timelag Limitation</title>
-   <para>
-    The client will process one job at a time, report back the result, and
-    then ask for the next job. If you create a persistent job with a timelag
-    of only a few seconds, it will be repeated forever and block other jobs
-    of this client. Therefore, adding jobs with a timelag smaller than one
-    minute is not supported.
+    When creating a software push or an update job, normally a
+    non-persistent patch status job will be added automatically with the
+    parent id set to the id of the new job. To disable this behavior,
+    use the <option>--no-autopatchstatus</option> option.
    </para>
   </note>
   <para>
-   <emphasis role="bold"> &smt; is not intended to be a system to directly
-   access the clients or to immediately report the results back. It is
-   rather a longtime maintenance and monitoring system than a live
-   interaction tool. </emphasis>
+   &smt; is not intended to be a system to directly access the clients
+   or to immediately report the results back. It is rather a longtime
+   maintenance and monitoring system than a live interaction tool.
   </para>
+  <note>
+   <title>Job Time Lag Limitation</title>
+   <para>
+    The client will process one job at a time, report back the result, and
+    then ask for the next job. If you create a persistent job with a time lag
+    of only a few seconds, it will be repeated forever and block other jobs
+    of this client. Therefore, adding jobs with a time lag smaller than one
+    minute is not supported.
+   </para>
+  </note>
  </sect2>
 
  <sect2 id="smt.scripts.smt">
@@ -511,32 +511,22 @@
     <para>
      To list all finished jobs, enter the following:
     </para>
-    <para>
-     <literal># smt-job --list --finished</literal>
-    </para>
+    <screen>smt-job --list --finished</screen>
     <para>
      To create a 'softwarepush' job that installs <literal>xterm</literal>
      and <literal>bash</literal> on client 12345 and 67890, enter the
      following:
     </para>
-    <para>
-     <literal># smt-job --create -t softwarepush -P xterm -P bash -g 12345
-     -g 67890</literal>
-    </para>
+    <screen>smt-job --create -t softwarepush -P xterm -P bash -g 12345 -g 67890</screen>
     <para>
      To change the timing for a persistent job with job ID 42 and guid 12345
      to run every 6 hours, enter the following:
     </para>
-    <para>
-     <literal># smt-job --edit -j 42 -g 12345 --targeted 0000-00-00
-     --timelag 06:00:00</literal>
-    </para>
+    <screen>smt-job --edit -j 42 -g 12345 --targeted 0000-00-00 --timelag 06:00:00</screen>
     <para>
      To delete all jobs with job ID 42, enter the following:
     </para>
-    <para>
-     <literal># smt-job --delete -jobid 42 --deleteall</literal>
-    </para>
+    <screen>smt-job --delete -jobid 42 --deleteall</screen>
    </sect4>
   </sect3>
   <sect3 id="smt.scripts.listproducts">
@@ -932,9 +922,9 @@
   <sect3>
    <title>smt-repos</title>
    <para>
-    You can use the <command>smt-repos</command> (or <command>smt
-    repositories</command>) script can to list all available repositories
-    and for enabling or disabling repositories. The following options are
+    You can use <command>smt-repos</command> (or <command>smt
+    repositories</command>) to list all available repositories and for
+    enabling, disabling, or deleting repositories. The following options are
     available:
    </para>
 <!--FIXME [name] [target]-->
@@ -1018,6 +1008,24 @@
      </listitem>
     </varlistentry>
     <varlistentry>
+     <!-- fate##310207 -->
+     <term><option>--delete</option></term>
+     <listitem>
+      <para>
+       List repositories and delete them from disk.
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><option>--namespace <replaceable>dirname</replaceable></option>
+     </term>
+     <listitem>
+      <para>
+       Delete the repository in the specified namespace.
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
      <term><option>--verbose</option> or <option>-v</option>
      </term>
      <listitem>
@@ -1092,14 +1100,14 @@
    <para>
     To set up a new repository, use the following command:
    </para>
-<screen>smt-setup-custom-repos --productid <replaceable>Product_ID</replaceable>
+<screen>smt-setup-custom-repos --productid <replaceable>Product_ID</replaceable> \
 --name <replaceable>Catalog_Name</replaceable> --exturl <replaceable>URL</replaceable>
 </screen>
    <para>
     For example:
    </para>
-<screen>smt-setup-custom-repos --productid <replaceable>434</replaceable>
---name <replaceable>My_Catalog</replaceable> --exturl <replaceable>http://my.domain.top/My_Catalog</replaceable>
+<screen>smt-setup-custom-repos --productid <replaceable>434</replaceable> \
+--name <replaceable>My_Catalog</replaceable> --exturl <replaceable>http://my.example.com/My_Catalog</replaceable>
 </screen>
    <para>
     To remove an already set repository, use the following command:
