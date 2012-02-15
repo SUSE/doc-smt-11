@@ -386,6 +386,27 @@
     linkend="smt.mirroring.testenv"/>.
   </para>
  </sect1>
+ <!-- ================================================================== -->
+ <sect1 id="smt.clients.repolist">
+  <!-- fate#310105 -->
+  <title>Listing Accessible Repositories</title>
+  <para>
+To retrieve the accessible repositories for a client, download
+<filename>repo/repoindex.xml</filename> from the &smt; server with the client's
+credentials.  The credentials are stored in
+<filename>/etc/zypp/credentials.d/NCCCredentials</filename> on the client
+machine.  Using <command>wget</command>, the command for testing could be as
+follows:
+</para>
+  <screen>wget https://<replaceable>USER</replaceable>:<replaceable>PASS</replaceable>@smt.example.com/repo/repoindex.xml</screen>
+  <para>
+To get a list of all repositories available on the &smt; server, use the
+credentials specified in the <literal>[LOCAL]</literal> section of
+<filename>/etc/smt.conf</filename> on the server as
+<literal>mirrorUser</literal> and <literal>mirrorPassword</literal>.
+</para>
+ </sect1>
+ <!-- ================================================================== -->
  <sect1 id="smt.clients.rhel">
   <title>How to Update Red Hat Enterprise Linux with SMT 11</title>
 
