@@ -211,6 +211,8 @@
     the <command>smt-repos <replaceable>repository_name</replaceable>
     <replaceable>target</replaceable></command> command.
    </para>
+   <para>To get a list of installation repositories from remote, see <xref
+   linkend="smt.clients.repolist"/>.</para>
   </sect2>
 
   <sect2 id="smt.mirroring.manage.domirror">
