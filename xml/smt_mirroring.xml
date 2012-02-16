@@ -607,7 +607,8 @@ repo/testing => repo</screen>
    <filename>repo/testing</filename> into the production area
    <filename>/repo</filename>.  <filename>repo/testing/</filename> and
    <filename>/repo</filename> is called the <quote>default</quote> staging
-   group.  You can create additional staging groups as needed.
+   group.  You can create additional staging groups as needed with the
+   <command>smt-staging creategroup</command> command.<!--FIXME: (see ...)-->
   </para>
 
   <note>
@@ -639,14 +640,35 @@ repo/testing => repo</screen>
     <term>Generating Testing and Production Snapshots</term>
     <listitem>
      <para>
-      To create the testing repository enter the <command>smt-staging
-      createrepo <replaceable>Repository_ID</replaceable>
-      -–testing</command>. Now, you can test the installation and
-      functionality of the patches in testing clients. If no problems
-      are discovered during testing, create the production repository by
-      entering:
+      To create the testing repository in the <quote>default</quote> staging
+      group enter:</para>
+     <screen>smt-staging createrepo <replaceable>Repository_ID</replaceable> -–testing</screen>
+     <para>
+      Now, you can test the installation and functionality of the patches in
+      testing clients. If no problems are discovered during testing, create the
+      production repository by entering:
      </para>
      <screen>smt-staging createrepo <replaceable>Repository_ID</replaceable> --production</screen>
+
+     <para>To create testing and production repositories in a named staging
+     group first create the group and then the repositories in this
+     group:</para>
+<screen>smt-staging creategroup <replaceable>Groupname</replaceable> <replaceable>Testingdir</replaceable> <replaceable>Productiondir</replaceable>
+smt-staging createrepo --group <replaceable>Groupname</replaceable> <replaceable>Repository_ID</replaceable> -–testing
+smt-staging createrepo --group <replaceable>Groupname</replaceable> <replaceable>Repository_ID</replaceable> -–production</screen>
+     <para>
+      This can help you, if you for example, want to combine SLES11-SP1-Updates
+      and SLES11-SP2-Updates of the <literal>sle-11-x86_64</literal>
+      architecture into one repository of a group:</para>
+     <screen>smt-staging creategroup SLES11SP1-SP2-Up test-sp1-sp2 prod-sp1-sp2
+smt-staging createrepo --group SLES11SP1-SP2-Up \
+  SLES11-SP1-Updates sle-11-x86_64 --testing
+smt-staging createrepo --group SLES11SP1-SP2-Up \
+  SLES11-SP2-Updates sle-11-x86_64 --testing
+smt-staging createrepo --group SLES11SP1-SP2-Up \
+  SLES11-SP1-Updates sle-11-x86_64 --production
+smt-staging createrepo --group SLES11SP1-SP2-Up \
+  SLES11-SP2-Updates sle-11-x86_64 --production</screen>
     </listitem>
    </varlistentry>
   </variablelist>
@@ -694,8 +716,8 @@ sudo chmod go-rwx -R /var/lib/smt/.gnupg</screen>
       can be done:
      </para>
      <screen>sudo -u smt gpg --homedir /var/lib/smt/.gnupg \
---export -a <replaceable>signingKeyID</replaceable> \
-> <replaceable>MirrorTo</replaceable>/repo/keys/smt-signing-key.key
+  --export -a <replaceable>signingKeyID</replaceable> \
+  > /<replaceable>MirrorTo</replaceable>/repo/keys/smt-signing-key.key
      </screen>
      <para>
       In this example, <replaceable>MirrorTo</replaceable> stands for the
