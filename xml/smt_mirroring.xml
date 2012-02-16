@@ -7,9 +7,9 @@
           %entities;
 ]>
 <chapter id="smt.mirroring">
- <title>Mirroring Installation and Update Repositories with &smt;</title>
+ <title>Mirroring Repositories on the &smt; Server</title>
  <para>
-  With &smt; you can mirror the installation and update repositories
+  On the &smt; server you can mirror the installation and update repositories
   locally. This allows you to bypass per-machine downloads and the bandwidth
   use that goes with it.
  </para>
@@ -17,9 +17,8 @@
   <title>Getting Mirror Credentials</title>
 
   <para>
-   Before you create local mirrors of the repositories, you need proper
-   mirror credentials. Get these credentials from the &ncc; with these
-   steps:
+   Before you create a local mirror of the repositories, you need appropriate
+   mirror credentials. Get these credentials from the &ncc; with these steps:
   </para>
 
   <procedure>
@@ -81,8 +80,9 @@
   </procedure>
 
   <para>
-   The obtained credentials should be set in the &smt; Server module or
-   manually written in the <filename>/etc/smt.conf</filename> file. For more
+   The obtained credentials should be set with the &yast; &smt; Server
+   Configuration module or
+   manually written to the <filename>/etc/smt.conf</filename> file. For more
    information about the <filename>/etc/smt.conf</filename> file, see
    <xref linkend="smt.config.smtconf"/>
   </para>
@@ -98,7 +98,7 @@
   </para>
  </sect1>
  <sect1 id="smt.mirroring.manage">
-  <title>Managing Software Repositories with &smt;</title>
+  <title>Managing Software Repositories with &smt; Command Line Tools</title>
 
   <para>
    This section describes tools and procedures for viewing information about
@@ -165,8 +165,8 @@
     (repositories set to be mirrored) are marked with
     <literal>Yes</literal>. Disabled repositories are marked with
     <literal>No</literal>. The other columns show ID, type, name, target,
-    and description of the listed repositories. The last column shows
-    whether the repository can be mirrored.
+    and description of the listed repositories. The last columns show
+    whether the repository can be mirrored and staging is enabled.
    </para>
    <para>
     Use the <option>--verbose</option> option, to get additional information
@@ -523,7 +523,7 @@ drwxr-xr-x 2 smt  www  4096 Feb  8 14:14 tools/
 
   <para>
    To mirror a repository to the testing environment, you can use the
-   <guimenu>Staging</guimenu> tab in the &smt; Management module, or the
+   <guimenu>Staging</guimenu> tab in the &yast; &smt; Management module, or the
    command <command>smt-staging</command>.
   </para>
 
@@ -543,10 +543,9 @@ drwxr-xr-x 2 smt  www  4096 Feb  8 14:14 tools/
 
   <para>
    You can enable <quote>staging</quote> for a repository in the
-   <guimenu>Repositories</guimenu> tab of the <filename>&smt;
-   Management</filename> module or with the <command>smt-repos</command>
-   command. The mirroring happens automatically to
-   <filename>repo/full/</filename>.
+   <guimenu>Repositories</guimenu> tab of the &smt; Management module or with
+   the <command>smt-repos</command> command. The mirroring happens
+   automatically to <filename>repo/full/</filename>.
   </para>
 
   <para>
@@ -584,36 +583,41 @@ repo/testing => repo</screen>
   </para>
 
   <para>
-   For staging, you can either use the <command>smt-staging</command>
-   command, or use the SMT Management module. For more details, see
-   <xref linkend="smt.management"/>.
+   For staging, you can either use the <command>smt-staging</command> command,
+   or use the &yast; &smt; Management module. For more details, see <xref
+   linkend="smt.yast.staging.stage"/>.
   </para>
 
   <para>
    Repositories with staging enabled are mirrored to the
-   <filename>/<replaceable>MirrorTo</replaceable>/repos/full</filename>
+   <filename>/<replaceable>MirrorTo</replaceable>/repo/full</filename>
    subdirectory. This subdirectory is usually not used by your clients.
    Incoming new updates are not automatically visible to the clients
    before you get a chance to test them. Later you can generate a
    testing environment of this repository, which goes to
-   <filename>/<replaceable>MirrorTo</replaceable>/repos</filename>
+   <filename>/<replaceable>MirrorTo</replaceable>/repo</filename>
    directory.
   </para>
 
   <para>
    If you have a SLE11 based Update repository with patches, &smt; tools can
    help you with the management. With these tools you can select patches and
-   create a snapshot and put it into <filename>repo/testing/</filename>.
-   After tests are finished you can put the content of
-   <filename>repo/testing</filename> into the <filename>production area
-   /repo</filename>.
+   create a snapshot and put it into <filename>repo/testing/</filename>.  After
+   tests are finished you can put the content of
+   <filename>repo/testing</filename> into the production area
+   <filename>/repo</filename>.  <filename>repo/testing/</filename> and
+   <filename>/repo</filename> is called the <quote>default</quote> staging
+   group.  You can create additional staging groups as needed.
   </para>
 
-  <para>
-   SLE10 based Update repositories are not supported by &smt; tools. Not all
-   of these repositories support selective staging. In this case you need to
-   mirror the complete package.
-  </para>
+  <note>
+   <title>SLE 10 Based Update Repositories</title>
+   <para>
+    SLE 10 based Update repositories are not supported by &smt; tools. Not all
+    of these repositories support selective staging. In this case you need to
+    mirror the complete package.
+   </para>
+  </note>
 
   <variablelist>
    <varlistentry>
@@ -623,8 +627,7 @@ repo/testing => repo</screen>
       To enable or disable the staging use the <command>smt-repos</command>
       command with <option>--enable-staging</option> or <option>-s</option>:
      </para>
-     <screen>smt-repos --enable-staging
-     </screen>
+     <screen>smt-repos --enable-staging</screen>
      <para>
       You can enable the required repositories by entering the ID number or
       by entering the name and target. If you want to enable all
@@ -658,8 +661,7 @@ repo/testing => repo</screen>
       their ID or Category:
      </para>
      <screen>smt-staging forbid --patch <replaceable>ID</replaceable>
-smt-staging forbid --category <replaceable>Categoryname</replaceable>
-     </screen>
+smt-staging forbid --category <replaceable>Categoryname</replaceable></screen>
     </listitem>
    </varlistentry>
    <varlistentry>
@@ -680,8 +682,7 @@ smt-staging forbid --category <replaceable>Categoryname</replaceable>
 gpg --gen-key --homedir $some-dir
 sudo mv $some-dir /var/lib/smt/.gnupg
 sudo chown smt:users -R /var/lib/smt/.gnupg
-sudo chmod go-rwx -R /var/lib/smt/.gnupg
-     </screen>
+sudo chmod go-rwx -R /var/lib/smt/.gnupg</screen>
      <para>
       Then, the ID of the newly generated key must be written into
       <filename>/etc/smt.conf</filename>, option
