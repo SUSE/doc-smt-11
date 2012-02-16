@@ -6,11 +6,12 @@
           %entities;
 ]>
 <chapter id="smt.management">
- <title>Managing Repositories with &smt; Management</title>
+ <title>Managing Repositories with &yast; &smt; Server Management</title>
  <para>
-  You can use the &smt; Management module for day-to-day management. &smt;
-  Management enables and disables the mirroring of repositories, the staging
-  flag for repositories, and performs the mirroring and staging in the GUI.
+  You can use the &yast; &smt; Server Management module for day-to-day
+  management. &smt; Management enables and disables the mirroring of
+  repositories, the staging flag for repositories, and performs the mirroring
+  and staging.
  </para>
  <sect1 id="smt.yast.staging.starting">
   <title>Starting &smt; Management Module</title>
@@ -187,11 +188,12 @@
   </important>
 
   <para>
-   Once you mirror the repositories and make them available for staging,
-   click on the <guimenu>Staging</guimenu> tab. In the upper left part of
-   the window, there is a <guimenu>Repository Name</guimenu> drop-down list
-   of all repositories which are available for staging. Select the one you
-   want to stage and a list of packages of this repository appears below.
+   Once you mirror the repositories and make them available for staging, click
+   on the <guimenu>Staging</guimenu> tab. In the upper left part of the window,
+   there is a <guimenu>Repository Name</guimenu> drop-down list of all
+   repositories which are available for staging. There the repository names
+   have the name of the staging group attched in parenthesis.  Select the one
+   you want to stage and a list of packages of this repository appears below.
    Information about the patch name, its version and category, testing and
    production flags, and a short summary is available for each patch.
   </para>
