@@ -251,6 +251,7 @@
    </step>
   </procedure>
  </sect1>
+ <!-- ================================================================ -->
  <sect1 id="smt.client.clientsetupscript">
   <title>Configuring Clients with the clientSetup4SMT.sh Script</title>
 
@@ -275,13 +276,13 @@
   <procedure>
    <step>
     <para>
-     Copy the
-     <filename>clientSetup4SMT.sh</filename>
-     script from your &smt; server to the client machine.
-     The script is available at
-     <filename>&lt;SMT_HOSTNAME&gt;/repo/tools/clientSetup4SMT.sh</filename> and
-     <filename>/srv/www/htdocs/repo/tools/clientSetup4SMT.sh</filename>. You can
-     download it with a browser, run <command>wget</command>, or by another means, such as with <command>scp</command>.
+     Copy the <filename>clientSetup4SMT.sh</filename> script from your &smt;
+     server to the client machine.  The script is available at
+     <filename>&lt;SMT_HOSTNAME&gt;/repo/tools/clientSetup4SMT.sh</filename>
+     and
+     <filename>/srv/www/htdocs/repo/tools/clientSetup4SMT.sh</filename>. You
+     can download it with a browser, using <command>wget</command>, or by
+     another means, such as with <command>scp</command>.
     </para>
    </step>
    <step>
@@ -292,15 +293,19 @@
     </para>
      <screen>./clientSetup4SMT.sh https://smt.&exampledomain;/center/regsvc</screen>
      <para>
-      In the second case, the script uses the <option>--host</option>
-      option followed by hostname of the &smt; server, and the
-      <option>--regcert</option> followed by the URL of the SSL
-      certificate; for
-      example:
+      In the second case, the script uses the <option>--host</option> option
+      followed by the hostname of the &smt; server, and
+      <option>--regcert</option> followed by the URL of the SSL certificate;
+      for example:
      </para>
      <screen>./clientSetup4SMT.sh --host smt.&exampledomain; \
-      --regcert http://smt.&exampledomain;/certs/smt.crt</screen>
-
+  --regcert http://smt.&exampledomain;/certs/smt.crt</screen>
+    <para>
+     In this case, without any <quote>namespace</quote> specified, the client
+     will be configured to use the default production repositories. If
+     <option>--namespace <replaceable>groupname</replaceable></option> is
+     specified, the client will use that staging group.
+    </para>
    </step>
    <step>
     <para>
@@ -316,8 +321,8 @@
    </step>
    <step>
     <para>
-     Downloads and asks to accept additional GPG keys to sign repositories
-     with.
+     The script downloads and asks to accept additional GPG keys to sign
+     repositories with.
     </para>
    </step>
    <step>
@@ -330,8 +335,8 @@
   </procedure>
 
   <para>
-   The <command>clientSetup4SMT.sh</command> script works with &sle; 10 SP2, SP3
-   and SLE 11 systems.
+   The <command>clientSetup4SMT.sh</command> script works with &sle; 10 SP2 and
+   later SPs, and SLE 11 systems.
   </para>
 
   <para>
@@ -339,7 +344,7 @@
   </para>
 
   <para>
-   <literal>wget http://FQDN/repo/tools/clientSetup4SMT.sh</literal>
+   <literal>wget http://smt.example.com/repo/tools/clientSetup4SMT.sh</literal>
   </para>
 
   <sect2>
@@ -399,6 +404,13 @@ machine.  Using <command>wget</command>, the command for testing could be as
 follows:
 </para>
   <screen>wget https://<replaceable>USER</replaceable>:<replaceable>PASS</replaceable>@smt.example.com/repo/repoindex.xml</screen>
+
+  <para><filename>repoindex.xml</filename> returns the complete repository list
+as they come from the vendor.  If a repository is marked for staging,
+<filename>repoindex.xml</filename> list the repository in the
+<literal>full</literal> namespace (<filename>repos/full/$RCE</filename>).
+</para>
+
   <para>
 To get a list of all repositories available on the &smt; server, use the
 credentials specified in the <literal>[LOCAL]</literal> section of
