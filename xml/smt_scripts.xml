@@ -1119,6 +1119,7 @@
 <screen>smt-setup-custom-repos --delete <replaceable>1cf336d819e8e5904f4d4b05ee081971a0cc8afc</replaceable>
 </screen>
   </sect3>
+  <!-- =================================================================== -->
   <sect3>
    <title>smt-staging</title>
    <para>
@@ -1176,6 +1177,35 @@
       </para>
      </listitem>
     </varlistentry>
+    <varlistentry>
+     <term><option>listgroups</option>
+     </term>
+     <listitem>
+      <para>List staging groups.</para>
+
+      <para>There is always one group available with the name
+       <quote>default</quote>. The default group has the path
+       <filename>repo/full</filename>, <filename>repo/testing</filename> and
+       <filename>repo</filename>.  With creating a new group, new pathes can be
+       specified.
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><option>creategroup</option>
+     </term>
+     <listitem>
+      <para>Create a staging group.  Required parameters are: group name,
+           testing directory name, and production directory name.</para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><option>removegroup</option>
+     </term>
+     <listitem>
+      <para>Remove a staging group.  Required parameter is: group name.</para>
+     </listitem>
+    </varlistentry>
    </variablelist>
    <para>
     The following options apply to any <command>smt-staging</command>
@@ -1213,7 +1243,7 @@
    </variablelist>
    <para>
     The following options apply to specific <command>smt-staging</command>
-    command:
+    commands:
    </para>
    <variablelist>
     <varlistentry>
@@ -1252,6 +1282,17 @@
       </para>
      </listitem>
     </varlistentry>
+
+    <varlistentry>
+     <term><option>--individually</option>
+     </term>
+     <listitem>
+      <para>
+        Allow or forbid multiple patches (e.g. by category) one by one, that
+        is, as if the --patch option had been used on each of the patches.
+</para>
+     </listitem>
+    </varlistentry>
     <varlistentry>
      <term><option>--testing</option>
      </term>
@@ -1283,6 +1324,16 @@
      </listitem>
     </varlistentry>
     <varlistentry>
+     <term><option>--group</option>
+     </term>
+     <listitem>
+      <para>
+       Specify on which group the command should work on. The default for
+       <option>--group</option> is default.
+</para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
      <term><option>--nohardlink</option>
      </term>
      <listitem>
@@ -1303,8 +1354,29 @@
       </para>
      </listitem>
     </varlistentry>
+
+    <varlistentry>
+     <term><option>--sort-by-version</option>
+     </term>
+     <listitem>
+      <para>
+       Sort the <literal>listupdates</literal> table by patch version. The
+       higher the version, the newer the patch should be.
+</para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><option>--sort-by-category</option>
+     </term>
+     <listitem>
+      <para>
+       Sort the <literal>listupdates</literal> table by patch category.
+</para>
+     </listitem>
+    </varlistentry>
    </variablelist>
   </sect3>
+  <!-- =================================================================== -->
   <sect3>
    <title>smt-support</title>
    <para>
