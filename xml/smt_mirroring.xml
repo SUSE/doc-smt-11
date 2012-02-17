@@ -669,6 +669,10 @@ smt-staging createrepo --group SLES11SP1-SP2-Up \
   SLES11-SP1-Updates sle-11-x86_64 --production
 smt-staging createrepo --group SLES11SP1-SP2-Up \
   SLES11-SP2-Updates sle-11-x86_64 --production</screen>
+     <para>
+      For group names, these characters are allowed: <literal>-_</literal>,
+      <literal>a-zA-Z</literal>, and <literal>0-9</literal>.
+     </para>
     </listitem>
    </varlistentry>
   </variablelist>
