@@ -30,4 +30,5 @@
  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="smt_reporting.xml"></xi:include>
  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="smt_tools.xml"></xi:include>
  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="smt_client.xml"></xi:include>
+ <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="smt_appendix_api.xml"></xi:include>
 </book>
