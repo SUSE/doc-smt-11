@@ -328,6 +328,15 @@
     repositories.  If you want to delete all repositories, enter
     <guimenu>a</guimenu>.
    </para>
+
+   <note>
+    <title>Detecting Repository IDs</title>
+    <para>
+Every repository has a sha1sum that you can use as an ID.  You can
+get the repository's sha1sum by calling <command>smt-repos -v</command>.
+    </para>
+   </note>
+
   </sect2>
 
   <sect2>
