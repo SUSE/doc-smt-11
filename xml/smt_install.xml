@@ -8,11 +8,10 @@
 <chapter id="smt.installation">
  <title>&smt; Installation</title>
  <para>
-  &smt; is an add-on product for &sls; 11 systems. Install the &sls; 11
-  base system and add &smt;. You can either install the &smt; add-on
-  together with your base system during the initial installation
-  process, or on top of an already-installed base system at any later
-  time.
+  &smt; is an add-on product for &sls; 11 systems.  You can either install the
+  &smt; add-on together with your &sls; base system during the initial
+  installation process, or on top of an already-installed base system at any
+  later time.
  </para>
  <sect1>
   <title>Installation During the Initial Installation Process</title>
@@ -183,10 +182,10 @@
    </step>
    <step>
     <para>
-     For security reasons, &smt; requires a separate user to connect to
-     the database.  With <guimenu>Database Password for smt
-     User</guimenu> set the database password for that user.  Confirm it
-     in the following field.
+     For security reasons, &smt; requires a separate user to connect to the
+     database.  With the <guimenu>Database Password for smt User</guimenu>
+     widget set the database password for that user.  Confirm it in the
+     following field.
     </para>
     <para>
      Enter all e-mail addresses that &smt; should send reports to using the
