@@ -36,7 +36,7 @@
   </itemizedlist>
 
   <para>
-   &smt; Management application window opens with the
+   The &smt; Management application window opens with the
    <guimenu>Repositories</guimenu> tab active.
   </para>
 
@@ -61,7 +61,7 @@
    shows the repository's name, target product and architecture, mirroring
    and staging flag, date of last mirroring, and a short description. You
    can sort the list by clicking on the relevant column's header, and scroll
-   the list items by the scroll's on the window's right side.
+   the list items using the scrollbars on the window's right side.
   </para>
 
   <sect2 id="smt.yast.staging.viewing.filter">
@@ -172,7 +172,7 @@
    </step>
    <step>
     <para>
-     Repeat steps 1 to 3 for all the directory whose staging flag you wish
+     Repeat steps 1 to 3 for all directory whose staging flag you wish
      to change.
     </para>
    </step>
@@ -181,8 +181,8 @@
   <important>
    <title>Toggle Staging Button Not Active</title>
    <para>
-    You can only stage the repositories that were selected for mirroring
-    previously. If it is not the case, the <guimenu>Toggle Staging</guimenu>
+    You can only stage the repositories that were previously selected for
+    mirroring.  If it is not the case, the <guimenu>Toggle Staging</guimenu>
     button will not be active.
    </para>
   </important>
@@ -192,7 +192,7 @@
    on the <guimenu>Staging</guimenu> tab. In the upper left part of the window,
    there is a <guimenu>Repository Name</guimenu> drop-down list of all
    repositories which are available for staging. There the repository names
-   have the name of the staging group attched in parenthesis.  Select the one
+   have the name of the staging group attached in parentheses.  Select the one
    you want to stage and a list of packages of this repository appears below.
    Information about the patch name, its version and category, testing and
    production flags, and a short summary is available for each patch.
@@ -200,7 +200,7 @@
 
   <para>
    Next to the <guimenu>Repository Name</guimenu> drop-down list, there is a
-   <guimenu>Patch Category</guimenu> filter. It helps you list only the
+   <guimenu>Patch Category</guimenu> filter. It helps you to list only the
    patches that belong to one of the predefined categories.
   </para>
 
@@ -235,7 +235,7 @@
   </figure>
 
   <important>
-   <title>Creating Production Snapshot</title>
+   <title>Creating a Production Snapshot</title>
    <para>
     After you enable <emphasis>staging</emphasis> for an update repository,
     you have to create its <emphasis>production</emphasis> snapshot to make
@@ -288,7 +288,7 @@
     <listitem>
      <para>
       This status means that there are updates available for the client that
-      either <literal>optional</literal> or <literal>recommended</literal>.
+      are either <literal>optional</literal> or <literal>recommended</literal>.
      </para>
     </listitem>
    </varlistentry>
