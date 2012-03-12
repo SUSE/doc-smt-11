@@ -88,7 +88,7 @@
   </para>
 
   <para>
-   To request a merge, the customer or their sales rep send an email
+   To request a merge, the customer or their sales rep send an email to
    <ulink
     url="mailto:emea_pic@novell.com"/>
    (for EMEA-based customers only) with the applicable customer and site
@@ -705,7 +705,7 @@ smt-staging forbid --category <replaceable>Categoryname</replaceable></screen>
      <para>
       If you filter one or more patches from a repository,the original
       signature becomes invalid. The repository needs to be signed
-      again.  The <command>smt-staging creeaterepo</command> command
+      again.  The <command>smt-staging createrepo</command> command
       takes care of that automatically if you configure the &smt;
       server.
      </para>
@@ -713,9 +713,9 @@ smt-staging forbid --category <replaceable>Categoryname</replaceable></screen>
       In order to enable signing of changed metadata, the admin needs to
       generate new signing key. This can be done with GPG like this:
      </para>
-     <screen>mkdir $some-dir
-gpg --gen-key --homedir $some-dir
-sudo mv $some-dir /var/lib/smt/.gnupg
+     <screen>mkdir <replaceable>some_dir</replaceable>
+gpg --gen-key --homedir <replaceable>some_dir</replaceable>
+sudo mv <replaceable>some_dir</replaceable> /var/lib/smt/.gnupg
 sudo chown smt:users -R /var/lib/smt/.gnupg
 sudo chmod go-rwx -R /var/lib/smt/.gnupg</screen>
      <para>
