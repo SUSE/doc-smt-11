@@ -95,7 +95,7 @@
      When the &smt; Configuration applies configuration changes, it
      checks for the existence of the common server certificate. If the
      certificate does not exist, you will be asked if the certificate
-     needs to be created.
+     should be created.
     </para>
    </note>
   </step>
@@ -193,7 +193,7 @@
    <listitem>
     <para>
      The schema of the &smt; database is checked. If the database schema is
-     obsolete, the &smt; database is upgraded to conform to the current
+     outdated, the &smt; database is upgraded to conform to the current
      schema.
     </para>
    </listitem>
@@ -221,9 +221,9 @@
    </listitem>
    <listitem>
     <para>
-     The Cron, Apache Web and MySQL servers are reloaded. Neither Apache nor
-     MySQL are stopped, because they may be used for other purposes than the
-     &smt; service.
+     The Cron daemon, the Apache server and the MySQL database daemon are
+     reloaded. Neither Apache nor MySQL are stopped, because they may be used
+     for other purposes than the &smt; service.
     </para>
    </listitem>
   </itemizedlist>
@@ -260,6 +260,10 @@
     </para>
    </step>
    <step>
+    <!-- FIXME:
+    bwiedemann: future: software could provide link to click ; or fetch
+    credentials over an API
+    -->
     <para>
      If you do not have your credentials, visit &ncc; to obtain them. For
      more details, see <xref linkend="smt.mirroring.getcredentials"/>.
@@ -285,7 +289,7 @@
      credentials and try again.
     </para>
     <figure id="fig.yast.credtest">
-     <title>Succesful Test of &nu; Credentials</title>
+     <title>Successful Test of &nu; Credentials</title>
      <mediaobject>
       <imageobject role="html">
        <imagedata fileref="smt-yast-credtest.png" width="65%" format="PNG"/>
@@ -331,6 +335,7 @@
     </para>
    </step>
    <step>
+    <!-- FIXME: checkit.  Sounds like bad usability - bwiedemann -->
     <para>
      Enter the &smt; <guimenu>Database Password for &smt; User</guimenu>.
      Confirm the password by reentering it and click
@@ -370,7 +375,7 @@
   </procedure>
 
   <para>
-   The comma-separated list of adresses for &smt; reports is written to the
+   The comma-separated list of addresses for &smt; reports is written to the
    <option>reportEmail</option> option of the
    <filename>/etc/smt.conf</filename> configuration file.
   </para>
@@ -425,11 +430,12 @@
     </listitem>
    </varlistentry>
    <varlistentry>
-    <term>Uploads Support Configs</term>
+    <!-- FIXME: checkit.  "uploading"? -->
+    <term>Uploading Support Configs</term>
     <listitem>
-     <para>Uploads support configs, only when the &smt;-support package
-     is installed and manually added.  To add it, click
-     <guimenu>Add</guimenu>, then select <guimenu>Uploads Support
+     <para>Uploading support configs is only available, when the &smt;-support
+     package is installed and manually added.  To add it, click
+     <guimenu>Add</guimenu>, then select <guimenu>Uploading Support
      Configs</guimenu> from the <guimenu>Job to Run</guimenu> list.
      </para>
     </listitem>
@@ -467,6 +473,7 @@
      The <guimenu>Adding New SMT Scheduled Job</guimenu> dialog opens.
     </para>
     <para>
+     <!-- FIXME: check the dialog title -->
      Choose the synchronization job to schedule. You can choose between
      <guimenu>Synchronization of Updates</guimenu>, <guimenu>Report
      Generation</guimenu>, <guimenu>NCC Registration</guimenu>,
