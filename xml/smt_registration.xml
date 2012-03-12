@@ -70,10 +70,16 @@
       of the Month</guimenu> the mirroring should occur. </para>
     <note>
      <title>Lowest Registration Frequency</title>
-     <para> Do not set the frequency lower than 10 minutes, because the maximal value of the
-       <literal>rndRegister</literal> is 450 (7.5 minutes). If the frequency is lower, it may occur
-      that the started process is still sleeping when the proceeding process starts. In this case,
-      the second request will exit. </para>
+     <!-- FIXME: bwiedemann: proceeding # was bedeutet das hier?
+                 ke, asking jiri, 2012-03-12
+     -->
+     <para>
+      Do not set the frequency lower than 10 minutes, because the maximal value
+      of the <literal>rndRegister</literal> is 450 (7.5 minutes). If the
+      frequency is lower, it may occur that the started process is still
+      sleeping when the proceeding process starts. In this case, the second
+      request will exit.
+     </para>
     </note>
    </step>
    <step>
