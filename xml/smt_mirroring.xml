@@ -88,13 +88,12 @@
   </para>
 
   <para>
-   To request a merge, the customer or their sales rep send an email to
-   <ulink
-    url="mailto:emea_pic@novell.com"/>
-   (for EMEA-based customers only) with the applicable customer and site
-   IDs. The EMEA PIC team will verify the records. The contact for NALAAP is
-   <ulink
-    url="mailto:cmf@novell.com"/>
+   To request a merge, the customer or their sales rep send an email to <ulink
+   url="mailto:emea_pic@novell.com"/> (for EMEA-based customers
+   only&mdash;Europe, the Middle East and Africa) with the applicable customer
+   and site IDs. The EMEA PIC team will verify the records. The contact for
+   NALAAP is <ulink url="mailto:cmf@novell.com"/> (North America, Latin
+   America, and Asia Pacific).
   </para>
  </sect1>
  <sect1 id="smt.mirroring.manage">
@@ -221,7 +220,7 @@
     Only enabled repositories can be mirrored. In the database, the enabled
     repositories have the <literal>DOMIRROR</literal> flag set. Repositories
     can be enabled or disabled using the <command>smt-repos</command>
-    script.
+    command.
    </para>
    <para>
     To enable one or more repositories, follow these steps:
@@ -299,7 +298,7 @@
     </step>
     <step>
      <para>
-      If more than one repositories is listed, choose which one you want
+      If more than one repository is listed, choose which one you want
       to disable by specifying its ID listed in the repository table
       shown and pressing <keycap function="enter"/>. If you want to
       disable all the listed repositories, use <literal>a</literal> and
@@ -310,7 +309,7 @@
   </sect2>
 
   <sect2>
-   <!-- fate##310207 -->
+   <!-- fate#310207 -->
    <title>Deleting Mirrored Repositories</title>
 
    <para>You can delete mirrored repositories that are no longer used.  If you
@@ -342,11 +341,10 @@ get the repository's sha1sum by calling <command>smt-repos -v</command>.
   <sect2>
    <title>Mirroring Custom Repositories</title>
    <para>
-    You can mirror repositories that are not available at the &ncc;
-    using &smt;; those repositories are called <quote>custom
-    repositories</quote>. Use the
-    <command>smt-setup-custom-repos</command> script for this purpose.
-    Custom repositories can also be deleted.
+    Using &smt; you can also mirror repositories that are not available at the
+    &ncc;.  Those repositories are called <quote>custom
+    repositories</quote>. Use the <command>smt-setup-custom-repos</command>
+    command for this purpose.  Custom repositories can also be deleted.
    </para>
    <para>
     When adding a new custom repository,
@@ -420,13 +418,13 @@ get the repository's sha1sum by calling <command>smt-repos -v</command>.
    <para>
     For mirroring old style update repositories which were used for &sls; 9
     and similar products, use a special command:
-    <command>smt-mirror-sle9</command>. This script mirrors from the
+    <command>smt-mirror-sle9</command>. This command mirrors from the
     <literal>https://you.novell.com</literal> server. The download URL for
     &sls; 9 clients is following:
    </para>
 <screen>http(s)://example.com/repo/YOU9/&lt;<replaceable>architecture</replaceable>>/update/&lt;<replaceable>product</replaceable>>/&lt;<replaceable>version</replaceable>>/</screen>
    <para>
-    The <command>smt-mirror-sle9</command> script does not store information
+    The <command>smt-mirror-sle9</command> command does not store information
     about repositories to be mirrored in the &smt; database. It only uses
     the configuration from the <filename>/etc/smt.conf</filename> file. The
     configuration of <command>smt-mirror-sle9</command> is described in
@@ -711,7 +709,7 @@ smt-staging forbid --category <replaceable>Categoryname</replaceable></screen>
      </para>
      <para>
       In order to enable signing of changed metadata, the admin needs to
-      generate new signing key. This can be done with GPG like this:
+      generate a new signing key. This can be done with GPG like this:
      </para>
      <screen>mkdir <replaceable>some_dir</replaceable>
 gpg --gen-key --homedir <replaceable>some_dir</replaceable>
@@ -719,9 +717,9 @@ sudo mv <replaceable>some_dir</replaceable> /var/lib/smt/.gnupg
 sudo chown smt:users -R /var/lib/smt/.gnupg
 sudo chmod go-rwx -R /var/lib/smt/.gnupg</screen>
      <para>
-      Then, the ID of the newly generated key must be written into
-      <filename>/etc/smt.conf</filename>, option
-      <option>signingKeyID</option>.
+      Then, the ID of the newly generated key as seen in the <command>gpg
+      --gen-key</command> command output, must be written into
+      <filename>/etc/smt.conf</filename>, option <option>signingKeyID</option>.
      </para>
      <para>
       At this point the clients do not know about this new key. In order to
