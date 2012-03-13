@@ -79,11 +79,11 @@
   <variablelist>
    <!--
    <varlistentry>
-    <term><option>--classreport</option>
+    <term><option>-\-classreport</option>
     </term>
     <listitem>
      <para>
-      When the <option>--classreport</option> option is used, the created
+      When the <option>-\-classreport</option> option is used, the created
       report summarizes the number of clients running products of various
       classes (for example, all &sle; Server* products belong to the class
       <literal>SLES</literal>).
