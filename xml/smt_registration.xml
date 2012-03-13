@@ -70,14 +70,11 @@
       of the Month</guimenu> the mirroring should occur. </para>
     <note>
      <title>Lowest Registration Frequency</title>
-     <!-- FIXME: bwiedemann: proceeding # was bedeutet das hier?
-                 ke, asking jiri, 2012-03-12
-     -->
      <para>
-      Do not set the frequency lower than 10 minutes, because the maximal value
+      Do not set the frequency lower than 10 minutes, because the maximum value
       of the <literal>rndRegister</literal> is 450 (7.5 minutes). If the
       frequency is lower, it may occur that the started process is still
-      sleeping when the proceeding process starts. In this case, the second
+      sleeping when the next process starts. In this case, the second
       request will exit.
      </para>
     </note>
@@ -87,15 +84,20 @@
       <guimenu>Finish</guimenu>. </para>
    </step>
   </procedure>
-  <para> Scheduling of &smt; jobs in general is covered in <xref linkend="smt.yast.scheduling"/>
+  <para>
+   Scheduling of &smt; jobs in general is covered in <xref
+   linkend="smt.yast.scheduling"/>.
   </para>
   <para>
    &yast; uses <command>cron</command> to schedule &ncc; registrations
    and other &smt; jobs.  If you do not want to use &yast;, you can use
    <command>cron</command> directly.
   </para>
-  <para> To disable automatic registration, change the <option>forwardRegistration</option> value in
-   the <literal>[LOCAL]</literal> section of the <filename>/etc/smt.conf</filename> configuration
-   file to <literal>false</literal>. </para>
+  <para>
+   To disable automatic registration, change the
+   <option>forwardRegistration</option> value in the <literal>[LOCAL]</literal>
+   section of the <filename>/etc/smt.conf</filename> configuration file to
+   <literal>false</literal>.
+  </para>
  </sect1>
 </chapter>
