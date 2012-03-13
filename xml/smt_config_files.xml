@@ -88,7 +88,7 @@
        credentials, see
        <xref
         linkend="smt.mirroring.getcredentials"/> You can set
-       this value with the&smt; Server.
+       this value with the &smt; Server.
       </para>
      </listitem>
     </varlistentry>
@@ -174,7 +174,7 @@
      <listitem>
       <para>
        E-mail address used for registration at the &ncc;. The &smt;
-       administrator can set this value with the&smt; Server.
+       administrator can set this value with the &smt; Server.
 <!--
        It should be a Novell account adress of the &smt;
        administrator or of the person who aministers client machines
@@ -321,7 +321,7 @@
         If you configure the global proxy settings with &yast;, manually
         copy <filename>/root/.curlrc</filename> to the home directory of
         the <systemitem class="username">smt</systemitem> and adjust the
-        premissions with the following commands as &rootuser;:
+        permissions with the following commands as &rootuser;:
        </para>
        <screen>cp /root/.curlrc /var/lib/smt/
 chown smt:www /var/lib/smt/.curlrc</screen>
@@ -634,7 +634,7 @@ HTTPSProxy =
 ProxyUser = 
 #
 # require authentication to access the repository?
-# Three possible authtypes can be configures here
+# Three possible authtypes can be configured here
 # 1) none   : no authentication required (default)
 # 2) lazy   : check only username and password. A valid user has access to all repositories
 # 3) strict : check also if this user has access to the repository. 
@@ -693,7 +693,7 @@ jobStatusIsSuccess = 1,4
 reportEmail = exampleuser@example.com
 # from field of report mails - if empty it defaults to "root@&lt;hostname>.&lt;domainname>"
 reportEmailFrom = 
-# relay mail server - leave emtpy if mail should be sent directly
+# relay mail server - leave empty if mail should be sent directly
 mailServer = 
 mailServerPort = 
 # mail server authentication - leave empty if not required
