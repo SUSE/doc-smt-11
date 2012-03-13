@@ -1187,7 +1187,7 @@
       <para>There is always one group available with the name
        <quote>default</quote>. The default group has the path
        <filename>repo/full</filename>, <filename>repo/testing</filename> and
-       <filename>repo</filename>.  With creating a new group, new pathes can be
+       <filename>repo</filename>.  With creating a new group, new paths can be
        specified.
       </para>
      </listitem>
@@ -1290,7 +1290,8 @@
      <listitem>
       <para>
         Allow or forbid multiple patches (e.g. by category) one by one, that
-        is, as if the --patch option had been used on each of the patches.
+        is, as if the <option>--patch</option> option had been used on each of
+        the patches.
 </para>
      </listitem>
     </varlistentry>
@@ -1394,8 +1395,8 @@
       <para>
        Specify the directory where the supportconfig archives are uploaded.
        You can also set this option with the <literal>SMT_INCOMING</literal>
-       environment variable. The default SMT_INCOMING directory is
-       /var/spool/smt-support
+       environment variable. The default <literal>SMT_INCOMING</literal>
+       directory is <filename>/var/spool/smt-support</filename>.
       </para>
      </listitem>
     </varlistentry>
@@ -1404,7 +1405,7 @@
      </term>
      <listitem>
       <para>
-       List the uploaded supportconfig archives in the > incoming directory
+       List the uploaded supportconfig archives in the incoming directory.
       </para>
      </listitem>
     </varlistentry>
@@ -1431,7 +1432,7 @@
      </term>
      <listitem>
       <para>
-       Upload the specified archive to Novell. If you specify
+       Upload the specified archive to &suse;. If you specify
        <option>-s</option>, <option>-n</option>, <option>-c</option>,
        <option>-p</option>, and <option>-e</option> options, the archive is
        repackaged with contact information.
@@ -1443,7 +1444,7 @@
      </term>
      <listitem>
       <para>
-       Upload all archives in the incoming directory to Novell.
+       Upload all archives in the incoming directory to &suse;.
       </para>
      </listitem>
     </varlistentry>
@@ -1565,8 +1566,7 @@
     </term>
     <listitem>
      <para>
-      Check whether the &smt; is enabled and if so, restarts the &smt;
-      services.
+      Check whether the &smt; services are enabled and if so, restart them.
      </para>
     </listitem>
    </varlistentry>
