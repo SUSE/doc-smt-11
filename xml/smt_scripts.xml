@@ -1337,7 +1337,7 @@
      <listitem>
       <para>
        Specify on which group the command should work on. The default for
-       <option>--group</option> is default.
+       <option>--group</option> is the name <literal>default</literal>.
 </para>
      </listitem>
     </varlistentry>
@@ -1390,7 +1390,7 @@
    <para>
     The <command>smt-support</command> command manages uploaded support data
     usually coming from the <command>supportconfig</command> tool. You can
-    forward the data to Novell, either selectively or all. This command
+    forward the data to &suse;, either selectively or in full. This command
     understands the following options:
    </para>
    <variablelist>
@@ -1504,7 +1504,7 @@
      </term>
      <listitem>
       <para>
-       Enter the phone number of the contact.
+       Enter the phone number of the contact person.
       </para>
      </listitem>
     </varlistentry>
@@ -1578,7 +1578,7 @@
    </varlistentry>
   </variablelist>
   <para>
-   You can enable and disable &smt; with the &smt; Server.
+   You can enable and disable &smt; with the &yast; &smt; Server module.
   </para>
  </sect2>
 </sect1>
