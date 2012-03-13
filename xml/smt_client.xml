@@ -36,15 +36,14 @@
   </para>
  </note>
  <para>
-  There are several ways to provide this information and to configure the
-  client machine to use &smt;. The first way is to provide the needed
-  information via boot parameters at boot time. The second way is to
+  There are several ways to provide the registration information and to
+  configure the client machine to use &smt;. The first way is to provide the
+  needed information via boot parameters at boot time. The second way is to
   configure clients using an &ay; profile. There is also the
-  <command>clientSetup4SMT.sh</command> script. 
-  This script can be run on a
+  <command>clientSetup4SMT.sh</command> script.  This script can be run on a
   client to make it register against a specified &smt; server. In SLE 11 you
-  can now set the SMT server URL with the &yast;2 registration module during
-  installation. These methods are described in the following sections:
+  can now set the SMT server URL with the &yast; registration module during
+  installation. These methods are described in the following sections.
  </para>
  <sect1 id="smt.client.parameters">
   <title>Using Kernel Parameters to Access an &smt; Server</title>
@@ -145,7 +144,7 @@
     will fail.
    </para>
    <para>
-    If a wrong value for <literal>regcert</literal> has been entered, you
+    If an invalid value for <literal>regcert</literal> has been entered, you
     will be prompted for a local path to the certificate. In case
     <literal>regcert</literal> is not specified at all, it will default to
     <literal>http://<replaceable>FQDN</replaceable>/smt.crt</literal> with
@@ -363,8 +362,8 @@
     <literal>apache2-example-pages</literal> package.
    </para>
    <para>
-    If you choose to edit the <filename>robots.txt</filename> file, and
-    before the <literal>Disallow: /</literal> add:
+    If you choose to edit the <filename>robots.txt</filename> file, add
+    before the <literal>Disallow: /</literal> statement:
    </para>
    <screen>Allow: /repo/keys</screen>
   </sect2>
@@ -374,7 +373,7 @@
 
   <para>
    To configure a client to register against the test environment instead
-   the production environment, modify
+   of the production environment, modify
    <filename>/etc/suseRegister.conf</filename> on the client machine by
    setting:
    <remark>taroth 080605: any idea if this line just needs to be added or if another line
@@ -407,7 +406,7 @@ follows:
 
   <para><filename>repoindex.xml</filename> returns the complete repository list
 as they come from the vendor.  If a repository is marked for staging,
-<filename>repoindex.xml</filename> list the repository in the
+<filename>repoindex.xml</filename> lists the repository in the
 <literal>full</literal> namespace (<filename>repos/full/$RCE</filename>).
 </para>
 
@@ -612,7 +611,7 @@ gpgcheck=1</screen>
    <para>
     Both up2date and the update notification applet should work correctly
     now, pointing to the SMT repository and indicating updates when
-    available. It may need to restart the applet.
+    available. In case of trouble, try to restart the applet.
    </para>
    <para>
     In order to ensure correct reporting of the Red Hat Enterprise systems
