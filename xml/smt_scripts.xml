@@ -47,7 +47,7 @@
   <para>
    You can manipulate, list, create or delete the jobs. For this reason, the
    command line tool <command>smt-job</command> was introduced. For more
-   details on, see <xref linkend="smt.scripts.job"/>.
+   details on <command>smt-job</command>, see <xref linkend="smt.scripts.job"/>.
   </para>
   <note>
    <title>Overriding the Automatic Creation of Patch Status Job</title>
@@ -802,7 +802,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--nosync</option>
+     <term><option>--nonccsync</option>
      </term>
      <listitem>
       <para>
@@ -1041,11 +1041,10 @@
    <title>smt-setup-custom-repos</title>
    <para>
     The <command>smt-setup-custom-repos</command> or <command>smt
-    setup-custom-repos</command> script is a tool to set up custom
-    repositories (repositories not present in &nu;) to be used with &smt;.
-    You can this script to add a new repository to the &smt; database or to
-    delete a repository from the database. The script recognizes the
-    following options:
+    setup-custom-repos</command> script is a tool to set up custom repositories
+    (repositories not present in &nu;) to be used with &smt;.  You can use this
+    script to add a new repository to the &smt; database or to delete a
+    repository from the database. The script recognizes the following options:
    </para>
    <variablelist>
     <varlistentry>
@@ -1055,7 +1054,7 @@
       <para>
        ID of a product the repository belongs to. If a repository should
        belong to multiple products, use this option multiple times to assign
-       repository to all relevant products.
+       the repository to all relevant products.
       </para>
      </listitem>
     </varlistentry>
@@ -1111,7 +1110,7 @@
 --name <replaceable>My_Catalog</replaceable> --exturl <replaceable>http://my.example.com/My_Catalog</replaceable>
 </screen>
    <para>
-    To remove an already set repository, use the following command:
+    To remove a configured repository, use the following command:
    </para>
 <screen>smt-setup-custom-repos --delete <replaceable>Catalog_ID</replaceable></screen>
    <para>
@@ -1179,6 +1178,10 @@
      </listitem>
     </varlistentry>
     <varlistentry>
+     <!-- bwiedemann:
+     concept of groups vs directories is still somewhat unclear - does every
+     group have 3 dirs (full/testing/prod)? If explained elsewhere, add a ref?
+     -->
      <term><option>listgroups</option>
      </term>
      <listitem>
@@ -1288,6 +1291,9 @@
      <term><option>--individually</option>
      </term>
      <listitem>
+      <!-- bwiedemann:
+      # where is the difference to allowing all together?
+      -->
       <para>
         Allow or forbid multiple patches (e.g. by category) one by one, that
         is, as if the <option>--patch</option> option had been used on each of
