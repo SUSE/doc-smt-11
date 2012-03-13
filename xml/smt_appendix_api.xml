@@ -38,14 +38,14 @@ GET /job/<jobid>                     get job with jobid for client.
 PUT /job/<jobid>                     update job having <jobid> using XML data.
                                      Note: updates only retrieved jobs]]></screen>
 
-<para>For backward compatibiltiy reasons also available:</para>
+<para>For backward compatibility reasons also available:</para>
 
 <screen><![CDATA[GET /jobs/@next                      same as GET /job/@next
 GET /jobs/<jobid>                    same as GET /job/<jobid>
 PUT /jobs/<jobid>                    same as PUT /job/<jobid>]]></screen>
 
 
-<para>API for genaral access
+<para>API for general access
 (this needs authentication using credentials from the <literal>[REST]</literal> section of <filename>smt.conf</filename>).</para>
 
 <screen><![CDATA[GET /clients                         get data of all clients
@@ -146,7 +146,7 @@ Example:
                                       # (for compatibility reasons, if third
                                       # party application talks to SMT REST
                                       # service).
-  attribute type {                    # job type ID string. Must be uniqe and
+  attribute type {                    # job type ID string. Must be unique and
                                       # equal to the name of the Perl module on
                                       # the client.
     "softwarepush",
@@ -158,7 +158,7 @@ Example:
   attribute created {xsd:string},     # time stamp of creation
   attribute expires {xsd:string},     # expiration time stamp; the job expires
                                       # if not retrieved by then
-  attribute finished {xsd:string},    # time stamp of job's completion
+  attribute finished {xsd:string},    # time stamp of job completion
   attribute retrieved {xsd:string},   # time stamp of retrieval of the job
   attribute persistent {xsd:boolean}?, # defines whether the job is a persistent
                                       # (repetitive) job
@@ -267,7 +267,7 @@ in which case a new target time will be computed).
     <varlistentry>
      <term><literal><![CDATA[GET /repo/<repoid>]]></literal></term>
      <listitem>
-      <para>Returns detailed information about specified repository. The
+      <para>Returns detailed information about the specified repository. The
       <literal><![CDATA[<repoid>]]></literal> can be obtained using the
       <literal>/repos</literal> or
       <literal><![CDATA[/products/<productid>/repos/]]></literal>
@@ -302,7 +302,7 @@ in which case a new target time will be computed).
      <term><literal><![CDATA[GET /repo/<repoid>/patches]]></literal></term>
      <listitem>
       <para>
-Returns a list of all patches in specified software repository. The
+Returns a list of all patches in the specified software repository. The
 repoid can be obtained using the <literal>/repos</literal> or
 <literal><![CDATA[/products/<productid>/repos/]]></literal> call.
       </para>
@@ -365,7 +365,7 @@ in the mirrored attribute.
      <term><literal><![CDATA[GET /patch/<patchid>]]></literal></term>
 
      <listitem>
-      <para>Returns detailed information about specified patch. The
+      <para>Returns detailed information about the specified patch. The
       patchid can be obtained via the
       <literal><![CDATA[/repo/<repoid>/patches]]></literal> call.
       </para>
@@ -483,8 +483,8 @@ RNC:
 
  <listitem>
   <para>
-Returns information about specific product. The productid can be obtained from
-data returned by /products call.
+Returns information about the specified product. The productid can be obtained
+from data returned by /products call.
   </para>
 <para>
 RNC:
@@ -508,7 +508,7 @@ RNC:
 <varlistentry>
  <term><literal><![CDATA[GET /product/<productid>/repos]]></literal></term>
 <listitem>
-<para>Returns the list of all software repositories repositories for
+<para>Returns the list of all software repositories for the
 specified product. The productid can be obtained from the data returned
 by <literal>/products</literal> call.</para>
 
