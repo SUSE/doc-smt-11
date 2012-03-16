@@ -410,6 +410,26 @@
    &smt; server here.  After confirmation the certificate is loaded and
    the user is asked to accept it.  Then continue.
   </para>
+
+  <warning>
+   <!-- bnc#752395 -->
+   <title>Staging Groups Need Registration with the clientSetup4SMT.sh
+   Script</title>
+
+   <para>
+    If a staging group is used, the
+    <command>clientSetup4SMT.sh</command> script (see <xref
+    linkend="smt.client.clientsetupscript"/>) must be used for
+    registration instead of &yast; registration module.
+   </para>
+
+   <para>
+    For more information about staging groups, see <xref
+    linkend="smt.yast.staging.stage"/>.
+   </para>
+  </warning>
+
+
  </sect1>
  <!-- ================================================================ -->
  <sect1>
