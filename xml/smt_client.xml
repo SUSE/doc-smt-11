@@ -407,8 +407,13 @@
   <para>
    Click <menuchoice><guimenu>Advanced</guimenu><guimenu>Local
    Registration Server</guimenu></menuchoice> and enter the name of the
-   &smt; server here.  After confirmation the certificate is loaded and
-   the user is asked to accept it.  Then continue.
+   &smt; server plus the path to the registration internals
+   (<filename>/center/regsvc/</filename>), e.g.:
+  </para>
+  <screen>https://smt.example.com/center/regsvc/</screen>
+  <para>
+   After confirmation the certificate is loaded and the user is asked to
+   accept it.  Then continue.
   </para>
 
   <warning>
