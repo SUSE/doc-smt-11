@@ -48,7 +48,7 @@ PUT /jobs/<jobid>                    same as PUT /job/<jobid>]]></screen>
 <para>API for general access
 (this needs authentication using credentials from the <literal>[REST]</literal> section of <filename>smt.conf</filename>).</para>
 
-<screen><![CDATA[GET /clients                         get data of all clients
+<screen><![CDATA[GET /client                          get data of all clients
 GET /client/<GUID>                   get data of client with specified GUID
 GET /client/<GUID>/jobs              get client's job data
 GET /client/<GUID>/patchstatus       get client's patch status
@@ -56,13 +56,22 @@ GET /client/<GUID>/job/@next         get client's next job
 GET /client/<GUID>/job/<jobid>       get specified client job data
 GET /client/@all/jobs                get job data of all clients
 GET /client/@all/patchstatus         get patch status of all clients
+GET /repo                            get all repositories known to SMT
 GET /repo/<repoid>                   get details of repository with <repoid>
 GET /repo/<repoid>/patches           get repository's patches
-GET /repos                           get all repositories known to SMT
 GET /patch/<patchid>                 get patch <patchid> details
-GET /products                        get list of all products known to SMT
+GET /product                         get list of all products known to SMT
 GET /product/<productid>             get details of product with <productid>
 GET /product/<productid>/repos       get list of product's repositories]]></screen>
+
+<!-- bnc#752473 -->
+<para>For backward compatibility reasons, plural forms are also
+available; e.g.:</para>
+
+<screen><![CDATA[GET /clients                         same as GET /client
+GET /repos                           same as GET /repo
+GET /product                         same as GET /product]]></screen>
+
    </listitem>
   </varlistentry>
   <varlistentry>
