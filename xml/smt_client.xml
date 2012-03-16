@@ -8,7 +8,7 @@
 <chapter id="smt.client">
  <title>Configuring Clients to Use &smt;</title>
  <para>
-  Any machine running &sle; 10 SP4 or 11 SP1 or later can be configured
+  Any machine running &sle; 10 SP4 or 11 SP1 (or later) can be configured
   to register against &smt; and download software updates from there,
   instead of communicating directly with the &ncc; and the &nu; servers.
  </para>
@@ -54,6 +54,22 @@
    <literal>regcert</literal>. The first parameter is mandatory, the latter
    is optional.
   </para>
+
+  <warning>
+   <title>Beware of Typing Errors</title>
+   <para>
+    Make sure the values you enter are correct. If <literal>regurl</literal>
+    has not been specified correctly, the registration of the update source
+    will fail.
+   </para>
+   <para>
+    If an invalid value for <literal>regcert</literal> has been entered, you
+    will be prompted for a local path to the certificate. In case
+    <literal>regcert</literal> is not specified at all, it will default to
+    <literal>http://<replaceable>FQDN</replaceable>/smt.crt</literal> with
+    <literal>FQDN</literal> being the name of the &smt; server.
+   </para>
+  </warning>
 
   <variablelist>
    <varlistentry>
@@ -135,22 +151,6 @@
     </listitem>
    </varlistentry>
   </variablelist>
-
-  <warning>
-   <title>Beware of Typing Errors</title>
-   <para>
-    Make sure the values you enter are correct. If <literal>regurl</literal>
-    has not been specified correctly, the registration of the update source
-    will fail.
-   </para>
-   <para>
-    If an invalid value for <literal>regcert</literal> has been entered, you
-    will be prompted for a local path to the certificate. In case
-    <literal>regcert</literal> is not specified at all, it will default to
-    <literal>http://<replaceable>FQDN</replaceable>/smt.crt</literal> with
-    <literal>FQDN</literal> being the name of the &smt; server.
-   </para>
-  </warning>
 
   <warning>
    <title>Change of &smt; Server Certificate</title>
