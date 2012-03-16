@@ -37,14 +37,40 @@
  </note>
  <para>
   There are several ways to provide the registration information and to
-  configure the client machine to use &smt;. The first way is to provide the
-  needed information via boot parameters at boot time. The second way is to
-  configure clients using an &ay; profile. There is also the
-  <command>clientSetup4SMT.sh</command> script.  This script can be run on a
-  client to make it register against a specified &smt; server. In SLE 11 you
-  can now set the SMT server URL with the &yast; registration module during
-  installation. These methods are described in the following sections.
+  configure the client machine to use &smt;:
  </para>
+ <orderedlist>
+  <listitem>
+   <para>
+    Provide the needed information via kernel parameters at boot time
+    (<xref linkend="smt.client.parameters"/>).
+   </para>
+  </listitem>
+  <listitem>
+   <para>
+    Configure the clients using an &ay; profile (<xref
+    linkend="smt.client.autoyast"/>).
+   </para>
+  </listitem>
+  <listitem>
+   <para>
+    Use the <command>clientSetup4SMT.sh</command> script (<xref
+    linkend="smt.client.clientsetupscript"/>).  This script can be run
+    on a client to make it register against a specified &smt; server.
+   </para>
+  </listitem>
+  <listitem>
+   <para>
+    In &sle; 11 you can now set the &smt; server URL with the &yast;
+    registration module during installation (<xref
+    linkend="smt.client.yast"/>).
+   </para>
+  </listitem>
+ </orderedlist>
+  <para>
+   These methods are described in the following sections.
+  </para>
+  <!-- ============================================================== -->
  <sect1 id="smt.client.parameters">
   <title>Using Kernel Parameters to Access an &smt; Server</title>
 
@@ -257,7 +283,7 @@
   <para>
    The <command>/usr/share/doc/packages/smt/clientSetup4SMT.sh</command>
    script is provided with &smt;. This script allows you to configure a
-   client machine to use a &smt; server or to reconfigure it to use a
+   client machine to use an &smt; server or to reconfigure it to use a
    different &smt; server.
   </para>
   <note>
@@ -368,6 +394,24 @@
    <screen>Allow: /repo/keys</screen>
   </sect2>
  </sect1>
+ <!-- ================================================================ -->
+ <sect1 id="smt.client.yast">
+  <!-- bnc#752392 -->
+  <title>Configuring Clients with &yast;</title>
+
+  <para>
+   To configure a client to perform the registration against an &smt;
+   server use the &yast; registration module (<command>yast2
+   inst_suse_register</command>).
+  </para>
+  <para>
+   Click <menuchoice><guimenu>Advanced</guimenu><guimenu>Local
+   Registration Server</guimenu></menuchoice> and enter the name of the
+   &smt; server here.  After confirmation the certificate is loaded and
+   the user is asked to accept it.  Then continue.
+  </para>
+ </sect1>
+ <!-- ================================================================ -->
  <sect1>
   <title>Registering Clients Against &smt; Test Environment</title>
 
