@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE chapter PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd"
-          [
-          <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE">
-          <!ENTITY % entities SYSTEM "entity-decl.ent">
-          %entities;
+<!DOCTYPE chapter PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd" [
+<!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE">
+<!ENTITY % entities SYSTEM "entity-decl.ent">
+%entities;
 ]>
 <chapter id="smt.client">
  <title>Configuring Clients to Use &smt;</title>
@@ -418,20 +417,23 @@
 
   <warning>
    <!-- bnc#752395 -->
-   <title>Staging Groups Need Registration with the clientSetup4SMT.sh
-   Script</title>
+   <title>Staging Groups Registration</title>
 
    <para>
-    If a staging group is used, the
-    <command>clientSetup4SMT.sh</command> script (see <xref
-    linkend="smt.client.clientsetupscript"/>) must be used for
-    registration instead of &yast; registration module.
-   </para>
-
-   <para>
+    If a staging group is used, make sure that settings in
+    <filename>/etc/suseRegister.conf</filename> are done accordingly.
+    If not already done, modify the <literal>register=</literal>
+    paramater and append
+    <literal>&amp;namespace=<replaceable>groupname</replaceable></literal>.
     For more information about staging groups, see <xref
     linkend="smt.yast.staging.stage"/>.
    </para>
+
+   <para>
+    Alternatively, use the <command>clientSetup4SMT.sh</command> script
+    (see <xref linkend="smt.client.clientsetupscript"/>).
+   </para>
+
   </warning>
 
 
