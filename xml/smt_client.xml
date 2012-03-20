@@ -424,7 +424,7 @@
     <filename>/etc/suseRegister.conf</filename> are done accordingly.
     If not already done, modify the <literal>register=</literal>
     paramater and append
-    <literal>&amp;namespace=<replaceable>groupname</replaceable></literal>.
+    <literal>&amp;namespace=<replaceable>namespace</replaceable></literal>.
     For more information about staging groups, see <xref
     linkend="smt.yast.staging.stage"/>.
    </para>
