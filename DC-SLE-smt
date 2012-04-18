@@ -15,7 +15,7 @@ HTML_CSS="/usr/share/xml/docbook/stylesheet/suse/html/susebooks.css"
 EPUB_CSS="/usr/share/xml/docbook/stylesheet/suse/epub/susebooks.css"
 
 ## obsolete
-DISTVER="11.1"
+DISTVER="11.2"
 PKGNAME="sle-smt"
 
 ## enable sourcing
