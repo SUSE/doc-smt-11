@@ -7,20 +7,20 @@
 ]>
 <!--
      Please keep this document neatly formatted, because a text version
-     for LICENSE.txt is created form this source. That means only the
+     for LICENSE.txt is created from this source. That means only the
      xml tags will be stripped, the rest of the formatting will appear
      in the txt file as is.
 -->
 <legalnotice>
  <para>
   All content is copyright &copy; 2006&ndash;<?dbtimestamp format="Y"?>
-  Novell, Inc. All rights reserved.
+  SUSE LLC. All rights reserved.
  </para>
  <para>
   Legal Notice
  </para>
  <para>
-  This manual is protected under Novell intellectual property rights. By
+  This manual is protected under SUSE intellectual property rights. By
   reproducing, duplicating or distributing this manual you explicitly agree
   to conform to the terms and conditions of this license agreement.
  </para>
@@ -40,13 +40,13 @@
   </member>
  </simplelist>
  <para>
-  For Novell trademarks, see the Novell Trademark and Service Mark list
+  For SUSE or Novell trademarks, see the Novell Trademark and Service Mark list
   <ulink
    url="http://www.novell.com/company/legal/trademarks/tmlist.html"/>.
   All other third party
   trademarks are the property of their respective owners. A trademark symbol
-  (&reg;, &trade; etc.) denotes a Novell trademark; an asterisk (*) denotes
-  a third party trademark.
+  (&reg;, &trade; etc.) denotes a SUSE or Novell trademark; an asterisk (*)
+  denotes a third party trademark.
  </para>
  <para>
   All information found in this book has been compiled with utmost attention
