@@ -210,12 +210,12 @@
   <title>Upgrade of &smt; From Previous Versions</title>
 
   <para>
-   SLES11-SP3 introduces upgrade of the MySQL database to version 5.5.
-   This upgrade involves change of the database format and the database
-   needs to be converted.
+   SLES11-SP3 introduces the upgrade of the MySQL database to version 5.5.
+   This upgrade involves a change of the database format and the database
+   needs to be converted accordingly.
   </para>
   <para>
-   After MySQL database is upgraded, the database engine is not running.
+   After the MySQL database is upgraded, the database engine is not running.
    The database needs to be converted and MySQL started to continue using
    &smt;.
   </para>
