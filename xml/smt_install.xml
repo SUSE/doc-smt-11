@@ -206,4 +206,25 @@
    </step>
   </procedure>
  </sect1>
+ <sect1 id="smt.installation.upgrade">
+  <title>Upgrade of &smt; From Previous Versions</title>
+
+  <para>
+   SLES11-SP3 introduces upgrade of the MySQL database to version 5.5.
+   This upgrade involves change of the database format and the database
+   needs to be converted.
+  </para>
+  <para>
+   After MySQL database is upgraded, the database engine is not running.
+   The database needs to be converted and MySQL started to continue using
+   &smt;.
+  </para>
+  <para>
+   To mgirate the MySQL database, run following commands as root:</para>
+<screen>touch /var/lib/mysql/.force_upgrade
+rcmysql restart</screen>
+  <para>
+   We strongly recommend to back up the database before migrating it.
+  </para>
+ </sect1>
 </chapter>
