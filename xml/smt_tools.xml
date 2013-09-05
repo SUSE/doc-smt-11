@@ -10,6 +10,7 @@
  <para>
   This chapter describes the most important scripts, configuration files and certificates
   shipped with &smt;.
+
  </para>
  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="smt_scripts.xml"></xi:include>
  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="smt_config_files.xml"></xi:include>
