@@ -9,9 +9,9 @@
  <title>Managing Repositories with &yast; &smt; Server Management</title>
  <para>
   You can use the &yast; &smt; Server Management module for day-to-day
-  management. &smt; Management enables and disables the mirroring of
-  repositories, the staging flag for repositories, and performs the mirroring
-  and staging.
+  management. &smt; Server Management enables and disables the mirroring
+  of repositories, the staging flag for repositories, and performs the
+  mirroring and staging.
  </para>
  <sect1 id="smt.yast.staging.starting">
   <title>Starting &smt; Management Module</title>
@@ -73,7 +73,8 @@
     from the first word of the repositories' names. If you use a filter to
     limit the number of displayed repositories, you can always go back and
     view all of them by selecting <guimenu>All</guimenu> from the
-    <guimenu>Filter</guimenu> drop-down list.
+    <guimenu>Filter</guimenu> drop-down list. You can also use more
+    than one filter in sequence.
    </para>
   </sect2>
 

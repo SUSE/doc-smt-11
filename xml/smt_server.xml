@@ -25,7 +25,7 @@
   -->
  </para>
  <para>
-  To configure &smt; with &smt; Configuration, follow these
+  To configure &smt; with &smt; Server Configuration, follow these
   steps:
  </para>
  <procedure>
@@ -48,18 +48,24 @@
     Tool Service (SMT)</guimenu> option in the <guimenu>Customer Center
     Access</guimenu> tab. If you want to disable &smt;, uncheck this option.
     For more information about activating &smt; with &yast;, see
-    <xref linkend="smt.yast.activation"/>
+    <xref linkend="smt.yast.activation"/>.
    </para>
   </step>
   <step>
    <para>
-    In the <guimenu>Customer Center Access</guimenu> tab, set and test
-    credentials for the &nu; (Novell Update) service. Correct credentials
-    are necessary to enable mirroring from &nu; and determine the products
+    If the firewall is enabled, check <guimenu>Open Port in Firewall</guimenu>.
+   </para>
+  </step>
+  <step>
+   <para>
+    In the <guimenu>Customer Center Configuration</guimenu> section of the 
+    <guimenu>Customer Center Access</guimenu> tab, choose which service
+    should be used (&ncc; or &scc;) and, if necessary, set the custom server
+    URLs. Set and test credentials for the &nu; (Novell Update) service. Correct
+    credentials are necessary to enable mirroring from &nu; and determine the products
     that should be mirrored. Also set the e-mail address used for the
-    registration and the URL of your &smt; server. For more information, see
-    <xref
-     linkend="smt.yast.credentials"/>.
+    registration and the URL of your &smt; server and your &smt; server URL.
+    For more information, see <xref linkend="smt.yast.credentials"/>.
    </para>
   </step>
   <step>
@@ -80,7 +86,6 @@
    </para>
   </step>
   <step>
-   <!-- at least in my yast (sles 11 sp2), this button is called "OK". -->
    <para>
     If satisfied with the configuration, click <guimenu>OK</guimenu>.
     &yast; adjusts the &smt; configuration and starts or restarts necessary

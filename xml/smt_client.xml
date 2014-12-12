@@ -685,11 +685,11 @@ gpgcheck=1</screen>
     available. In case of trouble, try to restart the applet.
    </para>
    <para>
-    In order to ensure correct reporting of the Red Hat Enterprise systems
-    in &ncc;, they need to be be registered against your SMT server. For
+    In order to ensure correct reporting of the Red Hat Enterprise systems in
+    &ncc; or &scc;, they need to be be registered against your SMT server. For
     this a special suseRegisterRES package is provided through the RES*
-    catalogs and it should be installed, configured and executed as
-    described below.
+    catalogs and it should be installed, configured and executed as described
+    below.
    </para>
   </sect2>
 
@@ -775,4 +775,5 @@ rpm -ivh /var/spool/up2date/suseRegisterRES*.rpm /var/spool/up2date/perl-XML-Wri
    </procedure>
   </sect2>
  </sect1>
+
 </chapter>

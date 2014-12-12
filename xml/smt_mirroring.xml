@@ -118,10 +118,10 @@
    </para>
    <para>
     To update the &smt; database manually, use the
-    <command>smt-ncc-sync</command> command. For more information about the
-    <command>smt-ncc-sync</command> command, see
+    <command>smt-sync</command> command. For more information about the
+    <command>smt-sync</command> command, see
     <xref
-     linkend="smt.scripts.nccsync"/>.
+     linkend="smt.scripts.smtsync"/>.
    </para>
   </sect2>
 
@@ -442,22 +442,20 @@ get the repository's sha1sum by calling <command>smt-repos -v</command>.
   </sect2>
  </sect1>
  <sect1>
-  <title>The /srv/www/htdocs Structure</title>
-
+  <title>The /srv/www/htdocs Structure with &ncc;</title>
   <para>
    The path to the directory containing the mirror is set by the
-   <option>MirrorTo</option> option in the
-   <filename>/etc/smt.conf</filename> configuration file. For more
-   information about <filename>/etc/smt.conf</filename>, see
-   <xref linkend="smt.config.smtconf"/>. If the <option>MirrorTo</option>
-   option is not set to the Apache htdocs directory
-   <filename>/srv/www/htdocs/</filename>, links should be created manually
-   like this:
+   <option>MirrorTo</option> option in the <filename>/etc/smt.conf</filename>
+   configuration file. For more information about <filename>/etc/smt.conf</filename>,
+   see <xref linkend="smt.config.smtconf"/>. If the <option>MirrorTo</option>
+   option is not set to the Apache htdocs directory <filename>/srv/www/htdocs/</filename>,
+   links should be created manually like this:
   </para>
   <itemizedlist>
    <listitem>
-    <para><filename>/srv/www/htdocs/repo/$RCE</filename> should point to
-   <filename><replaceable>/MirrorTo</replaceable>/repo/$RCE/</filename>
+    <para>
+     <filename>/srv/www/htdocs/repo/$RCE</filename> should point to
+    <filename><replaceable>/MirrorTo</replaceable>/repo/$RCE/</filename>
     </para>
    </listitem>
    <listitem>
@@ -511,6 +509,48 @@ drwxr-xr-x 2 smt  www  4096 Feb  8 14:14 tools/
    </para>
   </note>
  </sect1>
+ <sect1>
+  <title>The /srv/www/htdocs Structure with &scc;</title>
+  <para>
+   The repository structure in the <filename>/srv/www/htdocs</filename>
+   directory matches the structure as it comes from &scc;. This directory
+   structure differs from the structure coming from &ncc;. There are the following directories in the
+   structure (selected examples, similar for other products and
+   architectures):
+  </para>
+<screen>
+repo/SUSE/Products/SLE-SDK/12/x86_64/product/
+</screen>
+  <para>
+   contains the -POOL repository of SDK (the GA version of all packages).
+  </para>
+<screen>
+repo/SUSE/Products/SLE-SDK/12/x86_64/product.license/
+</screen>
+  <para>
+   contains EULA associated with the product.
+  </para>
+<screen>
+repo/SUSE/Updates/SLE-SDK/12/x86_64/update/
+repo/SUSE/Updates/SLE-SDK/12/s390x/update/
+repo/SUSE/Updates/SLE-SERVER/12/x86_64/update/
+</screen>
+  <para>
+   contain update repositories for respective products.
+  </para>
+<screen>
+repo/full/SUSE/Updates/SLE-SERVER/12/x86_64/update/
+repo/testing/SUSE/Updates/SLE-SERVER/12/x86_64/update/
+</screen>
+  <para>
+   contain repositories optionally created for staging of respecive
+   repositories. The semantics are the same as with repositories from &ncc;.
+  </para>
+ </sect1>
+
+
+
+
  <sect1 id="smt.mirroring.testenv">
   <title>Using the Test Environment</title>
 

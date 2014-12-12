@@ -20,7 +20,7 @@
   <title>/etc/smt.conf</title>
   <para>
    The <filename>/etc/smt.conf</filename> file has several sections. The
-   <literal>[NU]</literal> section contains the &nu; credentials and URL.
+   <literal>[NU]</literal> section contains the update credentials and URL.
 <!--For more information, see <xref linkend="smt.config.smtconf.nu" />.-->
    The <literal>[DB]</literal> section contains the configuration of the
    MySQL database for &smt;. The <literal>[LOCAL]</literal> section
@@ -49,7 +49,7 @@
      </term>
      <listitem>
       <para>
-       URL of the &nu; service. In most cases, it should contain the
+       URL of the update service. In most cases, it should contain the
        <literal>https://nu.novell.com/</literal> URL.
       </para>
      </listitem>
@@ -59,8 +59,8 @@
      </term>
      <listitem>
       <para>
-       URL of the &nu; registration service. It is used by
-       <command>smt-ncc-sync</command>. If this option is missing, the URL
+       URL of the update registration service. It is used by
+       <command>smt-sync</command>. If this option is missing, the URL
        from <filename>/etc/suseRegister.conf</filename> is used as a
        fallback.
       </para>
@@ -71,7 +71,8 @@
      </term>
      <listitem>
       <para>
-       <option>NUUser</option> should contain the username for &nu; service.
+       <option>NUUser</option> should contain the username for update
+       service.
        For information about getting mirroring credentials, see
        <xref linkend="smt.mirroring.getcredentials"/>. You can set this
        value with the &smt; Server.
@@ -86,9 +87,19 @@
        <option>NUPass</option> is the password for the user defined in
        <option>NUUser</option>. For information about getting mirroring
        credentials, see
-       <xref
-        linkend="smt.mirroring.getcredentials"/> You can set
+       <xref linkend="smt.mirroring.getcredentials"/> You can set
        this value with the &smt; Server.
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><option>ApiType</option>
+     </term>
+     <listitem>
+      <para>
+       <option>ApiType</option> is the type of the service &smt;
+       uses, it can be either <literal>NCC</literal> for &ncc; or
+       <literal>SCC</literal> for &scc;.
       </para>
      </listitem>
     </varlistentry>
@@ -198,7 +209,7 @@
      <listitem>
       <para>
        If the <option>MirrorAll</option> option is set to
-       <literal>true</literal>, the <command>smt-ncc-sync</command> script
+       <literal>true</literal>, the <command>smt-sync</command> script
        will set all repositories that can be mirrored to be mirrored
        (DOMIRROR flag).
       </para>
@@ -604,6 +615,7 @@ NUUrl = https://nu.novell.com/
 NURegUrl = https://secure-www.novell.com/center/regsvc/
 NUUser = exampleuser
 NUPass = examplepassword
+ApiType = NCC
 
 [DB]
 config = dbi:mysql:database=smt;host=localhost
@@ -749,7 +761,7 @@ credentials =</screen>
   <variablelist>
    <varlistentry>
     <term><option>NCC_SYNC_PARAMS</option>
-    </term>
+    </term><!--FIXME scc?-->
     <listitem>
      <para>
       Contains parameters of the <command>smt ncc-sync</command> command, if
