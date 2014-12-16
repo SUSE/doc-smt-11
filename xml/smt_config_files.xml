@@ -246,7 +246,8 @@
        to <literal>true</literal>, client registrations will be forwarded to
        &ncc;. If the <option>forwardRegistration</option> option is set to
        <literal>false</literal>, no client registrations will be sent to
-       &ncc;.
+       &ncc;. <option>forwardRegistration</option> does not work with &scc;
+       yet.
       </para>
      </listitem>
     </varlistentry>

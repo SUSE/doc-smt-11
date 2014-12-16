@@ -9,7 +9,7 @@
  <para>
   Any machine running &sle; 10 SP4 or 11 SP1 (or later) can be configured
   to register against &smt; and download software updates from there,
-  instead of communicating directly with the &ncc; and the &nu; servers.
+  instead of communicating directly with the Customer Center and the &nu; servers.
  </para>
  <para>
   If your network includes an &smt; server to provide a local update source,
@@ -390,6 +390,10 @@
  <sect1 id="smt.client.yast">
   <!-- bnc#752392 -->
   <title>Configuring Clients with &yast;</title>
+  <para>
+  </para>
+  <sect2>
+   <title>Configuring Clients with &yast; in SLE 11</title>
 
   <para>
    To configure a client to perform the registration against an &smt;
@@ -428,8 +432,12 @@
    </para>
 
   </warning>
-
-
+ </sect2>
+ <sect2>
+  <title>Configuring Clients with &yast; in SLE 11</title>
+  <para>
+  </para>
+ </sect2>
  </sect1>
  <!-- ================================================================ -->
  <sect1>
