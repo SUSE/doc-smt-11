@@ -370,7 +370,7 @@ rcmysql restart
   <title>Migration between &scc; and &ncc;</title>
   <para>
    &smt; can talk to only one registration service (&scc;, &ncc;,
-   alternatively also SLMS). The switch between the registration servers can
+   alternatively also &slms;). The switch between the registration servers can
    be done either via a &yast; module or command-line tools.
   </para>
   <para>
@@ -407,8 +407,14 @@ smt scc-ncc-migration
    module.
   </para>
   <para>
-   After migration, it is needed to re-synchronize the repositories.
+   After migration is done, it is needed to re-synchronize &smt; with the
+   customer center. It is recommended to assure that the repositories are
+   up-to-date. This can be done using the following commands:
   </para>
+  <screen>
+   smt sync
+   smt mirror
+  </screen>
  </sect1>
  <sect1>
   <title>Enabling SLP Announcements</title>

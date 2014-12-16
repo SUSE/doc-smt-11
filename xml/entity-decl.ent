@@ -147,7 +147,7 @@
 <!ENTITY nu            "NU">
 <!ENTITY scc           "&suse; Customer Center">
 <!ENTITY sccurl        "https://scc.suse.com/">
-<!ENTITY ncc           "&scc;">
+<!ENTITY ncc           "Novell Customer Center">
 <!ENTITY yup           "yup">
 <!ENTITY imgcreat      "Image Creator">
 <!ENTITY admserv       "Administration Server">
