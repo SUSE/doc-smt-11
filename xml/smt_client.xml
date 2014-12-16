@@ -230,8 +230,8 @@
     </para>
    </step>
    <step>
-    <para>
-     Select <menuchoice> <guimenu>Software</guimenu> <guimenu>Novell
+    <para><!-- FIXME also for SLE12-->
+     In SLE 11, select <menuchoice> <guimenu>Software</guimenu> <guimenu>Novell
      Customer Center Configuration</guimenu> </menuchoice>. An overview of
      the current configuration is shown.
     </para>
@@ -242,13 +242,6 @@
     </para>
    </step>
    <step>
-<!--
-     <remark>mdejmek: to register automatically while installing...?</remark>
-    <para>
-     To register while installing automatically, select
-     <guimenu>Run Product Registration</guimenu>.
-    </para>
-    -->
     <para>
      Set the URL of the <guimenu>&smt; Server</guimenu> and, optionally, the
      location of the <guimenu>&smt; Certificate</guimenu>. The possible
@@ -277,10 +270,10 @@
  </sect1>
  <!-- ================================================================ -->
  <sect1 id="smt.client.clientsetupscript">
-  <title>Configuring Clients with the clientSetup4SMT.sh Script</title>
+  <title>Configuring Clients with the clientSetup4SMT.sh Script in SLE 11</title>
 
   <para>
-   The <command>/usr/share/doc/packages/smt/clientSetup4SMT.sh</command>
+   In SLE 11, the <command>/usr/share/doc/packages/smt/clientSetup4SMT.sh</command>
    script is provided with &smt;. This script allows you to configure a
    client machine to use an &smt; server or to reconfigure it to use a
    different &smt; server.
