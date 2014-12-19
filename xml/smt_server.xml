@@ -11,7 +11,7 @@
  <para>
   You can use the &yast; &smt; Configuration module for the
   initial and overall configuration. The &smt; Configuration configures
-  mirroring credentials, sets database passwords and e-mail addresses
+  organization credentials, sets database passwords and e-mail addresses
   for &smt; reports, sets the &smt; job schedule, and activates or
   deactivates the &smt; service.
  </para>
@@ -127,11 +127,9 @@
     </para>
     <note>
      <para>
-      If not already configured, mirroring credentials should be configured
+      If not already configured, organization credentials should be configured
       before activating &smt;. For more information about how to set
-      mirroring credentials with &yast;, see
-      <xref
-       linkend="smt.yast.credentials"/>.
+      organization credentials with &yast;, see <xref linkend="smt.yast.credentials"/>.
      </para>
     </note>
    </step>

@@ -185,7 +185,7 @@
      computers.
     </para>
     <para>
-     Enter your &ncc; mirroring credentials in <guimenu>User</guimenu>
+     Enter your &ncc; organization credentials in <guimenu>User</guimenu>
      and <guimenu>Password</guimenu>.  If you do not know your &ncc;
      credentials, refer to <xref
      linkend="smt.mirroring.getcredentials"/>. Test the entered

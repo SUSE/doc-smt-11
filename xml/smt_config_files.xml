@@ -73,7 +73,7 @@
       <para>
        <option>NUUser</option> should contain the username for update
        service.
-       For information about getting mirroring credentials, see
+       For information about getting organization credentials, see
        <xref linkend="smt.mirroring.getcredentials"/>. You can set this
        value with the &smt; Server.
       </para>
@@ -85,7 +85,7 @@
      <listitem>
       <para>
        <option>NUPass</option> is the password for the user defined in
-       <option>NUUser</option>. For information about getting mirroring
+       <option>NUUser</option>. For information about getting organization
        credentials, see
        <xref linkend="smt.mirroring.getcredentials"/> You can set
        this value with the &smt; Server.
@@ -675,7 +675,7 @@ signingKeyID =
 # If UserAgent is empty, no UserAgent string is set.
 #
 #UserAgent=
-# Mirroring credentials for this SMT server.
+# Organization credentials for this SMT server.
 # These are currently only used to get list of all available repositories
 # from https://your.smt.url/repo/repoindex.xml
 # Note: if authenticated as a client machine instead of these mirrorUser,
