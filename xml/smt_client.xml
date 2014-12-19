@@ -104,7 +104,7 @@
       URL of the &smt; server.
      </para>
      <para>
-      When using &ncc;, the URL needs to be in the following format:
+      For SLE 11 and older clients, the URL needs to be in the following format:
       <literal>https://<replaceable>FQDN</replaceable>/center/regsvc/</literal>
       with <replaceable>FQDN</replaceable> being the fully qualified
       hostname of the &smt; server. It must be identical to the FQDN of the
@@ -112,7 +112,7 @@
      </para>
      <screen>regurl=https://smt.&exampledomain;/center/regsvc/</screen>
      <para>
-      When using &scc;, the URL needs to be in the following format:
+      For SLE 12 clients, the URL needs to be in the following format:
       <literal>https://<replaceable>FQDN</replaceable>/connect/</literal>
       with <replaceable>FQDN</replaceable> being the fully qualified
       hostname of the &smt; server. It must be identical to the FQDN of the
@@ -448,12 +448,15 @@
   <title>Configuring Clients with &yast; in SLE 12</title>
   <para>
    To configure a client to perform the registration against an &smt;
-   server use the &yast; <guimenu>SUSE Customer Center Configuration</guimenu> module (<command>yast2
-   scc</command>).
+   server use the &yast; <guimenu>SUSE Customer Center
+    Configuration</guimenu> module (<command>yast2 scc</command>).
   </para>
   <para>
-   Enter your credentials. Then click <guimenu>Local Registration Server</guimenu>
-   and enter its url. Then click <guimenu>Next</guimenu>.
+   On the client, the credentials are not necessary and you may
+   leave the relevant fields empty.
+   Click <guimenu>Local Registration Server</guimenu>
+   and enter its url. Then click <guimenu>Next</guimenu> until
+   the exit from the module.
   </para>
  </sect2>
  </sect1>

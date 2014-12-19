@@ -14,7 +14,7 @@
   use that goes with it.
  </para>
  <sect1 id="smt.mirroring.getcredentials">
-  <title>Getting Organization Credentials</title>
+  <title>Mirroring Credentials</title>
 
   <para>
    Before you create a local mirror of the repositories, you need appropriate
