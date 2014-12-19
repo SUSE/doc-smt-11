@@ -462,7 +462,7 @@
  </sect1>
  <!-- ================================================================ -->
  <sect1>
-  <title>Registering Clients Against &smt; Test Environment</title>
+  <title>Registering SLE11 Clients Against &smt; Test Environment</title>
 
   <para>
    To configure a client to register against the test environment instead
