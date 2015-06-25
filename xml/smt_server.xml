@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE chapter PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd"
-          [
-          <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE">
-          <!ENTITY % entities SYSTEM "entity-decl.ent">
-          %entities;
+<!DOCTYPE chapter
+[
+  <!ENTITY % entities SYSTEM "entity-decl.ent">
+    %entities;
 ]>
-<chapter id="smt.server">
+<!-- Converted by suse-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="smt.server">
  <title>&smt; Server Configuration</title>
-
+ <info/>
  <para>
-  You can use the &yast; &smt; Configuration module for the
-  initial and overall configuration. The &smt; Configuration configures
-  organization credentials, sets database passwords and e-mail addresses
-  for &smt; reports, sets the &smt; job schedule, and activates or
+  You can use the &yast; &smt; Configuration module for the initial
+  and overall configuration. The &smt; Configuration configures
+  organization credentials, sets database passwords and e-mail addresses for
+  &smt; reports, sets the &smt; job schedule, and activates or
   deactivates the &smt; service.
  </para>
  <para>
@@ -31,48 +31,48 @@
  <procedure>
   <step>
    <para>
-    To start &smt; Configuration with the text (ncurses)
-    interface, run the <command>yast smt-server</command> command as
-    &rootuser;.
+    To start &smt; Configuration with the text (ncurses) interface, run
+    the <command>yast smt-server</command> command as &rootuser;.
    </para>
    <para>
-    To start the module with a graphical interface, open &yast;
-    Control Center and click <guimenu>SMT Server Configuration</guimenu> in the
+    To start the module with a graphical interface, open &yast; Control
+    Center and click <guimenu>SMT Server Configuration</guimenu> in the
     <guimenu>Network Services</guimenu> section.
    </para>
-
   </step>
   <step>
    <para>
     To activate &smt;, check the <guimenu>Enable Subscription Management
     Tool Service (SMT)</guimenu> option in the <guimenu>Customer Center
-    Access</guimenu> tab. If you want to disable &smt;, uncheck this option.
-    For more information about activating &smt; with &yast;, see
-    <xref linkend="smt.yast.activation"/>.
+    Access</guimenu> tab. If you want to disable &smt;, uncheck this
+    option. For more information about activating &smt; with &yast;,
+    see <xref linkend="smt.yast.activation"/>.
    </para>
   </step>
   <step>
    <para>
-    If the firewall is enabled, check <guimenu>Open Port in Firewall</guimenu>.
+    If the firewall is enabled, check <guimenu>Open Port in
+    Firewall</guimenu>.
    </para>
   </step>
   <step>
    <para>
-    In the <guimenu>Customer Center Configuration</guimenu> section of the 
+    In the <guimenu>Customer Center Configuration</guimenu> section of the
     <guimenu>Customer Center Access</guimenu> tab, choose which service
-    should be used (&ncc; or &scc;) and, if necessary, set the custom server
-    URLs. Set and test credentials for the &nu; (Novell Update) service. Correct
-    credentials are necessary to enable mirroring from &nu; and determine the products
-    that should be mirrored. Also set the e-mail address used for the
-    registration and the URL of your &smt; server and your &smt; server URL.
-    For more information, see <xref linkend="smt.yast.credentials"/>.
+    should be used (&ncc; or &scc;) and, if necessary, set the custom
+    server URLs. Set and test credentials for the &nu; (Novell Update)
+    service. Correct credentials are necessary to enable mirroring from
+    &nu; and determine the products that should be mirrored. Also set the
+    e-mail address used for the registration and the URL of your &smt;
+    server and your &smt; server URL. For more information, see
+    <xref linkend="smt.yast.credentials"/>.
    </para>
   </step>
   <step>
    <para>
     In the <guimenu>Database and Reporting</guimenu> tab, set the password
-    for the &smt; user in the MySQL database and enter the e-mail addresses
-    where reports should be sent. For more information, see
+    for the &smt; user in the MySQL database and enter the e-mail
+    addresses where reports should be sent. For more information, see
     <xref linkend="smt.yast.database"/> and
     <xref linkend="smt.yast.reports"/>.
    </para>
@@ -88,8 +88,8 @@
   <step>
    <para>
     If satisfied with the configuration, click <guimenu>OK</guimenu>.
-    &yast; adjusts the &smt; configuration and starts or restarts necessary
-    services.
+    &yast; adjusts the &smt; configuration and starts or restarts
+    necessary services.
    </para>
    <para>
     If you want to abort the configuration and cancel any changes, click
@@ -99,18 +99,18 @@
     <para>
      When the &smt; Configuration applies configuration changes, it
      checks for the existence of the common server certificate. If the
-     certificate does not exist, you will be asked if the certificate
-     should be created.
+     certificate does not exist, you will be asked if the certificate should
+     be created.
     </para>
    </note>
   </step>
  </procedure>
- <sect1 id="smt.yast.activation">
+ <sect1 xml:id="smt.yast.activation">
   <title>Activating and Deactivating &smt; with &yast;</title>
 
   <para>
-   &yast; provides an easy way to activate or deactivate the &smt; service.
-   To activate &smt; with &yast;, follow these steps:
+   &yast; provides an easy way to activate or deactivate the &smt;
+   service. To activate &smt; with &yast;, follow these steps:
   </para>
 
   <procedure>
@@ -127,9 +127,10 @@
     </para>
     <note>
      <para>
-      If not already configured, organization credentials should be configured
-      before activating &smt;. For more information about how to set
-      organization credentials with &yast;, see <xref linkend="smt.yast.credentials"/>.
+      If not already configured, organization credentials should be
+      configured before activating &smt;. For more information about how
+      to set organization credentials with &yast;, see
+      <xref linkend="smt.yast.credentials"/>.
      </para>
     </note>
    </step>
@@ -167,11 +168,11 @@
   </procedure>
 
   <para>
-   When activating &smt;, the following important operations are performed
-   by &yast;:
+   When activating &smt;, the following important operations are
+   performed by &yast;:
   </para>
 
-  <itemizedlist>
+  <itemizedlist mark="bullet" spacing="normal">
    <listitem>
     <para>
      The Apache configuration is changed by creating symbolic links in the
@@ -188,16 +189,15 @@
    </listitem>
    <listitem>
     <para>
-     The MySQL server is started (or reloaded if already running). The
-     smt user and all necessary tables in the database are created as
-     needed.
+     The MySQL server is started (or reloaded if already running). The smt
+     user and all necessary tables in the database are created as needed.
     </para>
    </listitem>
    <listitem>
     <para>
-     The schema of the &smt; database is checked. If the database schema is
-     outdated, the &smt; database is upgraded to conform to the current
-     schema.
+     The schema of the &smt; database is checked. If the database schema
+     is outdated, the &smt; database is upgraded to conform to the
+     current schema.
     </para>
    </listitem>
    <listitem>
@@ -210,11 +210,11 @@
   </itemizedlist>
 
   <para>
-   When deactivating &smt;, the following important operations are performed
-   by &yast;:
+   When deactivating &smt;, the following important operations are
+   performed by &yast;:
   </para>
 
-  <itemizedlist>
+  <itemizedlist mark="bullet" spacing="normal">
    <listitem>
     <para>
      Symbolic links created upon &smt; activation in the
@@ -225,21 +225,21 @@
    <listitem>
     <para>
      The Cron daemon, the Apache server and the MySQL database daemon are
-     reloaded. Neither Apache nor MySQL are stopped, because they may be used
-     for other purposes than the &smt; service.
+     reloaded. Neither Apache nor MySQL are stopped, because they may be
+     used for other purposes than the &smt; service.
     </para>
    </listitem>
   </itemizedlist>
  </sect1>
- <sect1 id="smt.yast.credentials">
+ <sect1 xml:id="smt.yast.credentials">
   <title>Setting &nu; Credentials with &yast;</title>
 
   <para>
-   &yast; provides an interface to set and test &nu; credentials
-   and the URL of the &nu; service. To do so, follow these steps:
+   &yast; provides an interface to set and test &nu; credentials and
+   the URL of the &nu; service. To do so, follow these steps:
   </para>
 
-  <figure id="fig.yast.credentials">
+  <figure xml:id="fig.yast.credentials">
    <title>Setting &nu; Credentials with &yast;</title>
    <mediaobject>
     <imageobject role="html">
@@ -255,15 +255,15 @@
    <step>
     <para>
      Open the <guimenu>Customer Center Access</guimenu> tab of the &smt;
-     Configuration (NU Configuration). If the credentials have
-     been already set with &yast; or the
-     <filename>/etc/smt.conf</filename> configuration file, they appear
-     in the dialog. Otherwise, the <guimenu>User</guimenu> and
-     <guimenu>Password</guimenu> fields are blank.
+     Configuration (NU Configuration). If the credentials have been already
+     set with &yast; or the <filename>/etc/smt.conf</filename>
+     configuration file, they appear in the dialog. Otherwise, the
+     <guimenu>User</guimenu> and <guimenu>Password</guimenu> fields are
+     blank.
     </para>
    </step>
    <step>
-    <!-- FIXME:
+<!-- FIXME:
     bwiedemann: future: software could provide link to click ; or fetch
     credentials over an API
     -->
@@ -272,8 +272,6 @@
      more details, see <xref linkend="smt.mirroring.getcredentials"/>.
     </para>
    </step>
-
-   
    <step>
     <para>
      Enter your &nu; username in <guimenu>User</guimenu> and the
@@ -282,8 +280,8 @@
    </step>
    <step>
     <para>
-     Click <guimenu>Test</guimenu> to check the credentials. &yast; will try
-     to download a list of available repositories with the provided
+     Click <guimenu>Test</guimenu> to check the credentials. &yast; will
+     try to download a list of available repositories with the provided
 <!--URL and-->
      credentials. If the test succeeds, the last line of the test results
      will read <literal>Test result: success</literal>. If the test fails,
@@ -291,7 +289,7 @@
 <!--URL and -->
      credentials and try again.
     </para>
-    <figure id="fig.yast.credtest">
+    <figure xml:id="fig.yast.credtest">
      <title>Successful Test of &nu; Credentials</title>
      <mediaobject>
       <imageobject role="html">
@@ -320,12 +318,12 @@
    </step>
   </procedure>
  </sect1>
- <sect1 id="smt.yast.database">
+ <sect1 xml:id="smt.yast.database">
   <title>Setting &smt; Database Password with &yast;</title>
 
   <para>
-   For security reasons, &smt; uses its own user in the database. &yast;
-   provides an interface for setting up or changing the &smt;
+   For security reasons, &smt; uses its own user in the database.
+   &yast; provides an interface for setting up or changing the &smt;
    database password. To set or change the &smt; database password with
    &yast;, follow these steps:
   </para>
@@ -338,22 +336,22 @@
     </para>
    </step>
    <step>
-    <!-- FIXME: checkit.  Sounds like bad usability - bwiedemann -->
+<!-- FIXME: checkit.  Sounds like bad usability - bwiedemann -->
     <para>
-     Enter the &smt; <guimenu>Database Password for &smt; User</guimenu>.
-     Confirm the password by reentering it and click
+     Enter the &smt; <guimenu>Database Password for &smt;
+     User</guimenu>. Confirm the password by reentering it and click
      <guimenu>OK</guimenu>, or continue with other configurations.
     </para>
    </step>
   </procedure>
  </sect1>
- <sect1 id="smt.yast.reports">
+ <sect1 xml:id="smt.yast.reports">
   <title>Setting E-mail Addresses to Receive Reports with &yast;</title>
 
   <para>
-   &yast; &smt; provides an interface for setting up a list of
-   e-mail addresses to which &smt; reports will be sent. To edit this list
-   of addresses, follow these steps:
+   &yast; &smt; provides an interface for setting up a list of e-mail
+   addresses to which &smt; reports will be sent. To edit this list of
+   addresses, follow these steps:
   </para>
 
   <procedure>
@@ -378,19 +376,19 @@
   </procedure>
 
   <para>
-   The comma-separated list of addresses for &smt; reports is written to the
-   <option>reportEmail</option> option of the
+   The comma-separated list of addresses for &smt; reports is written to
+   the <option>reportEmail</option> option of the
    <filename>/etc/smt.conf</filename> configuration file.
   </para>
  </sect1>
- <sect1 id="smt.yast.scheduling">
+ <sect1 xml:id="smt.yast.scheduling">
   <title>Setting the &smt; Job Schedule with &yast;</title>
 
   <para>
-   The &smt; Configuration module provides an interface to
-   schedule periodical &smt; jobs. &yast; uses <literal>cron</literal>
-   to schedule configured jobs. If needed, <literal>cron</literal> can
-   be used directly. Five types of periodical jobs can be set:
+   The &smt; Configuration module provides an interface to schedule
+   periodical &smt; jobs. &yast; uses <literal>cron</literal> to
+   schedule configured jobs. If needed, <literal>cron</literal> can be used
+   directly. Five types of periodical jobs can be set:
   </para>
 
   <variablelist>
@@ -398,7 +396,8 @@
     <term>Synchronization of Updates</term>
     <listitem>
      <para>
-      Synchronizes with &ncc;, updates repositories, and downloads new updates.
+      Synchronizes with &ncc;, updates repositories, and downloads new
+      updates.
      </para>
     </listitem>
    </varlistentry>
@@ -406,9 +405,8 @@
     <term>Generation of Reports</term>
     <listitem>
      <para>
-      Generates and sends &smt; Subscription Reports to addresses defined in
-      <xref
-       linkend="smt.yast.reports"/>.
+      Generates and sends &smt; Subscription Reports to addresses defined
+      in <xref linkend="smt.yast.reports"/>.
      </para>
     </listitem>
    </varlistentry>
@@ -416,76 +414,81 @@
     <term>NCC Registration</term>
     <listitem>
      <para>
-      Registers all clients to &ncc; that are not already registered or that
-      changed their data since the last registration.
+      Registers all clients to &ncc; that are not already registered or
+      that changed their data since the last registration.
      </para>
     </listitem>
    </varlistentry>
    <varlistentry>
     <term>Job Queue Cleanup</term>
     <listitem>
-     <para>Cleans up queued jobs.<!-- 2009-11-16 toba: see #525978
+     <para>
+      Cleans up queued jobs.
+<!-- 2009-11-16 toba: see #525978
 2012-02-09 ke: I added more info from the provided bug. -->
-     It will remove finished or failed jobs from the job queue that are
-     older than 8 days and remove job artifacts that remained in the
-     database as result of an error.
+      It will remove finished or failed jobs from the job queue that are
+      older than 8 days and remove job artifacts that remained in the
+      database as result of an error.
      </para>
     </listitem>
    </varlistentry>
    <varlistentry>
-    <!-- FIXME: checkit.  "uploading"? -->
+<!-- FIXME: checkit.  "uploading"? -->
     <term>Uploading Support Configs</term>
     <listitem>
-     <para>Uploading support configs is only available, when the &smt;-support
-     package is installed and manually added.  To add it, click
-     <guimenu>Add</guimenu>, then select <guimenu>Uploading Support
-     Configs</guimenu> from the <guimenu>Job to Run</guimenu> list.
+     <para>
+      Uploading support configs is only available, when the &smt;-support
+      package is installed and manually added. To add it, click
+      <guimenu>Add</guimenu>, then select <guimenu>Uploading Support
+      Configs</guimenu> from the <guimenu>Job to Run</guimenu> list.
      </para>
     </listitem>
-    </varlistentry>
+   </varlistentry>
   </variablelist>
 
-    <figure id="fig.yast.jobconf">
-     <title>&smt; Job Schedule Configuration</title>
-     <mediaobject>
-      <imageobject role="html">
-       <imagedata fileref="smt-yast-jobs-conf.png" width="80%" format="PNG"/>
-      </imageobject>
-      <imageobject role="fo">
-       <imagedata fileref="smt-yast-jobs-conf.png" width="80%" format="PNG"/>
-      </imageobject>
-     </mediaobject>
-    </figure>
+  <figure xml:id="fig.yast.jobconf">
+   <title>&smt; Job Schedule Configuration</title>
+   <mediaobject>
+    <imageobject role="html">
+     <imagedata fileref="smt-yast-jobs-conf.png" width="80%" format="PNG"/>
+    </imageobject>
+    <imageobject role="fo">
+     <imagedata fileref="smt-yast-jobs-conf.png" width="80%" format="PNG"/>
+    </imageobject>
+   </mediaobject>
+  </figure>
 
   <para>
-   To configure the schedule of &smt; jobs with &yast;, follow these steps:
+   To configure the schedule of &smt; jobs with &yast;, follow these
+   steps:
   </para>
 
   <procedure>
    <step>
     <para>
      Open the <guimenu>Scheduled SMT Jobs</guimenu> tab of the &smt;
-     Configuration. The table contains a list of all scheduled jobs, their type,
-     frequency, date, and time to run. You can add, delete or edit these
-     scheduled events.
+     Configuration. The table contains a list of all scheduled jobs, their
+     type, frequency, date, and time to run. You can add, delete or edit
+     these scheduled events.
     </para>
    </step>
    <step>
     <para>
-     If you want to add a scheduled &smt; job, click <guimenu>Add</guimenu>.
-     The <guimenu>Adding New SMT Scheduled Job</guimenu> dialog opens.
+     If you want to add a scheduled &smt; job, click
+     <guimenu>Add</guimenu>. The <guimenu>Adding New SMT Scheduled
+     Job</guimenu> dialog opens.
     </para>
     <para>
-     <!-- FIXME: check the dialog title -->
+<!-- FIXME: check the dialog title -->
      Choose the synchronization job to schedule. You can choose between
      <guimenu>Synchronization of Updates</guimenu>, <guimenu>Report
-     Generation</guimenu>, <guimenu>NCC Registration</guimenu>,
-     <guimenu>Job Queue Cleanup</guimenu>, and <guimenu>Uploading
-     Support Configs</guimenu>.
+     Generation</guimenu>, <guimenu>NCC Registration</guimenu>, <guimenu>Job
+     Queue Cleanup</guimenu>, and <guimenu>Uploading Support
+     Configs</guimenu>.
     </para>
     <para>
-     Choose the <guimenu>Frequency</guimenu> of the new scheduled &smt; job.
-     Jobs can be performed <guimenu>Daily</guimenu>,
+     Choose the <guimenu>Frequency</guimenu> of the new scheduled &smt;
+     job. Jobs can be performed <guimenu>Daily</guimenu>,
      <guimenu>Weekly</guimenu>, <guimenu>Monthly</guimenu>, or
      <guimenu>Periodically</guimenu> (every n-th hour or every m-th minute).
     </para>
@@ -507,17 +510,18 @@
      <guimenu>Edit</guimenu>. Then change the desired parameters and click
      <guimenu>OK</guimenu>.
     </para>
-  <informalfigure><!--id="fig.yast.schedule"-->
+    <informalfigure>
+<!--id="fig.yast.schedule"-->
 <!--   <title>Setting SMT Job Schedule with &yast;</title> -->
-   <mediaobject>
-    <imageobject role="html">
-     <imagedata fileref="smt-yast-schedule.png" width="60%" format="PNG"/>
-    </imageobject>
-    <imageobject role="fo">
-     <imagedata fileref="smt-yast-schedule.png" width="60%" format="PNG"/>
-    </imageobject>
-   </mediaobject>
-  </informalfigure>
+     <mediaobject>
+      <imageobject role="html">
+       <imagedata fileref="smt-yast-schedule.png" width="60%" format="PNG"/>
+      </imageobject>
+      <imageobject role="fo">
+       <imagedata fileref="smt-yast-schedule.png" width="60%" format="PNG"/>
+      </imageobject>
+     </mediaobject>
+    </informalfigure>
    </step>
    <step>
     <para>
@@ -527,8 +531,8 @@
    </step>
    <step>
     <para>
-     Click <guimenu>OK</guimenu> to apply the settings and quit the
-     &smt; Configuration, or continue with other configurations.
+     Click <guimenu>OK</guimenu> to apply the settings and quit the &smt;
+     Configuration, or continue with other configurations.
     </para>
    </step>
   </procedure>

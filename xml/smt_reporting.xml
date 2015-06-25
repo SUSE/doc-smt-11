@@ -1,50 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE chapter PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd"
-          [
-          <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE">
-          <!ENTITY % entities SYSTEM "entity-decl.ent">
-          %entities;
+<!DOCTYPE chapter
+[
+  <!ENTITY % entities SYSTEM "entity-decl.ent">
+    %entities;
 ]>
-<chapter id="smt.reporting">
+<!-- Converted by suse-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="smt.reporting">
  <title>&smt; Reports</title>
+ <info/>
  <para>
-  &smt; allows you to register client machines on &ncc;. Client machines
-  must be configured to be able to use &smt;.
+  &smt; allows you to register client machines on &ncc;. Client
+  machines must be configured to be able to use &smt;.
   <remark>mbowling 140709: This following sentence makes no sense to me. If it
   is correct, please disregard this remark. however, it looks wrong from where I'm
   sitting.</remark>
   <remark>ke 2012-01-24: I completed the sentence; not sure, whether
   that was initially meant that way.</remark>
-
   For information about configuring clients to be able to use &smt;, see
-  <xref linkend="smt.client"/>.
-  &smt; lets you generate reports based on &smt; and &ncc; data. Generated
-  reports contain statistics of the registered machines and products used
-  and of the active, expiring, or missing subscriptions. If the number of
-  registered machines and products exceeds the number of available
-  subscriptions, warnings are given.
+  <xref linkend="smt.client"/>. &smt; lets you generate reports based on
+  &smt; and &ncc; data. Generated reports contain statistics of the
+  registered machines and products used and of the active, expiring, or
+  missing subscriptions. If the number of registered machines and products
+  exceeds the number of available subscriptions, warnings are given.
  </para>
  <note>
   <title>Assignment of Reports</title>
   <para>
    If you are using more than one &smt; server in your environment,
-   generated reports may not represent all of the &smt; servers or machines
-   in your environment. For the complete statistics of all your registered
-   machines, refer to the information in the &ncc;.
+   generated reports may not represent all of the &smt; servers or
+   machines in your environment. For the complete statistics of all your
+   registered machines, refer to the information in the &ncc;.
   </para>
  </note>
  <sect1>
   <title>Report Schedule and Recipients</title>
 
   <para>
-   Generated &smt; reports can be sent to a defined list of e-mail addresses
-   periodically. To create or edit this list, and to set the frequency of the
-   reports, use the &yast; &smt; Configuration module. How to configure this
-   list is described in <xref
-    linkend="smt.yast.reports"/>.
-   Configuration of the report schedule is described in
-   <xref
-    linkend="smt.yast.scheduling"/>.
+   Generated &smt; reports can be sent to a defined list of e-mail
+   addresses periodically. To create or edit this list, and to set the
+   frequency of the reports, use the &yast; &smt; Configuration
+   module. How to configure this list is described in
+   <xref linkend="smt.yast.reports"/>. Configuration of the report schedule
+   is described in <xref linkend="smt.yast.scheduling"/>.
   </para>
 
   <para>
@@ -53,14 +50,14 @@
    more information about editing the list of addresses directly, see
    <xref linkend="smt.config.smtconf.report"/>. To set the frequency of
    reports manually, you can directly edit the
-   <filename>smt-gen-report</filename> lines of the crontab
-   in <filename>/etc/cron.d/novell.com-smt</filename>. For more information
+   <filename>smt-gen-report</filename> lines of the crontab in
+   <filename>/etc/cron.d/novell.com-smt</filename>. For more information
    about the crontab format, see <command>man 5 crontab</command>.
   </para>
 
   <para>
-   Reports, including those created as a scheduled &smt; job, are created by
-   the <command>smt-report</command> command. This command has various
+   Reports, including those created as a scheduled &smt; job, are created
+   by the <command>smt-report</command> command. This command has various
    parameters. To edit parameters used with scheduled commands, edit the
    <filename>/etc/smt.d/smt-cron.conf</filename> configuration file. For
    more information, see <xref linkend="smt.config.cronconf"/>.
@@ -70,14 +67,16 @@
   <title>Types of &smt; Reports</title>
 
 <!--classreport info removed as it is not a feature to be advertised-->
+
 <!-- ke 2012-02-24: this comment is to be clarified -->
+
   <para>
    Two types of reports can be created with the
    <command>smt-report</command> command:
   </para>
 
   <variablelist>
-   <!--
+<!--
    <varlistentry>
     <term><option>-\-classreport</option>
     </term>
@@ -133,9 +132,9 @@
   <title>Report Output Formats and Targets</title>
 
   <para>
-   &smt; reports can be printed to the standard output, exported to one or
-   multiple files (in CSV format) as well as mailed to the defined list of
-   e-mail addresses. Use the following options for the
+   &smt; reports can be printed to the standard output, exported to one
+   or multiple files (in CSV format) as well as mailed to the defined list
+   of e-mail addresses. Use the following options for the
    <command>smt-report</command> command:
   </para>
 
@@ -176,11 +175,12 @@
     <listitem>
      <para>
       The report will be exported to multiple files in CSV format. The first
-      line of each *.csv file consists of the column names, the data starts on
-      line two. It is recommended to use the <option>--csv</option> parameter
-      together with the <option>--file</option> parameter. If the specified
-      filename contains a <literal>.csv</literal> extension, the report format
-      will be CSV (as if the <option>--csv</option> parameter was used).
+      line of each *.csv file consists of the column names, the data starts
+      on line two. It is recommended to use the <option>--csv</option>
+      parameter together with the <option>--file</option> parameter. If the
+      specified filename contains a <literal>.csv</literal> extension, the
+      report format will be CSV (as if the <option>--csv</option> parameter
+      was used).
      </para>
     </listitem>
    </varlistentry>
@@ -207,17 +207,23 @@
     </listitem>
    </varlistentry>
    <varlistentry>
-    <term> <option>--pdf</option></term>
+    <term><option>--pdf</option>
+    </term>
     <listitem>
-     <para>The report will be exported to multiple files in pdf format. </para>
+     <para>
+      The report will be exported to multiple files in pdf format.
+     </para>
     </listitem>
-   </varlistentry>   
+   </varlistentry>
    <varlistentry>
-    <term> <option>--xml</option></term>
+    <term><option>--xml</option>
+    </term>
     <listitem>
-     <para>The report will be exported to multiple files in xml format. </para>
+     <para>
+      The report will be exported to multiple files in xml format.
+     </para>
     </listitem>
-   </varlistentry>      
+   </varlistentry>
   </variablelist>
 
   <note>

@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE chapter PUBLIC "-//Novell//DTD NovDoc XML V1.0//EN" "novdocx.dtd"
-          [
-          <!ENTITY % NOVDOC.DEACTIVATE.IDREF "INCLUDE">
-          <!ENTITY % entities SYSTEM "entity-decl.ent">
-          %entities;
+<!DOCTYPE chapter
+[
+  <!ENTITY % entities SYSTEM "entity-decl.ent">
+    %entities;
 ]>
-<chapter id="smt.management">
+<!-- Converted by suse-upgrade version 1.1 -->
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="smt.management">
  <title>Managing Repositories with &yast; &smt; Server Management</title>
+ <info/>
  <para>
   You can use the &yast; &smt; Server Management module for day-to-day
   management. &smt; Server Management enables and disables the mirroring
   of repositories, the staging flag for repositories, and performs the
   mirroring and staging.
  </para>
- <sect1 id="smt.yast.staging.starting">
+ <sect1 xml:id="smt.yast.staging.starting">
   <title>Starting &smt; Management Module</title>
 
   <para>
-   &smt; Management is a &yast; module. To start the module, do one of the
-   following:
+   &smt; Management is a &yast; module. To start the module, do one of
+   the following:
   </para>
 
-  <itemizedlist>
+  <itemizedlist mark="bullet" spacing="normal">
    <listitem>
     <para>
      Start &yast; and select <guimenu>Network Services</guimenu>, then
@@ -30,7 +31,8 @@
    </listitem>
    <listitem>
     <para>
-     Enter <command>yast2 smt</command> in the command line as &rootuser;.
+     Enter <command>yast2 smt</command> in the command line as
+     &rootuser;.
     </para>
    </listitem>
   </itemizedlist>
@@ -52,19 +54,20 @@
    </mediaobject>
   </figure>
  </sect1>
- <sect1 id="smt.yast.staging.viewing">
+ <sect1 xml:id="smt.yast.staging.viewing">
   <title>Viewing and Managing Repositories</title>
 
   <para>
    In the <guimenu>Repositories</guimenu> tab, you can see the list of all
-   available package repositories for &smt;. For each repository, the list
-   shows the repository's name, target product and architecture, mirroring
-   and staging flag, date of last mirroring, and a short description. You
-   can sort the list by clicking on the relevant column's header, and scroll
-   the list items using the scrollbars on the window's right side.
+   available package repositories for &smt;. For each repository, the
+   list shows the repository's name, target product and architecture,
+   mirroring and staging flag, date of last mirroring, and a short
+   description. You can sort the list by clicking on the relevant column's
+   header, and scroll the list items using the scrollbars on the window's
+   right side.
   </para>
 
-  <sect2 id="smt.yast.staging.viewing.filter">
+  <sect2 xml:id="smt.yast.staging.viewing.filter">
    <title>Filtering Repositories</title>
    <para>
     You can also filter out groups of repositories with the
@@ -73,12 +76,12 @@
     from the first word of the repositories' names. If you use a filter to
     limit the number of displayed repositories, you can always go back and
     view all of them by selecting <guimenu>All</guimenu> from the
-    <guimenu>Filter</guimenu> drop-down list. You can also use more
-    than one filter in sequence.
+    <guimenu>Filter</guimenu> drop-down list. You can also use more than one
+    filter in sequence.
    </para>
   </sect2>
 
-  <sect2 id="smt.yast.staging.viewing.mirror">
+  <sect2 xml:id="smt.yast.staging.viewing.mirror">
    <title>Mirroring Repositories</title>
    <para>
     Before you can start to offer package repositories, you need to create a
@@ -137,7 +140,7 @@
    </figure>
   </sect2>
  </sect1>
- <sect1 id="smt.yast.staging.stage">
+ <sect1 xml:id="smt.yast.staging.stage">
   <title>Staging Repositories</title>
 
   <para>
@@ -173,8 +176,8 @@
    </step>
    <step>
     <para>
-     Repeat steps 1 to 3 for all directory whose staging flag you wish
-     to change.
+     Repeat steps 1 to 3 for all directory whose staging flag you wish to
+     change.
     </para>
    </step>
   </procedure>
@@ -183,20 +186,21 @@
    <title>Toggle Staging Button Not Active</title>
    <para>
     You can only stage the repositories that were previously selected for
-    mirroring.  If it is not the case, the <guimenu>Toggle Staging</guimenu>
+    mirroring. If it is not the case, the <guimenu>Toggle Staging</guimenu>
     button will not be active.
    </para>
   </important>
 
   <para>
-   Once you mirror the repositories and make them available for staging, click
-   on the <guimenu>Staging</guimenu> tab. In the upper left part of the window,
-   there is a <guimenu>Repository Name</guimenu> drop-down list of all
-   repositories which are available for staging. There the repository names
-   have the name of the staging group attached in parentheses.  Select the one
-   you want to stage and a list of packages of this repository appears below.
-   Information about the patch name, its version and category, testing and
-   production flags, and a short summary is available for each patch.
+   Once you mirror the repositories and make them available for staging,
+   click on the <guimenu>Staging</guimenu> tab. In the upper left part of
+   the window, there is a <guimenu>Repository Name</guimenu> drop-down list
+   of all repositories which are available for staging. There the repository
+   names have the name of the staging group attached in parentheses. Select
+   the one you want to stage and a list of packages of this repository
+   appears below. Information about the patch name, its version and
+   category, testing and production flags, and a short summary is available
+   for each patch.
   </para>
 
   <para>
@@ -257,7 +261,7 @@
    list.
   </para>
  </sect1>
- <sect1 id="smt.yast.staging.client">
+ <sect1 xml:id="smt.yast.staging.client">
   <title>Checking the Client Status</title>
 
   <para>
@@ -269,8 +273,8 @@
 
   <para>
    You can read the client's host name, the date and time of the last
-   network contact with the &smt; server, and its update status. The update
-   status can be one of the following:
+   network contact with the &smt; server, and its update status. The
+   update status can be one of the following:
   </para>
 
   <variablelist>
@@ -289,7 +293,8 @@
     <listitem>
      <para>
       This status means that there are updates available for the client that
-      are either <literal>optional</literal> or <literal>recommended</literal>.
+      are either <literal>optional</literal> or
+      <literal>recommended</literal>.
      </para>
     </listitem>
    </varlistentry>
