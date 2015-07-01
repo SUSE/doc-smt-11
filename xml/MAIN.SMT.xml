@@ -11,24 +11,30 @@
 <?xml-stylesheet href="urn:x-suse:xslt:profiling:novdoc-profile.xsl"
                  type="text/xml" 
                  title="Profiling step"?>
-<book xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en" xml:id="book.yep">
+<book version="5.0" xml:lang="en" xml:id="book.yep"
+  xmlns="http://docbook.org/ns/docbook"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>&smtool; Guide</title>
+  <!-- ============================================================= -->
+  <!--			Bookinfo			                                           -->
+  <!-- ============================================================= -->
+  <info>
+   <productname>&smtool;</productname>
+   <productnumber>11.3</productnumber>
+   <date><?dbtimestamp format="B d, Y" ?></date>
+   <xi:include href="common_copyright_gfdl.xml"/>
+   <xi:include href="smt_authors.xml"/>
+ </info>
 <?dbhtml filename="index.html"?>
-<!-- ============================================================= -->
-<!--			Bookinfo			       -->
-<!-- ============================================================= -->
- <info/>
-<?dbhtml filename="index.html"?>
-<!-- ============================================================= -->
-<!--			Bookinfo			       -->
-<!-- ============================================================= -->
- <xi:include href="smt_overview.xml" parse="xml"/>
- <xi:include href="smt_install.xml" parse="xml"/>
- <xi:include href="smt_server.xml" parse="xml"/>
- <xi:include href="smt_mirroring.xml" parse="xml"/>
- <xi:include href="smt_management.xml" parse="xml"/>
- <xi:include href="smt_registration.xml" parse="xml"/>
- <xi:include href="smt_reporting.xml" parse="xml"/>
- <xi:include href="smt_tools.xml" parse="xml"/>
- <xi:include href="smt_client.xml" parse="xml"/>
- <xi:include href="smt_appendix_api.xml" parse="xml"/>
+ <xi:include href="smt_overview.xml"/>
+ <xi:include href="smt_install.xml"/>
+ <xi:include href="smt_server.xml"/>
+ <xi:include href="smt_mirroring.xml"/>
+ <xi:include href="smt_management.xml"/>
+ <xi:include href="smt_registration.xml"/>
+ <xi:include href="smt_reporting.xml"/>
+ <xi:include href="smt_tools.xml"/>
+ <xi:include href="smt_client.xml"/>
+ <xi:include href="smt_appendix_api.xml"/>
 </book>
