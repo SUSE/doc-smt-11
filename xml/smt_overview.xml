@@ -122,6 +122,6 @@
    <link xlink:href="http://www.novell.com/documentation"/>.
   </para>
  </sect1>
- <xi:include href="common_intro_feedback_i.xml" parse="xml"/>
- <xi:include href="common_intro_typografie_i.xml" parse="xml"/>
+ <xi:include href="common_intro_feedback_i.xml"/>
+ <xi:include href="common_intro_typografie_i.xml"/>
 </preface>
