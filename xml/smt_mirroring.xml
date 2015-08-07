@@ -511,8 +511,10 @@
   </itemizedlist>
 
   <para>
-   Here, <literal>/MirrorTo</literal> is the path set in the
-   <option>MirrorTo</option> option.
+   The directory specified by the option <option>MirrorTo</option> and the
+   subdirectories listed above must exist. Files and directories need to
+   belong to the user <systemitem class="username">smt</systemitem> and the
+   group <systemitem class="groupname">www</systemitem>.
   </para>
 
   <para>
