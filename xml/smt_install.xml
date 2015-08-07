@@ -10,10 +10,11 @@
  <title>&smt; Installation</title>
  <info/>
  <para>
-  &smt; is an add-on product for &sls; 12 systems. You can either
-  install the &smt; add-on together with your &sls; base system during
-  the initial installation process, or on top of an already-installed base
-  system at any later time.
+  &smt; is an add-on product for &sls; 11 systems. You can either install the
+  &smt; add-on together with your &sls; base system during the initial
+  installation process, or on top of an already-installed base system at any
+  later time. &smt; can be obtained free of charge from <link
+  xlink:href="https://download.suse.com/"/>.
  </para>
  <para>
   If you install &smt; on top of SLES with the latest maintenance patches
