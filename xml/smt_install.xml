@@ -31,6 +31,15 @@
   compared to those installed from media, for example using the
   <command>zypper patch</command> command.
  </para>
+ 
+ <note>
+  <title>Installation Scope</title>
+  <para>
+   SMT is a LAMP (Linux, Apache, MySQL, PHP) based application. During the
+   installation, Apache and MySQL will automatically be installed if missing.
+  </para>
+ </note>
+ 
  <sect1>
   <title>Installation During the Initial Installation Process</title>
 
