@@ -478,8 +478,9 @@
    information about <filename>/etc/smt.conf</filename>, see
    <xref linkend="smt.config.smtconf"/>. If the <option>MirrorTo</option>
    option is not set to the Apache htdocs directory
-   <filename>/srv/www/htdocs/</filename>, links should be created manually
-   like this:
+   <filename>/srv/www/htdocs/</filename>, the following links need to be
+   created. In case the directories already exist, they need to be removed
+   prior to creating the link (the data from that directories will be lost!):
   </para>
 
   <itemizedlist mark="bullet" spacing="normal">
@@ -512,7 +513,8 @@
 
   <para>
    The directory specified by the option <option>MirrorTo</option> and the
-   subdirectories listed above must exist. Files and directories need to
+   subdirectories listed above must exist. Files and directories in
+   <replaceable>/MirrorTo</replaceable> as well as the links need to
    belong to the user <systemitem class="username">smt</systemitem> and the
    group <systemitem class="groupname">www</systemitem>.
   </para>
@@ -525,13 +527,13 @@
 <screen>
 l /srv/www/htdocs/repo/
 total 16
-lrwxrwxrwx 1 root root   22 Feb  9 14:23 $RCE -&gt; /mirror/data/repo/$RCE/
+lrwxrwxrwx 1 smt  www    22 Feb  9 14:23 $RCE -&gt; /mirror/data/repo/$RCE/
 drwxr-xr-x 4 smt  www  4096 Feb  9 14:23 ./
 drwxr-xr-x 4 root root 4096 Feb  8 15:44 ../
-lrwxrwxrwx 1 root root   23 Feb  9 14:23 RPMMD -&gt; /mirror/data/repo/RPMMD/
-lrwxrwxrwx 1 root root   22 Feb  9 14:23 full -&gt; /mirror/data/repo/full/
+lrwxrwxrwx 1 smt  www    23 Feb  9 14:23 RPMMD -&gt; /mirror/data/repo/RPMMD/
+lrwxrwxrwx 1 smt  www    22 Feb  9 14:23 full -&gt; /mirror/data/repo/full/
 drwxr-xr-x 2 smt  www  4096 Feb  8 11:12 keys/
-lrwxrwxrwx 1 root root   25 Feb  9 14:23 testing -&gt; /mirror/data/repo/testing/
+lrwxrwxrwx 1 smt  www    25 Feb  9 14:23 testing -&gt; /mirror/data/repo/testing/
 drwxr-xr-x 2 smt  www  4096 Feb  8 14:14 tools/
 </screen>
 
@@ -540,7 +542,9 @@ drwxr-xr-x 2 smt  www  4096 Feb  8 14:14 tools/
    example:
   </para>
 
-<screen>ln -s '/mirror/data/repo/$RCE' '/srv/www/htdocs/repo/$RCE'</screen>
+  <screen>for LINK in \$RCE RPMMD full testing; do
+ln -s /mirror/data/repo/${LINK}/ && chown -h smt.www ${LINK}   
+done</screen>
 
   <note>
    <title>The <filename>/srv/www/htdocs/repo</filename> Directory</title>
