@@ -29,12 +29,11 @@
   <title>Deleting Registrations</title>
 
   <para>
-   To delete a registration from &smt; and &ncc;, use the
-   <command>smt-delete-registrations</command> <option>-g</option>
-   <replaceable>Client_ID</replaceable> command. To delete multiple
-   registrations, the option <option>-g</option> can be used several times.
+   To delete a registration from &smt; and &ncc;, use the following
+   command. To delete multiple registrations, the option <option>-g</option>
+   can be used several times.
   </para>
-
+  <screen>smt-delete-registration -g <replaceable>Client_ID</replaceable></screen>
   <para>
    The ID of the client machine to be deleted can be determined from the
    output of the <command>smt-list-registrations</command> command.
