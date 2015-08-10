@@ -598,7 +598,9 @@ chown smt:www /var/lib/smt/.curlrc</screen>
      <listitem>
       <para>
        If you want to mirror this product, provide credentials in the
-       <literal><replaceable>user</replaceable>:<replaceable>password</replaceable></literal>
+       <literal><replaceable>user</replaceable>:<replaceable>password</replaceable></literal>. Note
+       that these credentials differ from the mirroring credentials used for
+       &slsa; 10 and 11. You need to use the NCC login credentials here.
        format.
       </para>
      </listitem>
