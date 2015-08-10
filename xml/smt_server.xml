@@ -9,20 +9,12 @@
  <title>&smt; Server Configuration</title>
 
  <para>
-  You can use the &yast; &smt; Configuration module for the
-  initial and overall configuration. The &smt; Configuration configures
-  organization credentials, sets database passwords and e-mail addresses
-  for &smt; reports, sets the &smt; job schedule, and activates or
-  deactivates the &smt; service.
+  This chapter introduces the &yast; configuration module for the &smt;
+  server. You can set and configure mirroring credentials, &smt; database
+  passwords, and e-mail addresses to send SMT reports to. It also lets you set
+  the &smt; job schedule, and activate or deactivate the &smt; service.
  </para>
  <para>
-<!--
-  Appart from the &smt; configuration changes set in the user interface,
-  running &smt; Server configuration also makes the necessary changes in the
-  configuration of the Apache web server, restarts the server and runs the
-  <command>insserv apache2</command> command to make Apache to start
-  automatically with the system. Fixed
-  -->
  </para>
  <para>
   To configure &smt; with &smt; Server Configuration, follow these
@@ -31,16 +23,10 @@
  <procedure>
   <step>
    <para>
-    To start &smt; Configuration with the text (ncurses)
-    interface, run the <command>yast smt-server</command> command as
-    &rootuser;.
+    Start the &yast; module <guimenu>SMT Server Configuration</guimenu> from
+    the &yast; control center or by running <command>yast smt-server</command>
+    on the command line.
    </para>
-   <para>
-    To start the module with a graphical interface, open &yast;
-    Control Center and click <guimenu>SMT Server Configuration</guimenu> in the
-    <guimenu>Network Services</guimenu> section.
-   </para>
-
   </step>
   <step>
    <para>
