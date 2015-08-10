@@ -8,21 +8,10 @@
 <chapter id="smt.reporting">
  <title>&smt; Reports</title>
  <para>
-  &smt; allows you to register client machines on &ncc;. Client machines
-  must be configured to be able to use &smt;.
-  <remark>mbowling 140709: This following sentence makes no sense to me. If it
-  is correct, please disregard this remark. however, it looks wrong from where I'm
-  sitting.</remark>
-  <remark>ke 2012-01-24: I completed the sentence; not sure, whether
-  that was initially meant that way.</remark>
-
-  For information about configuring clients to be able to use &smt;, see
-  <xref linkend="smt.client"/>.
-  &smt; lets you generate reports based on &smt; and &ncc; data. Generated
-  reports contain statistics of the registered machines and products used
-  and of the active, expiring, or missing subscriptions. If the number of
-  registered machines and products exceeds the number of available
-  subscriptions, warnings are given.
+  This chapter introduces reports generated based on the SMT and Novell
+  Customer Center data. The reports generated contain statistics of all the
+  registered machines, products used and all active, expiring or missing
+  subscriptions.
  </para>
  <note>
   <title>Assignment of Reports</title>
