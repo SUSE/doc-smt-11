@@ -49,7 +49,7 @@
   <procedure>
    <step>
     <para> Start &yast;
-     <guimenu>&smt; Configuration</guimenu> module (<command>yast2 smt</command>). </para>
+     <guimenu>&smt; Configuration</guimenu> module (<command>yast2 smt-server</command>). </para>
    </step>
    <step>
     <para> Go to the <guimenu>Scheduled &smt; Job</guimenu>. </para>
