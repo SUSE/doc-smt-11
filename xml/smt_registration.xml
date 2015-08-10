@@ -24,7 +24,7 @@
  </sect1>
  <sect1 id="smt.registration.delete">
   <title>Deleting Registrations</title>
-  <para> To delete a registration from &smt; and &ncc;, use the <command>smt-delete-registrations
+  <para> To delete a registration from &smt; and &ncc;, use the <command>smt-delete-registration
      <option>-g</option>
     <replaceable>Client_ID</replaceable></command> command. To delete multiple registrations, the
    option <option>-g</option> can be used several times. </para>
