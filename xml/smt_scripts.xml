@@ -24,12 +24,12 @@
    registered clients.
   </para>
   <para>
-   To enable JobQueue, the <systemitem>smt-client</systemitem> package needs to be
-   installed on the SMT client. The client then pulls jobs from the server
-   via a cron job (every 3 hours by default). The list of jobs is maintained
-   on the server. Jobs are not pushed directly to the clients and processed
-   immediately, but the client asks for them. Therefore, a delay of several
-   hours may occur.
+   To enable JobQueue, the <systemitem>smt-client</systemitem> package needs
+   to be installed on the SMT client. The client then pulls jobs from the
+   server via a cron job (every 3 hours by default). The list of jobs is
+   maintained on the server. Jobs are not pushed directly to the clients and
+   processed immediately, but the client asks for them. Therefore, a delay of
+   several hours may occur.
   </para>
   <para>
    Every job can have its parent job, which sets a dependency. The child job
@@ -1222,11 +1222,13 @@
    <para>
     The first argument of <command>smt-staging</command> is always the
     <emphasis>command</emphasis>. It must be followed by a
-    <replaceable>repository</replaceable>. The repository can be specified
-    either by its ID, or by <replaceable>Name</replaceable> and
-    <replaceable>Target</replaceable> from the table scheme returned by the
-    <command>smt-repos</command> command. The <command>smt-staging</command>
-    script understands the following commands:
+    <replaceable>repository</replaceable>. The repository can be specified by
+    <replaceable>Name</replaceable> and <replaceable>Target</replaceable> from
+    the table scheme returned by the <command>smt-repos</command>
+    command. Alternatively, it can be specified by its <literal>Repository
+    ID</literal>, which is returned when running the commend
+    <command>smt-repos -v</command>. The <command>smt-staging</command> script
+    understands the following commands:
    </para>
    <variablelist>
     <varlistentry>
