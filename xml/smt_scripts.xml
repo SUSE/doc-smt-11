@@ -671,7 +671,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--logfile <replaceable>file</replaceable></option> or <option>--L
+     <term><option>--logfile <replaceable>file</replaceable></option> or <option>-L
         <replaceable>file</replaceable></option>
      </term>
      <listitem>
@@ -742,7 +742,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--logfile <replaceable>file</replaceable></option> or <option>--L
+     <term><option>--logfile <replaceable>file</replaceable></option> or <option>-L
         <replaceable>file</replaceable></option>
      </term>
      <listitem>
@@ -807,7 +807,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--logfile <replaceable>file</replaceable></option> or <option>--L
+     <term><option>--logfile <replaceable>file</replaceable></option> or <option>-L
         <replaceable>file</replaceable></option>
      </term>
      <listitem>
@@ -840,7 +840,7 @@
    </para>
    <variablelist>
     <varlistentry>
-     <term><option>--logfile <replaceable>file</replaceable></option> or <option>--L
+     <term><option>--logfile <replaceable>file</replaceable></option> or <option>-L
         <replaceable>file</replaceable></option>
      </term>
      <listitem>
