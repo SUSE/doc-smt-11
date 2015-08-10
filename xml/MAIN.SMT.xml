@@ -16,7 +16,7 @@
 <!-- ============================================================= -->
  <bookinfo>
   <title>&smtool; Guide</title><productname>&smtool;</productname>
-  <productnumber>11.3</productnumber><date>
+  <productnumber>11 SP3 (SMT 11 SP3)</productnumber><date>
 <?dbtimestamp format="B d, Y" ?></date>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="common_copyright_gfdl.xml"></xi:include>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="smt_authors.xml"></xi:include>
