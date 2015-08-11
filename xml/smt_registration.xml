@@ -27,7 +27,6 @@
  </sect1>
  <sect1 xml:id="smt.registration.delete">
   <title>Deleting Registrations</title>
-
   <para>
    To delete a registration from &smt; and &ncc;, use the following
    command. To delete multiple registrations, the option <option>-g</option>
@@ -66,9 +65,9 @@
 
   <procedure>
    <step>
-    <para>
-     Start &yast; <guimenu>&smt; Configuration</guimenu> module
-     (<command>yast2 smt</command>).
+    <para> Start &yast;
+     <guimenu>&smt; Configuration</guimenu> module (<command>yast2
+     smt-server</command>).
     </para>
    </step>
    <step>

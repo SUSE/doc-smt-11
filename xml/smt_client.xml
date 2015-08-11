@@ -295,10 +295,10 @@
 
   <para>
    In SLE 11, the
-   <command>/usr/share/doc/packages/smt/clientSetup4SMT.sh</command> script
-   is provided with &smt;. This script allows you to configure a client
-   machine to use an &smt; server or to reconfigure it to use a different
-   &smt; server.
+   <command>/usr/share/doc/packages/smt/clientSetup4SMT.sh</command> script is
+   provided with &smt;. This script allows you to configure a client machine
+   to use an &smt; server. It can also be used to reconfigure an existing
+   client to use a different &smt; server.
   </para>
 
   <note>
@@ -486,7 +486,7 @@
     &amp;testenv=1 is to be appended</remark>
   </para>
 
-<screen>register = command=register&namespace=testing</screen>
+<screen>register = command=register&amp;namespace=testing</screen>
 
   <para>
    For more information about using &smt; with a test environment, see

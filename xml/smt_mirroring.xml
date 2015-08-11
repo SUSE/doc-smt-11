@@ -543,7 +543,7 @@ drwxr-xr-x 2 smt  www  4096 Feb  8 14:14 tools/
   </para>
 
   <screen>for LINK in \$RCE RPMMD full testing; do
-ln -s /mirror/data/repo/${LINK}/ && chown -h smt.www ${LINK}   
+ln -s /mirror/data/repo/${LINK}/ &amp;&amp; chown -h smt.www ${LINK}   
 done</screen>
 
   <note>

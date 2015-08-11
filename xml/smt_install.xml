@@ -52,8 +52,8 @@
   <procedure>
    <step>
     <para>
-     Start the &sls; 12 installation as usual. For more information, see
-     the &sls; documentation coming with the base product.
+     Start the &sls; 11 installation as usual. For more information, see the
+     &sls; documentation coming with the base product.
     </para>
    </step>
 <!--<step>
