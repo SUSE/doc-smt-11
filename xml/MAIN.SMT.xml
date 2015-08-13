@@ -20,6 +20,13 @@
   <!--			Bookinfo			                                           -->
   <!-- ============================================================= -->
   <info>
+      <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
+          <dm:bugtracker>
+             <dm:url>https://bugzilla.suse.com/enter_bug.cgi</dm:url>
+             <dm:product>SUSE Linux Enterprise Server 12 SP1</dm:product>
+             <dm:component>Documentation</dm:component>
+          </dm:bugtracker>
+      </dm:docmanager>
    <productname>&smtool;</productname>
    <productnumber>11.3</productnumber>
    <date><?dbtimestamp format="B d, Y" ?></date>
