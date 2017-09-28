@@ -9,10 +9,9 @@
  <title>&smt; Reports</title>
  <info/>
  <para>
-  This chapter introduces reports generated based on the SMT and Novell
-  Customer Center data. The reports generated contain statistics of all the
-  registered machines, products used and all active, expiring or missing
-  subscriptions.
+  This chapter introduces reports based on the SMT and Novell Customer Center
+  data. The reports contain statistics of all the registered machines, products
+  used and all active, expiring or missing subscriptions.
  </para>
  <note>
   <title>Assignment of Reports</title>

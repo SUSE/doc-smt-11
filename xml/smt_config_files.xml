@@ -599,10 +599,10 @@ chown smt:www /var/lib/smt/.curlrc</screen>
      <listitem>
       <para>
        If you want to mirror this product, provide credentials in the
-       <literal><replaceable>user</replaceable>:<replaceable>password</replaceable></literal>. Note
-       that these credentials differ from the mirroring credentials used for
-       &slsa; 10 and 11. You need to use the NCC login credentials here.
-       format.
+       <literal><replaceable>user</replaceable>:<replaceable>password</replaceable></literal>
+       format. Note that these credentials differ from the mirroring
+       credentials used for &slsa; 10 and 11. You need to use the NCC login
+       credentials here.
       </para>
      </listitem>
     </varlistentry>
@@ -637,27 +637,27 @@ MirrorSRC = false
 forwardRegistration = true
 rndRegister = 127
 # The hook script that should be called before the smt-mirror script removes its lock
-mirror_preunlock_hook = 
+mirror_preunlock_hook =
 # The hook script that should be called after the smt-mirror script removed its lock
-mirror_postunlock_hook = 
+mirror_postunlock_hook =
 # specify proxy settings here, if you do not want to use the global proxy settings
 # If you leave these options empty the global options are used.
-# 
+#
 # specify which proxy you want to use for HTTP connection
 # in the form http://proxy.example.com:3128
-HTTPProxy = 
+HTTPProxy =
 # specify which proxy you want to use for HTTPS connection
 # in the form http://proxy.example.com:3128
-HTTPSProxy = 
+HTTPSProxy =
 # specify username and password if your proxy requires authentication
 # in the form username:password
-ProxyUser = 
+ProxyUser =
 #
 # require authentication to access the repository?
 # Three possible authtypes can be configured here
 # 1) none   : no authentication required (default)
 # 2) lazy   : check only username and password. A valid user has access to all repositories
-# 3) strict : check also if this user has access to the repository. 
+# 3) strict : check also if this user has access to the repository.
 #
 requiredAuthType = none
 #
@@ -671,7 +671,7 @@ smtUser = smt
 #
 # If empty, the modified repositories will be unsigned.
 #
-signingKeyID = 
+signingKeyID =
 #
 # This string is send in HTTP requests as UserAgent.
 # If the key UserAgent does not exist, a default is used.
@@ -683,8 +683,8 @@ signingKeyID =
 # from https://your.smt.url/repo/repoindex.xml
 # Note: if authenticated as a client machine instead of these mirrorUser,
 # the above URL returns only repositories relevant for that client.
-mirrorUser = 
-mirrorPassword = 
+mirrorUser =
+mirrorPassword =
 
 [REST]
 # Enable administrative access to the SMT RESTService by setting enableRESTAdminAccess=1
@@ -695,7 +695,7 @@ enableRESTAdminAccess = 0
 RESTAdminUser = RESTroot
 # Define the password for the REST-Admin (note: empty password is invalid)
 # default: &lt;empty&gt;
-RESTAdminPassword = 
+RESTAdminPassword =
 
 [JOBQUEUE]
 # maximum age of finished (non-persistent) jobs in days
@@ -712,27 +712,27 @@ jobStatusIsSuccess = 1,4
 # comma separated list of eMail addresses where the status reports will be sent to
 reportEmail = exampleuser@example.com
 # from field of report mails - if empty it defaults to "root@&lt;hostname&gt;.&lt;domainname&gt;"
-reportEmailFrom = 
+reportEmailFrom =
 # relay mail server - leave empty if mail should be sent directly
-mailServer = 
-mailServerPort = 
+mailServer =
+mailServerPort =
 # mail server authentication - leave empty if not required
-mailServerUser = 
-mailServerPassword = 
+mailServerUser =
+mailServerPassword =
 
 [YOU9-SLES-SDK]
 mirror_prod = SLES-SDK
 mirror_archs = i386,ia64,ppc,s390,s390x,x86_64
 mirror_version = 9
 mirror = false
-credentials = 
+credentials =
 
 [YOU9-SUSE-CORE]
 mirror_prod = SUSE-CORE
 mirror_archs = i386,ia64,ppc,s390,s390x,x86_64
 mirror_version = 9
 mirror = false
-credentials = 
+credentials =
 
 [YOU9-SUSE-SLES]
 mirror_prod = SUSE-SLES

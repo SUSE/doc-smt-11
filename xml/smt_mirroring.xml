@@ -281,10 +281,12 @@
 <!-- ke 2012-01-25: no spaces! -->
 <screen>smt-repos -p <replaceable>product</replaceable>[,<replaceable>version</replaceable>[,<replaceable>architecture</replaceable>[,<replaceable>release</replaceable>]]]</screen>
      <para>
-      For example, to enable all repositories belonging to &sls; 10 SP3
-      for PowerPC architecture, use the <command>smt-repos -p
-      SUSE-Linux-Enterprise-Server-SP3,10,ppc</command> command. The list of
-      known products can be obtained with the
+      For example, to enable all repositories belonging to &sls; 10 SP4
+      for PowerPC architecture, use the following command:
+     </para>
+     <screen>smt-repos -p SUSE-Linux-Enterprise-Server-SP4,10,ppc</screen>
+     <para>
+      The list of known products can be obtained with the
       <command>smt-list-products</command> command.
      </para>
     </step>
@@ -480,33 +482,35 @@
    option is not set to the Apache htdocs directory
    <filename>/srv/www/htdocs/</filename>, the following links need to be
    created. In case the directories already exist, they need to be removed
-   prior to creating the link (the data from that directories will be lost!):
+   prior to creating the link (the data from that directories will be
+   lost!). <replaceable>MIRRORTO</replaceable> has to be replaced with the path
+   defined with <option>MirrorTo</option>:
   </para>
 
   <itemizedlist mark="bullet" spacing="normal">
    <listitem>
     <para>
      <filename>/srv/www/htdocs/repo/$RCE</filename> should point to
-     <filename><replaceable>/MirrorTo</replaceable>/repo/$RCE/</filename>
+     <filename><replaceable>MIRRORTO</replaceable>/repo/$RCE/</filename>
     </para>
    </listitem>
    <listitem>
     <para>
      <filename>/srv/www/htdocs/repo/RPMMD</filename> to
-     <filename><replaceable>/MirrorTo</replaceable>/repo/RPMMD/</filename>
+     <filename><replaceable>MIRRORTO</replaceable>/repo/RPMMD/</filename>
     </para>
    </listitem>
    <listitem>
     <para>
      <filename>/srv/www/htdocs/repo/testing</filename> to
-     <filename><replaceable>/MirrorTo</replaceable>/repo/testing/</filename>
+     <filename><replaceable>MIRRORTO</replaceable>/repo/testing/</filename>
      and
     </para>
    </listitem>
    <listitem>
     <para>
      <filename>/srv/www/htdocs/repo/full</filename> to
-     <filename><replaceable>/MirrorTo</replaceable>/repo/full/</filename>
+     <filename><replaceable>MIRRORTO</replaceable>/repo/full/</filename>
     </para>
    </listitem>
   </itemizedlist>
@@ -542,18 +546,21 @@ drwxr-xr-x 2 smt  www  4096 Feb  8 14:14 tools/
    example:
   </para>
 
-  <screen>for LINK in \$RCE RPMMD full testing; do
-ln -s /mirror/data/repo/${LINK}/ &amp;&amp; chown -h smt.www ${LINK}   
+  <screen>cd /srv/www/htdocs/repo/
+for LINK in \$RCE RPMMD full testing; do
+  ln -s /mirror/data/repo/${LINK}/ &amp;&amp; chown -h smt.www ${LINK}
 done</screen>
 
-  <note>
+  <important>
    <title>The <filename>/srv/www/htdocs/repo</filename> Directory</title>
    <para>
     The <filename>/srv/www/htdocs/repo</filename> directory must not be a
     symbolic link.
    </para>
-  </note>
+  </important>
  </sect1>
+<!-- fs 2017-09-28: This only applies to SLE 12, where the SMT manual is
+     shipped with the product (rather than as a standalone manual
  <sect1>
   <title>The /srv/www/htdocs Structure for SLE 12</title>
 
@@ -601,7 +608,8 @@ repo/testing/SUSE/Updates/SLE-SERVER/12/x86_64/update/
    repositories. The semantics are the same as with repositories from
    &ncc;.
   </para>
- </sect1>
+  </sect1>
+  -->
  <sect1 xml:id="smt.mirroring.testenv">
   <title>Using the Test Environment</title>
 

@@ -260,7 +260,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--logfile</option> or <option>-L</option><replaceable>file</replaceable>
+     <term><option>--logfile</option> or <option>-L</option> <replaceable>file</replaceable>
      </term>
      <listitem>
       <para>
@@ -269,7 +269,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--hostname</option> or <option>-h</option><replaceable>name</replaceable>
+     <term><option>--hostname</option> or <option>-h</option> <replaceable>name</replaceable>
      </term>
      <listitem>
       <para>
@@ -279,7 +279,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--guid</option> or <option>-g</option><replaceable>guid</replaceable>
+     <term><option>--guid</option> or <option>-g</option> <replaceable>guid</replaceable>
      </term>
      <listitem>
       <para>
@@ -289,7 +289,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--severity</option> or <option>-s</option><replaceable>level</replaceable>
+     <term><option>--severity</option> or <option>-s</option> <replaceable>level</replaceable>
      </term>
      <listitem>
       <para>
@@ -312,7 +312,7 @@
    <variablelist>
     <varlistentry>
      <term><option>--guid <replaceable>ID</replaceable></option> or
-     <option>-g</option><replaceable>ID</replaceable>
+     <option>-g</option> <replaceable>ID</replaceable>
      </term>
      <listitem>
       <para>
@@ -352,7 +352,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--verbose</option> or <option>-v</option><replaceable>level</replaceable>
+     <term><option>--verbose</option> or <option>-v</option> <replaceable>level</replaceable>
      </term>
      <listitem>
       <para>
@@ -390,7 +390,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--guid</option> or <option>-g</option><replaceable>guid</replaceable>
+     <term><option>--guid</option> or <option>-g</option> <replaceable>guid</replaceable>
      </term>
      <listitem>
       <para>
@@ -400,7 +400,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--jobid</option> or <option>-j</option><replaceable>id</replaceable>
+     <term><option>--jobid</option> or <option>-j</option> <replaceable>id</replaceable>
      </term>
      <listitem>
       <para>
@@ -411,7 +411,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--deleteall</option> or <option>-A</option><replaceable>id</replaceable>
+     <term><option>--deleteall</option> or <option>-A</option> <replaceable>id</replaceable>
      </term>
      <listitem>
       <para>
@@ -421,7 +421,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--type</option> or <option>-t</option><replaceable>type</replaceable>
+     <term><option>--type</option> or <option>-t</option> <replaceable>type</replaceable>
      </term>
      <listitem>
       <para>
@@ -442,7 +442,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--parent</option><replaceable>id</replaceable>
+     <term><option>--parent</option> <replaceable>id</replaceable>
      </term>
      <listitem>
       <para>
@@ -483,7 +483,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--targeted</option><replaceable>time</replaceable>
+     <term><option>--targeted</option> <replaceable>time</replaceable>
      </term>
      <listitem>
       <para>
@@ -495,7 +495,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--expires</option><replaceable>time</replaceable>
+     <term><option>--expires</option> <replaceable>time</replaceable>
      </term>
      <listitem>
       <para>
@@ -504,7 +504,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--timelag</option><replaceable>time</replaceable>
+     <term><option>--timelag</option> <replaceable>time</replaceable>
      </term>
      <listitem>
       <para>
@@ -588,7 +588,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--format</option> or <option>-f</option><replaceable>format</replaceable>
+     <term><option>--format</option> or <option>-f</option> <replaceable>format</replaceable>
      </term>
      <listitem>
       <para>
@@ -672,8 +672,8 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--logfile <replaceable>file</replaceable></option> or <option>-L
-        <replaceable>file</replaceable></option>
+     <term><option>--logfile <replaceable>file</replaceable></option> or
+     <option>-L <replaceable>file</replaceable></option>
      </term>
      <listitem>
       <para>
@@ -1319,7 +1319,7 @@
    </para>
    <variablelist>
     <varlistentry>
-     <term><option>--logfile</option> or <option>-L</option><replaceable>file path</replaceable>
+     <term><option>--logfile</option> or <option>-L</option> <replaceable>file path</replaceable>
      </term>
      <listitem>
       <para>
@@ -1495,7 +1495,7 @@
    </para>
    <variablelist>
     <varlistentry>
-     <term><option>--incoming</option> or <option>-i</option><replaceable>directory</replaceable>
+     <term><option>--incoming</option> or <option>-i</option> <replaceable>directory</replaceable>
      </term>
      <listitem>
       <para>
@@ -1516,7 +1516,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--remove</option> or <option>-r</option><replaceable>archive</replaceable>
+     <term><option>--remove</option> or <option>-r</option> <replaceable>archive</replaceable>
      </term>
      <listitem>
       <para>
@@ -1534,7 +1534,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--upload</option> or <option>-u</option><replaceable>archive</replaceable>
+     <term><option>--upload</option> or <option>-u</option> <replaceable>archive</replaceable>
      </term>
      <listitem>
       <para>
@@ -1555,7 +1555,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--srnum</option> or <option>-s</option><replaceable>SR number</replaceable>
+     <term><option>--srnum</option> or <option>-s</option> <replaceable>SR number</replaceable>
      </term>
      <listitem>
       <para>
@@ -1564,7 +1564,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--name</option> or <option>-n</option><replaceable>name</replaceable>
+     <term><option>--name</option> or <option>-n</option> <replaceable>name</replaceable>
      </term>
      <listitem>
       <para>
@@ -1573,7 +1573,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--company</option> or <option>-c</option><replaceable>company</replaceable>
+     <term><option>--company</option> or <option>-c</option> <replaceable>company</replaceable>
      </term>
      <listitem>
       <para>
@@ -1582,7 +1582,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--storeid</option> or <option>-d</option><replaceable>id</replaceable>
+     <term><option>--storeid</option> or <option>-d</option> <replaceable>id</replaceable>
      </term>
      <listitem>
       <para>
@@ -1591,7 +1591,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--terminalid</option> or <option>-t</option><replaceable>id</replaceable>
+     <term><option>--terminalid</option> or <option>-t</option> <replaceable>id</replaceable>
      </term>
      <listitem>
       <para>
@@ -1600,7 +1600,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--phone</option> or <option>-p</option><replaceable>phone</replaceable>
+     <term><option>--phone</option> or <option>-p</option> <replaceable>phone</replaceable>
      </term>
      <listitem>
       <para>
@@ -1609,7 +1609,7 @@
      </listitem>
     </varlistentry>
     <varlistentry>
-     <term><option>--email</option> or <option>-e</option><replaceable>email</replaceable>
+     <term><option>--email</option> or <option>-e</option> <replaceable>email</replaceable>
      </term>
      <listitem>
       <para>

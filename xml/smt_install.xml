@@ -32,7 +32,7 @@
   compared to those installed from media, for example using the
   <command>zypper patch</command> command.
  </para>
- 
+
  <note>
   <title>Installation Scope</title>
   <para>
@@ -40,7 +40,7 @@
    installation, Apache and MySQL will automatically be installed if missing.
   </para>
  </note>
- 
+
  <sect1>
   <title>Installation During the Initial Installation Process</title>
 
@@ -77,7 +77,7 @@
     <para>
      To include the &smt; add-on product, check the <guimenu>I would like
      to install an additional Add On product</guimenu> option during the
-     isntallation and, if you are installing &smt; from a local ISO
+     installation and, if you are installing &smt; from a local ISO
      image, select <guimenu>Local ISO Image</guimenu> as the media type
      (repository). If you are installing from a different source, such as
      CD, NFS, or HTTP, choose the appropriate type. Then click
