@@ -334,7 +334,7 @@
      can be executed in two ways. In the first case, the script name is
      followed by the registration URL; for example:
     </para>
-<screen>./clientSetup4SMT.sh https://smt.&exampledomain;/center/regsvc</screen>
+<screen>./clientSetup4SMT.sh https://smt.&exampledomain;/center/regsvc/</screen>
     <para>
      In the second case, the script uses the <option>--host</option> option
      followed by the hostname of the &smt; server, and
@@ -342,7 +342,7 @@
      for example:
     </para>
 <screen>./clientSetup4SMT.sh --host smt.&exampledomain; \
-  --regcert http://smt.&exampledomain;/certs/smt.crt</screen>
+  --regcert http://smt.&exampledomain;/smt.crt</screen>
     <para>
      In this case, without any <quote>namespace</quote> specified, the
      client will be configured to use the default production repositories.

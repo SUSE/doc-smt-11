@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="urn:x-suse:xslt:profiling:docbook50-profile.xsl"
-                 type="text/xml" 
+                 type="text/xml"
                  title="Profiling step"?>
 <!DOCTYPE book
 [
@@ -9,7 +9,7 @@
 ]>
 <!-- Converted by suse-upgrade version 1.1 -->
 <?xml-stylesheet href="urn:x-suse:xslt:profiling:novdoc-profile.xsl"
-                 type="text/xml" 
+                 type="text/xml"
                  title="Profiling step"?>
 <book version="5.0" xml:lang="en" xml:id="book.yep"
   xmlns="http://docbook.org/ns/docbook"
@@ -17,13 +17,13 @@
   xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>&smtool; Guide</title>
   <!-- ============================================================= -->
-  <!--			Bookinfo			                                           -->
+  <!--                  Bookinfo                                                                   -->
   <!-- ============================================================= -->
   <info>
       <dm:docmanager xmlns:dm="urn:x-suse:ns:docmanager">
           <dm:bugtracker>
              <dm:url>https://bugzilla.suse.com/enter_bug.cgi</dm:url>
-             <dm:product>Subscription Management Tool 11 SP3 (SMT 11 SP3)</dm:product>
+             <dm:product>Subscription Management Tool 11 SP3 (SMT 11 SP3)</dm:product>
              <dm:component>SMT</dm:component>
           </dm:bugtracker>
       </dm:docmanager>
@@ -43,5 +43,6 @@
  <xi:include href="smt_reporting.xml"/>
  <xi:include href="smt_tools.xml"/>
  <xi:include href="smt_client.xml"/>
+ <xi:include href="smt_backup.xml"/>
  <xi:include href="smt_appendix_api.xml"/>
 </book>
