@@ -11,7 +11,7 @@
 <?xml-stylesheet href="urn:x-suse:xslt:profiling:novdoc-profile.xsl"
                  type="text/xml"
                  title="Profiling step"?>
-<book version="5.0" xml:lang="en" xml:id="book.yep"
+<book version="5.0" xml:lang="en" xml:id="book-yep"
   xmlns="http://docbook.org/ns/docbook"
   xmlns:xi="http://www.w3.org/2001/XInclude"
   xmlns:xlink="http://www.w3.org/1999/xlink">

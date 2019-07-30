@@ -5,7 +5,7 @@
     %entities;
 ]>
 <!-- Converted by suse-upgrade version 1.1 -->
-<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="smt.management">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="smt-management">
  <title>Managing Repositories with &yast; &smt; Server Management</title>
  <info/>
  <para>
@@ -14,7 +14,7 @@
   of repositories, the staging flag for repositories, and performs the
   mirroring and staging.
  </para>
- <sect1 xml:id="smt.yast.staging.starting">
+ <sect1 xml:id="smt-yast-staging-starting">
   <title>Starting &smt; Management Module</title>
 
   <para>
@@ -54,7 +54,7 @@
    </mediaobject>
   </figure>
  </sect1>
- <sect1 xml:id="smt.yast.staging.viewing">
+ <sect1 xml:id="smt-yast-staging-viewing">
   <title>Viewing and Managing Repositories</title>
 
   <para>
@@ -67,7 +67,7 @@
    right side.
   </para>
 
-  <sect2 xml:id="smt.yast.staging.viewing.filter">
+  <sect2 xml:id="smt-yast-staging-viewing-filter">
    <title>Filtering Repositories</title>
    <para>
     You can also filter out groups of repositories with the
@@ -81,7 +81,7 @@
    </para>
   </sect2>
 
-  <sect2 xml:id="smt.yast.staging.viewing.mirror">
+  <sect2 xml:id="smt-yast-staging-viewing-mirror">
    <title>Mirroring Repositories</title>
    <para>
     Before you can start to offer package repositories, you need to create a
@@ -140,7 +140,7 @@
    </figure>
   </sect2>
  </sect1>
- <sect1 xml:id="smt.yast.staging.stage">
+ <sect1 xml:id="smt-yast-staging-stage">
   <title>Staging Repositories</title>
 
   <para>
@@ -261,7 +261,7 @@
    list.
   </para>
  </sect1>
- <sect1 xml:id="smt.yast.staging.client">
+ <sect1 xml:id="smt-yast-staging-client">
   <title>Checking the Client Status</title>
 
   <para>

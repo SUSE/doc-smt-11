@@ -5,7 +5,7 @@
     %entities;
 ]>
 <!-- Converted by suse-upgrade version 1.1 -->
-<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="smt.client">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="smt-client">
 <!-- ============================================================== -->
 <!-- ================================================================ -->
 <!-- ================================================================ -->
@@ -51,19 +51,19 @@
   <listitem>
    <para>
     Provide the needed information via kernel parameters at boot time
-    (<xref linkend="smt.client.parameters"/>).
+    (<xref linkend="smt-client-parameters"/>).
    </para>
   </listitem>
   <listitem>
    <para>
     Configure the clients using an &ay; profile
-    (<xref linkend="smt.client.autoyast"/>).
+    (<xref linkend="smt-client-autoyast"/>).
    </para>
   </listitem>
   <listitem>
    <para>
     Use the <command>clientSetup4SMT.sh</command> script
-    (<xref linkend="smt.client.clientsetupscript"/>). This script can be run
+    (<xref linkend="smt-client-clientsetupscript"/>). This script can be run
     on a client to make it register against a specified &smt; server.
    </para>
   </listitem>
@@ -71,7 +71,7 @@
    <para>
     In &sle; 11 you can now set the &smt; server URL with the
     &yast; registration module during installation
-    (<xref linkend="smt.client.yast"/>).
+    (<xref linkend="smt-client-yast"/>).
    </para>
   </listitem>
  </orderedlist>
@@ -79,7 +79,7 @@
   These methods are described in the following sections.
  </para>
 <!-- ============================================================== -->
- <sect1 xml:id="smt.client.parameters">
+ <sect1 xml:id="smt-client-parameters">
   <title>Using Kernel Parameters to Access an &smt; Server</title>
 
   <para>
@@ -213,7 +213,7 @@
    </para>
   </warning>
  </sect1>
- <sect1 xml:id="smt.client.autoyast">
+ <sect1 xml:id="smt-client-autoyast">
   <title>Configuring Clients with &ay; Profile</title>
 
   <para>
@@ -271,7 +271,7 @@
      the location of the <guimenu>&smt; Certificate</guimenu>. The
      possible values are the same as for the kernel parameters
      <literal>regurl</literal> and <literal>regcert</literal> (see
-     <xref linkend="smt.client.parameters"/>). The only exception is that
+     <xref linkend="smt-client-parameters"/>). The only exception is that
      the <literal>ask</literal> value for <literal>regcert</literal> does
      not work in &ay;, because it requires user interaction. If using it,
      the registration process will be skipped.
@@ -292,7 +292,7 @@
   </procedure>
  </sect1>
 <!-- ================================================================ -->
- <sect1 xml:id="smt.client.clientsetupscript">
+ <sect1 xml:id="smt-client-clientsetupscript">
   <title>Configuring Clients with the clientSetup4SMT.sh Script in SLE 11</title>
 
   <para>
@@ -414,7 +414,7 @@
   </sect2>
  </sect1>
 <!-- ================================================================ -->
- <sect1 xml:id="smt.client.yast">
+ <sect1 xml:id="smt-client-yast">
 <!-- bnc#752392 -->
 
   <title>Configuring Clients with &yast;</title>
@@ -449,11 +449,11 @@
      append
      <literal>&amp;namespace=<replaceable>namespace</replaceable></literal>.
      For more information about staging groups, see
-     <xref linkend="smt.yast.staging.stage"/>.
+     <xref linkend="smt-yast-staging-stage"/>.
     </para>
     <para>
      Alternatively, use the <command>clientSetup4SMT.sh</command> script
-     (see <xref linkend="smt.client.clientsetupscript"/>).
+     (see <xref linkend="smt-client-clientsetupscript"/>).
     </para>
    </warning>
   </sect2>
@@ -494,11 +494,11 @@
 
   <para>
    For more information about using &smt; with a test environment, see
-   <xref linkend="smt.mirroring.testenv"/>.
+   <xref linkend="smt-mirroring-testenv"/>.
   </para>
  </sect1>
 <!-- ================================================================== -->
- <sect1 xml:id="smt.clients.repolist">
+ <sect1 xml:id="smt-clients-repolist">
 <!-- fate#310105 -->
 
   <title>Listing Accessible Repositories</title>
@@ -529,7 +529,7 @@
   </para>
  </sect1>
 <!-- ================================================================== -->
- <sect1 xml:id="smt.clients.rhel">
+ <sect1 xml:id="smt-clients-rhel">
   <title>How to Update Red Hat Enterprise Linux with SMT 11</title>
 
   <para>
@@ -552,7 +552,7 @@
    </para>
   </note>
 
-  <sect2 xml:id="smt.client.rhel.server">
+  <sect2 xml:id="smt-client-rhel-server">
    <title>How to Prepare SMT server for mirroring and publishing updates for RHEL</title>
    <procedure>
     <step>
@@ -626,7 +626,7 @@
    </procedure>
   </sect2>
 
-  <sect2 xml:id="smt.client.rhel.yum">
+  <sect2 xml:id="smt-client-rhel-yum">
    <title>How to Configure the YUM client on RHEL 5.2 to receive updates from SMT</title>
    <procedure>
     <step>
@@ -680,7 +680,7 @@ gpgcheck=1</screen>
    </procedure>
   </sect2>
 
-  <sect2 xml:id="smt.client.rhel.up2date">
+  <sect2 xml:id="smt-client-rhel-up2date">
    <title>How to Configure the UP2DATE client on RHEL 3.9 and 4.7 to receive updates from SMT</title>
    <procedure>
     <step>
@@ -734,7 +734,7 @@ gpgcheck=1</screen>
    </para>
   </sect2>
 
-  <sect2 xml:id="smt.client.rhel.rhel52">
+  <sect2 xml:id="smt-client-rhel-rhel52">
    <title>How to Register RHEL 5.2 against SMT</title>
    <procedure>
     <step>
@@ -778,7 +778,7 @@ gpgcheck=1</screen>
    </procedure>
   </sect2>
 
-  <sect2 xml:id="smt.client.rhel.rhel4739">
+  <sect2 xml:id="smt-client-rhel-rhel4739">
    <title>How to Register RHEL 4.7 and RHEL 3.9 against SMT</title>
    <procedure>
     <step>

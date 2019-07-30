@@ -5,7 +5,7 @@
     %entities;
 ]>
 <!-- Converted by suse-upgrade version 1.1 -->
-<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="smt.installation">
+<chapter xmlns="http://docbook.org/ns/docbook" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:id="smt-installation">
 <!-- ==================================================================== -->
  <title>&smt; Installation</title>
  <info/>
@@ -109,7 +109,7 @@
     <para>
      A two-step <guimenu>&smt; Configuration Wizard</guimenu> is shown
      during the final steps of the installation workflow. Configure &smt;
-     as described in <xref linkend="smt.installation.wizard"/> and continue
+     as described in <xref linkend="smt-installation-wizard"/> and continue
      with the &sls; installation as usual.
     </para>
    </step>
@@ -167,12 +167,12 @@
    <step>
     <para>
      The <guimenu>&smt; Configuration Wizard</guimenu> is launched. See
-     <xref linkend="smt.installation.wizard"/>.
+     <xref linkend="smt-installation-wizard"/>.
     </para>
    </step>
   </procedure>
  </sect1>
- <sect1 xml:id="smt.installation.wizard">
+ <sect1 xml:id="smt-installation-wizard">
   <title>&smt; Configuration Wizard</title>
 
   <para>
@@ -180,7 +180,7 @@
    Configuration Wizard</guimenu> is launched, regardless of the used
    installation method. Configure &smt; using this wizard. You are able
    to change the configuration later using the &yast; &smt; Server
-   Configuration module&mdash; see <xref linkend="smt.server"/>.
+   Configuration module&mdash; see <xref linkend="smt-server"/>.
   </para>
 
   <procedure>
@@ -198,7 +198,7 @@
     <para>
      Enter your &ncc; organization credentials in <guimenu>User</guimenu>
      and <guimenu>Password</guimenu>. If you do not know your &ncc;
-     credentials, refer to <xref linkend="smt.mirroring.getcredentials"/>.
+     credentials, refer to <xref linkend="smt-mirroring-getcredentials"/>.
      Test the entered credentials by pressing the <guimenu>Test</guimenu>
      button. &smt; will connect to the Customer Center server using the
      provided credentials and download some testing data.
@@ -242,7 +242,7 @@
    </step>
   </procedure>
  </sect1>
- <sect1 xml:id="smt.installation.upgrade">
+ <sect1 xml:id="smt-installation-upgrade">
   <title>Update of &smt; From Previous Versions</title>
 
   <para>
